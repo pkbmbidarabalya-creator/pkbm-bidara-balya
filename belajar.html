@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKBM Bidara Balya</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#0284c7">
+    <style>
+        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; justify-content: center; min-height: 100vh; }
+        
+        .app-container { width: 100%; max-width: 430px; background: #ffffff; min-height: 100vh; position: relative; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); overflow-x: hidden; }
+        .screen { display: none; padding-bottom: 30px; }
+        .active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Welcome Screen */
+        .welcome-hero { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 50px 24px 40px; text-align: center; border-bottom-left-radius: 32px; border-bottom-right-radius: 32px; }
+        .welcome-icon { font-size: 70px; margin-bottom: 12px; filter: drop-shadow(0 10px 8px rgba(0,0,0,0.15)); }
+        .welcome-title { font-size: 22px; font-weight: 700; line-height: 1.3; }
+        .welcome-subtitle { font-size: 13px; color: #bae6fd; margin-top: 8px; }
+        .welcome-body { padding: 35px 24px; text-align: center; }
+
+        /* Form Controls */
+        .form-group { text-align: left; margin-bottom: 18px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+        .form-group input { width: 100%; padding: 14px 16px; border: 1.5px solid #e2e8f0; border-radius: 12px; font-size: 14px; outline: none; transition: 0.2s; background: #f8fafc; }
+        .form-group input:focus { border-color: #0284c7; background: #ffffff; box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1); }
+
+        /* Password Wrapper khusus Ikon Mata */
+        .password-wrapper { position: relative; width: 100%; }
+        .password-wrapper input { padding-right: 48px; }
+        .toggle-password-btn {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #64748b;
+            user-select: none;
+        }
+
+        /* Buttons */
+        .btn-primary { width: 100%; padding: 15px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; border: none; border-radius: 14px; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3); transition: 0.2s; text-decoration: none; display: inline-block; text-align: center; }
+        .btn-primary:active { transform: scale(0.98); }
+        .btn-outline { background: #ffffff; color: #0284c7; border: 1.5px solid #0284c7; border-radius: 10px; padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 8px; }
+
+        /* Header Navigation Universal */
+        .app-header { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 20px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; display: flex; align-items: center; justify-content: space-between; }
+        .app-header h2 { font-size: 17px; font-weight: 600; }
+        .btn-header-back { background: rgba(255, 255, 255, 0.2); border: none; color: white; padding: 8px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: 0.2s; }
+        .btn-header-back:active { background: rgba(255, 255, 255, 0.35); transform: scale(0.95); }
+
+        /* User Banner Card */
+        .user-banner { background: white; margin: -20px 20px 20px; padding: 16px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 14px; border: 1px solid #f1f5f9; }
+        .avatar { width: 48px; height: 48px; background: #e0f2fe; color: #0284c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+        .user-info h4 { font-size: 15px; font-weight: 600; color: #0f172a; }
+        .user-info p { font-size: 12px; color: #64748b; }
+
+        /* Card Menu Options */
+        .card-container { padding: 0 20px; }
+        .paket-card { background: white; border-radius: 20px; padding: 20px; margin-bottom: 16px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); cursor: pointer; transition: 0.25s; position: relative; overflow: hidden; }
+        .paket-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .paket-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
+        
+        .paket-a::before { background: #f59e0b; }
+        .paket-b::before { background: #10b981; }
+        .paket-c::before { background: #6366f1; }
+
+        .paket-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .paket-badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+        .badge-a { background: #fef3c7; color: #d97706; }
+        .badge-b { background: #d1fae5; color: #059669; }
+        .badge-c { background: #e0e7ff; color: #4f46e5; }
+
+        .paket-title { font-size: 18px; font-weight: 700; color: #1e293b; }
+        .paket-sub { font-size: 13px; color: #64748b; margin-top: 2px; }
+
+        /* Class Items */
+        .kelas-box { background: white; border-radius: 16px; padding: 18px; margin-bottom: 16px; border: 1px solid #f1f5f9; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+        .kelas-title { font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+
+        /* Tabs Material & Ujian */
+        .tab-menu { display: flex; background: #f1f5f9; padding: 4px; border-radius: 12px; margin: 0 20px 20px; }
+        .tab-item { flex: 1; text-align: center; padding: 10px; font-size: 13px; font-weight: 600; color: #64748b; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+        .tab-item.active-tab { background: white; color: #0284c7; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+        /* Box Kartu Utama */
+        .main-drive-box { background: white; border-radius: 20px; padding: 24px; text-align: center; border: 1.5px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+        .main-drive-icon { font-size: 60px; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- 1. SELAMAT DATANG -->
+    <div id="screen-welcome" class="screen active">
+        <div class="welcome-hero">
+            <div class="welcome-icon">🎓</div>
+            <h1 class="welcome-title">Selamat Datang Di<br>PKBM Bidara Balya</h1>
+            <p class="welcome-subtitle">Platform Belajar Digital Pendidikan Kesetaraan Paket A, B, & C</p>
+        </div>
+        <div class="welcome-body">
+            <p style="color:#64748b; font-size: 14px; margin-bottom: 30px;">Akses materi pembelajaran dan ujian secara fleksibel.</p>
+            <button class="btn-primary" onclick="showScreen('screen-login')">Masuk Ke Aplikasi 🚀</button>
+        </div>
+    </div>
+
+    <!-- 2. LOGIN -->
+    <div id="screen-login" class="screen">
+        <div class="app-header">
+            <button class="btn-header-back" onclick="showScreen('screen-welcome')">⬅ Kembali</button>
+            <h2>Halaman Login</h2>
+            <div style="width: 50px;"></div>
+        </div>
+        <div style="padding: 30px 24px;">
+            <div class="form-group">
+                <label>Nama Siswa</label>
+                <input type="text" id="username" placeholder="Masukkan Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Masukkan Password">
+                    <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility()" id="btn-toggle-eye">👁️</button>
+                </div>
+            </div>
+            <button class="btn-primary" style="margin-top: 10px;" onclick="handleLogin()">Login</button>
+        </div>
+    </div>
+
+    <!-- 3. MENU UTAMA (PAKET A, B, C) -->
+    <div id="screen-paket" class="screen">
+        <div class="app-header">
+            <button class="btn-header-back" onclick="showScreen('screen-login')">⬅ Logout</button>
+            <h2>Menu Paket</h2>
+            <div style="width: 50px;"></div>
+        </div>
+
+        <div style="margin-top: 20px;"></div>
+
+        <!-- Banner Profil Siswa -->
+        <div class="user-banner">
+            <div class="avatar" id="avatar-initial">S</div>
+            <div class="user-info">
+                <h4 id="display-name">Nama Siswa</h4>
+                <p>Status: Siswa Aktif</p>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 12px;">Daftar Program Paket:</p>
+
+            <div class="paket-card paket-a" onclick="selectPaket('Paket A', ['Kelas 4', 'Kelas 5', 'Kelas 6'])">
+                <div class="paket-header">
+                    <span class="paket-title">Paket A</span>
+                    <span class="paket-badge badge-a">Setara SD</span>
+                </div>
+                <p class="paket-sub">Kelas 4, Kelas 5, dan Kelas 6</p>
+            </div>
+
+            <div class="paket-card paket-b" onclick="selectPaket('Paket B', ['Kelas 7', 'Kelas 8', 'Kelas 9'])">
+                <div class="paket-header">
+                    <span class="paket-title">Paket B</span>
+                    <span class="paket-badge badge-b">Setara SMP</span>
+                </div>
+                <p class="paket-sub">Kelas 7, Kelas 8, dan Kelas 9</p>
+            </div>
+
+            <div class="paket-card paket-c" onclick="selectPaket('Paket C', ['Kelas 10', 'Kelas 11', 'Kelas 12'])">
+                <div class="paket-header">
+                    <span class="paket-title">Paket C</span>
+                    <span class="paket-badge badge-c">Setara SMA</span>
+                </div>
+                <p class="paket-sub">Kelas 10, Kelas 11, dan Kelas 12</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. PILIH KELAS & SEMESTER -->
+    <div id="screen-kelas" class="screen">
+        <div class="app-header">
+            <button class="btn-header-back" onclick="showScreen('screen-paket')">⬅ Kembali</button>
+            <h2 id="judul-paket">Detail Paket</h2>
+            <div style="width: 50px;"></div>
+        </div>
+
+        <div class="card-container" style="margin-top: 20px;" id="daftar-kelas"></div>
+    </div>
+
+    <!-- 5. MATERI & TEST -->
+    <div id="screen-konten" class="screen">
+        <div class="app-header">
+            <button class="btn-header-back" onclick="showScreen('screen-kelas')">⬅ Kembali</button>
+            <h2 id="judul-konten">Detail Semester</h2>
+            <div style="width: 50px;"></div>
+        </div>
+
+        <div style="margin-top: 20px;"></div>
+
+        <!-- Tab Menu -->
+        <div class="tab-menu">
+            <div id="tab-materi" class="tab-item active-tab" onclick="switchTab('materi')">📁 Google Drive Materi</div>
+            <div id="tab-ujian" class="tab-item" onclick="switchTab('ujian')">📝 Test / Ujian</div>
+        </div>
+
+        <!-- TAB MATERI -->
+        <div id="content-materi" class="card-container">
+            <div class="main-drive-box">
+                <div class="main-drive-icon">📂</div>
+                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Materi Pembelajaran</h3>
+                <p id="desc-materi" style="font-size:12px; color:#64748b; margin-bottom:20px;">Akses modul pelajaran di Folder Google Drive.</p>
+                
+                <a id="link-drive-utama" href="#" target="_blank" class="btn-primary">
+                    Buka Google Drive Materi 🚀
+                </a>
+            </div>
+        </div>
+
+        <!-- TAB UJIAN -->
+        <div id="content-ujian" class="card-container" style="display: none;">
+            <div class="main-drive-box">
+                <div class="main-drive-icon">✍️</div>
+                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Lembar Test / Ujian Siswa</h3>
+                <p id="desc-ujian" style="font-size:12px; color:#64748b; margin-bottom:20px;">Klik tombol di bawah untuk membuka lembar soal ujian via Google Form.</p>
+                
+                <a id="link-ujian-utama" href="#" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                    Mulai Kerjakan Ujian 📝
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // =========================================================================
+    // PASSWORD LOGIN APLIKASI
+    // =========================================================================
+    const PASSWORD_LOGIN = "pkbm2026"; 
+
+    // =========================================================================
+    // DAFTAR LINK GOOGLE DRIVE & GOOGLE FORM UNTUK KELAS & SEMESTER
+    // =========================================================================
+    const databaseLink = {
+        // --- PAKET A ---
+        "Kelas 4 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 4 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 5 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 5 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 6 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 6 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+
+        // --- PAKET B ---
+        "Kelas 7 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 7 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 8 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 8 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 9 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 9 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+
+        // --- PAKET C ---
+        "Kelas 10 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 10 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 11 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 11 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 12 - Semester 1": { drive: "https://drive.google.com", form: "https://forms.google.com" },
+        "Kelas 12 - Semester 2": { drive: "https://drive.google.com", form: "https://forms.google.com" }
+    };
+
+    // =========================================================================
+    // LOGIKA OPERASIONAL APLIKASI
+    // =========================================================================
+    function showScreen(screenId) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        document.getElementById(screenId).classList.add('active');
+    }
+
+    // FITUR INTIP PASSWORD (LIHAT / SEMBUNYIKAN)
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const toggleBtn = document.getElementById('btn-toggle-eye');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleBtn.innerText = '🙈'; // Berubah jadi emoji tutup mata saat password terlihat
+        } else {
+            passwordInput.type = 'password';
+            toggleBtn.innerText = '👁️'; // Berubah kembali ke ikon mata
+        }
+    }
+
+    function handleLogin() {
+        const u = document.getElementById('username').value.trim();
+        const p = document.getElementById('password').value.trim();
+
+        if (!u) {
+            alert('Silakan masukkan Nama Lengkap Siswa terlebih dahulu!');
+            return;
+        }
+
+        if (p === PASSWORD_LOGIN) {
+            document.getElementById('display-name').innerText = u;
+            document.getElementById('avatar-initial').innerText = u.charAt(0).toUpperCase();
+            showScreen('screen-paket');
+        } else {
+            alert('Password salah! Silakan periksa kembali password kamu.');
+        }
+    }
+
+    function selectPaket(namaPaket, listKelas) {
+        document.getElementById('judul-paket').innerText = namaPaket;
+        const container = document.getElementById('daftar-kelas');
+        container.innerHTML = '';
+
+        listKelas.forEach(kelas => {
+            container.innerHTML += `
+                <div class="kelas-box">
+                    <div class="kelas-title">📌 ${kelas}</div>
+                    <button class="btn-outline" style="margin-bottom: 6px;" onclick="openSemester('${kelas} - Semester 1')">Semester 1</button>
+                    <button class="btn-outline" onclick="openSemester('${kelas} - Semester 2')">Semester 2</button>
+                </div>
+            `;
+        });
+        showScreen('screen-kelas');
+    }
+
+    function openSemester(keySemester) {
+        document.getElementById('judul-konten').innerText = keySemester;
+        
+        const data = databaseLink[keySemester] || { 
+            drive: "https://drive.google.com", 
+            form: "https://forms.google.com" 
+        };
+
+        document.getElementById('link-drive-utama').href = data.drive;
+        document.getElementById('link-ujian-utama').href = data.form;
+        
+        document.getElementById('desc-materi').innerText = `Akses modul pelajaran untuk ${keySemester} di Folder Google Drive.`;
+        document.getElementById('desc-ujian').innerText = `Lembar soal dan ujian via Google Form untuk ${keySemester}.`;
+
+        showScreen('screen-konten');
+    }
+
+    function switchTab(type) {
+        if(type === 'materi') {
+            document.getElementById('tab-materi').classList.add('active-tab');
+            document.getElementById('tab-ujian').classList.remove('active-tab');
+            document.getElementById('content-materi').style.display = 'block';
+            document.getElementById('content-ujian').style.display = 'none';
+        } else {
+            document.getElementById('tab-ujian').classList.add('active-tab');
+            document.getElementById('tab-materi').classList.remove('active-tab');
+            document.getElementById('content-materi').style.display = 'none';
+            document.getElementById('content-ujian').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
