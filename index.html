@@ -18,14 +18,14 @@
         }
         .container { 
             width: 100%;
-            max-width: 650px; 
+            max-width: 700px; 
             background: #ffffff; 
-            padding: 30px 25px; 
+            padding: 25px; 
             border-radius: 16px; 
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
         }
         .header { text-align: center; margin-bottom: 25px; }
-        .header h1 { color: #1a365d; font-size: 24px; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { color: #1a365d; font-size: 24px; margin: 0; font-weight: 700; text-transform: uppercase; }
         .header h2 { color: #2b6cb0; font-size: 15px; margin: 5px 0 0 0; font-weight: 500; }
         
         .form-group { margin-bottom: 18px; }
@@ -36,7 +36,6 @@
             border: 2px solid #e2e8f0; 
             border-radius: 8px; 
             font-size: 14px; 
-            transition: all 0.3s ease;
             outline: none;
             background-color: #f8fafc;
         }
@@ -64,9 +63,7 @@
             border-radius: 6px; 
             font-weight: 600; 
             font-size: 13px;
-            transition: background 0.3s;
         }
-        .btn-drive:hover { background: #2b6cb0; }
         
         .btn { 
             width: 100%; 
@@ -80,50 +77,30 @@
             cursor: pointer; 
             transition: all 0.3s; 
             margin-top: 10px;
-            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
         }
-        .btn:hover { background: #1a365d; transform: translateY(-1px); }
-        .btn-submit { background: #319795; box-shadow: 0 4px 12px rgba(49, 151, 149, 0.3); }
+        .btn:hover { background: #1a365d; }
+        .btn-submit { background: #319795; }
         .btn-submit:hover { background: #234e52; }
+        .btn-back { background: #e2e8f0; color: #4a5568; padding: 8px 14px; font-size: 13px; margin-bottom: 15px; width: auto; display: inline-block; }
+        .btn-back:hover { background: #cbd5e0; }
 
         .card { background: #f7fafc; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 15px; }
         .mapel-card { background: #ffffff; border: 1px solid #cbd5e0; padding: 15px; border-radius: 10px; margin-bottom: 12px; }
         .mapel-card h4 { margin: 0 0 10px 0; color: #2d3748; }
         
-        .mapel-btn { 
-            background: #3182ce; 
-            color: white; 
-            border: none; 
-            padding: 10px 16px; 
-            border-radius: 6px; 
-            cursor: pointer; 
-            font-size: 14px; 
-            font-weight: 500;
-        }
-        .mapel-btn:hover { background: #2b6cb0; }
+        .mapel-btn { background: #3182ce; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; }
         
         .hidden { display: none; }
         
-        .soal-item { 
-            background: #ffffff; 
-            border: 1px solid #e2e8f0; 
-            padding: 16px; 
-            margin-bottom: 16px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
+        /* INDIKATOR SOAL & TIMER */
+        .timer-box { background: #feebc8; border: 1px solid #fbd38d; color: #9b2c2c; padding: 10px 15px; border-radius: 8px; font-weight: 700; text-align: center; margin-bottom: 15px; font-size: 16px; }
+        .nav-soal-box { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; background: #edf2f7; padding: 12px; border-radius: 8px; }
+        .nav-num { width: 35px; height: 35px; border-radius: 6px; background: #e2e8f0; color: #4a5568; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; border: 1px solid #cbd5e0; }
+        .nav-num.answered { background: #48bb78; color: white; border-color: #38a169; }
+
+        .soal-item { background: #ffffff; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 16px; border-radius: 8px; }
         .soal-item p { margin: 0 0 12px 0; font-weight: 600; color: #2d3748; font-size: 15px; line-height: 1.5; }
-        .option-label { 
-            display: flex; 
-            align-items: center; 
-            margin: 8px 0; 
-            cursor: pointer; 
-            padding: 8px 12px; 
-            border-radius: 6px; 
-            border: 1px solid #edf2f7; 
-            transition: background 0.2s;
-            font-size: 14px;
-        }
+        .option-label { display: flex; align-items: center; margin: 8px 0; cursor: pointer; padding: 8px 12px; border-radius: 6px; border: 1px solid #edf2f7; transition: background 0.2s; font-size: 14px; }
         .option-label:hover { background: #ebf8ff; border-color: #bee3f8; }
         .option-label input { margin-right: 10px; }
     </style>
@@ -198,6 +175,7 @@
 
     <!-- LANGKAH 2: DAFTAR MATA PELAJARAN -->
     <div id="step-mapel" class="hidden">
+        <button class="btn btn-back" onclick="kembaliKeLogin()">← Keluar / Ganti Identitas</button>
         <div class="card">
             <p style="margin:0 0 5px 0; color:#4a5568;"><strong>Siswa:</strong> <span id="dispNama"></span></p>
             <p style="margin:0; color:#4a5568;"><strong>Jadwal:</strong> <span id="dispSem"></span> (<span id="dispHari"></span>)</p>
@@ -208,12 +186,22 @@
 
     <!-- LANGKAH 3: LEMBAR SOAL UJIAN -->
     <div id="step-soal" class="hidden">
+        <button class="btn btn-back" onclick="kembaliKeMapel()">← Kembali ke Daftar Mapel</button>
+        
+        <div class="timer-box">
+            ⏱️ Sisa Waktu Ujian: <span id="timerDisplay">60:00</span>
+        </div>
+
         <div class="card" style="border-left: 4px solid #3182ce;">
             <h3 id="judulMapel" style="margin:0; color:#1a365d; font-size:16px;"></h3>
         </div>
+
+        <p style="font-size:13px; font-weight:600; color:#4a5568; margin-bottom:5px;">Status Lembar Jawab (Abu-abu: Belum / Hijau: Sudah):</p>
+        <div id="navSoalContainer" class="nav-soal-box"></div>
+
         <form id="formSoal">
             <div id="soalContainer"></div>
-            <button type="button" class="btn btn-submit" onclick="hitungDanKirimNilai()">Selesai & Kirim Jawaban 📤</button>
+            <button type="button" class="btn btn-submit" onclick="hitungDanKirimNilai(false)">Selesai & Kirim Jawaban 📤</button>
         </form>
     </div>
 </div>
@@ -268,6 +256,7 @@
     let currentHari = "";
     let currentMapel = "";
     let currentDataSoal = [];
+    let timerInterval = null;
 
     function cekLinkMateri() {
         const sem = document.getElementById("pilihSemester").value;
@@ -336,6 +325,19 @@
         document.getElementById("step-mapel").classList.remove("hidden");
     }
 
+    function kembaliKeLogin() {
+        document.getElementById("step-mapel").classList.add("hidden");
+        document.getElementById("step-login").classList.remove("hidden");
+    }
+
+    function kembaliKeMapel() {
+        if (confirm("Apakah Anda yakin ingin keluar dari lembar soal? Kemajuan Anda pada soal ini belum tersimpan.")) {
+            clearInterval(timerInterval);
+            document.getElementById("step-soal").classList.add("hidden");
+            document.getElementById("step-mapel").classList.remove("hidden");
+        }
+    }
+
     function muatSoal(mapel, jsonLink) {
         currentMapel = mapel;
         document.getElementById("judulMapel").innerText = "Mata Pelajaran: " + mapel;
@@ -348,6 +350,7 @@
             .then(data => {
                 currentDataSoal = data;
                 tampilkanLembarSoal(data);
+                mulaiTimer(60); // Pengaturan durasi waktu ujian (60 Menit)
                 document.getElementById("step-mapel").classList.add("hidden");
                 document.getElementById("step-soal").classList.remove("hidden");
             })
@@ -357,15 +360,45 @@
             });
     }
 
+    function mulaiTimer(durasiMenit) {
+        clearInterval(timerInterval);
+        let sisaDetik = durasiMenit * 60;
+        const display = document.getElementById("timerDisplay");
+
+        timerInterval = setInterval(() => {
+            let m = Math.floor(sisaDetik / 60);
+            let s = sisaDetik % 60;
+
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            display.innerText = `${m}:${s}`;
+
+            if (--sisaDetik < 0) {
+                clearInterval(timerInterval);
+                alert("Waktu pengerjaan telah habis! Jawaban Anda akan otomatis dikirim.");
+                hitungDanKirimNilai(true); // Kirim otomatis saat waktu habis
+            }
+        }, 1000);
+    }
+
     function tampilkanLembarSoal(soalArray) {
         const container = document.getElementById("soalContainer");
+        const navContainer = document.getElementById("navSoalContainer");
         container.innerHTML = "";
+        navContainer.innerHTML = "";
 
         soalArray.forEach((q, idx) => {
+            // Buat kotak indikator nomor soal
+            const navNum = document.createElement("div");
+            navNum.className = "nav-num";
+            navNum.id = `nav_num_${idx}`;
+            navNum.innerText = idx + 1;
+            navContainer.appendChild(navNum);
+
             const div = document.createElement("div");
             div.className = "soal-item";
 
-            // Mengambil teks soal dan membersihkan angka di awal jika ada
             let teksSoal = q.soal || q.pertanyaan || "";
             teksSoal = teksSoal.replace(/^\d+[\.\)]\s*/, '');
 
@@ -374,7 +407,7 @@
                 q.pilihan.forEach((pil, pIdx) => {
                     pilihanHTML += `
                         <label class="option-label">
-                            <input type="radio" name="soal_${idx}" value="${pil}"> ${pil}
+                            <input type="radio" name="soal_${idx}" value="${pil}" onchange="updateIndikatorSoal(${idx})"> ${pil}
                         </label>
                     `;
                 });
@@ -385,7 +418,22 @@
         });
     }
 
-    function hitungDanKirimNilai() {
+    function updateIndikatorSoal(indexSoal) {
+        const navNum = document.getElementById(`nav_num_${indexSoal}`);
+        if (navNum) {
+            navNum.classList.add("answered");
+        }
+    }
+
+    function hitungDanKirimNilai(isAutoSubmit = false) {
+        if (!isAutoSubmit) {
+            if (!confirm(`Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ujian ${currentMapel}?`)) {
+                return;
+            }
+        }
+
+        clearInterval(timerInterval);
+
         let skor = 0;
         const totalSoal = currentDataSoal.length;
 
@@ -408,10 +456,6 @@
         });
 
         const nilaiFinal = Math.round((skor / totalSoal) * 100);
-
-        if (!confirm(`Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ujian ${currentMapel}?`)) {
-            return;
-        }
 
         const payload = {
             nama: currentSiswa,
