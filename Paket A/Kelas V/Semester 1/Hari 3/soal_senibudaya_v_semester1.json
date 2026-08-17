@@ -1,0 +1,327 @@
+[
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 1,
+    "soal": "Gambar atau seni yang mengandung sebuah cerita disebut dengan …",
+    "gambar": null,
+    "pilihan": [
+      "A. gambar cerita",
+      "B. gambar ilustrasi",
+      "C. gambar realistik",
+      "D. gambar kartun"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 2,
+    "soal": "Di bawah ini yang bukan termasuk media yang digunakan untuk menggambar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. kertas",
+      "B. kanvas",
+      "C. kain",
+      "D. cat"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 3,
+    "soal": "Urutan langkah-langkah membuat gambar ilustrasi yang tepat adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. menentukan gagasan, membuat sketsa, pewarnaan",
+      "B. pewarnaan, menentukan gagasan, membuat sketsa",
+      "C. membuat sketsa, pewarnaan, menentukan gagasan",
+      "D. menentukan gagasan, pewarnaan, membuat sketsa"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 4,
+    "soal": "Berikut ini yang bukan termasuk pewarna gambar teknik kering adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. pensil",
+      "B. krayon",
+      "C. cat air",
+      "D. oil pastel"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 5,
+    "soal": "Gambar-gambar atau coretan dapat ditemukan dalam karya …",
+    "gambar": null,
+    "pilihan": [
+      "A. puisi",
+      "B. komik",
+      "C. pantun",
+      "D. novel"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 6,
+    "soal": "Seni yang menggambarkan objek berupa pemandangan alam, tumbuhan, binatang, dan manusia untuk menimbulkan perasaan keindahan disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. seni lukis",
+      "B. seni patung",
+      "C. seni kriya",
+      "D. seni tari"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 7,
+    "soal": "Seni membuat bentuk manusia atau binatang dengan bahan yang lunak atau bahan keras disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. seni lukis",
+      "B. seni rupa",
+      "C. seni patung",
+      "D. seni kriya"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 8,
+    "soal": "Seni patung dapat dibuat dengan menggunakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. bahan lunak",
+      "B. bahan keras",
+      "C. bahan buatan",
+      "D. semua benar"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 9,
+    "soal": "Seni kerajinan dalam membuat benda-benda hias berdasarkan keindahan dan kegunaannya disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. seni desain",
+      "B. seni patung",
+      "C. seni kriya",
+      "D. seni tari"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 10,
+    "soal": "Seni lukis khas Indonesia berasal dari daerah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Bengkulu",
+      "B. Bali",
+      "C. Yogyakarta",
+      "D. Sumatra Barat"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 11,
+    "soal": "Tangga nada mayor memiliki ciri lagu yang …",
+    "gambar": null,
+    "pilihan": [
+      "A. sedih",
+      "B. lambat",
+      "C. riang dan bersemangat",
+      "D. sendu"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 12,
+    "soal": "Tangga nada minor memiliki ciri lagu yang …",
+    "gambar": null,
+    "pilihan": [
+      "A. gembira",
+      "B. riang",
+      "C. sedih",
+      "D. bersemangat"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 13,
+    "soal": "Contoh lagu yang menggunakan tangga nada mayor adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Hari Merdeka",
+      "B. Gugur Bunga",
+      "C. Syukur",
+      "D. Mengheningkan Cipta"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 14,
+    "soal": "Lagu “Gugur Bunga” termasuk tangga nada …",
+    "gambar": null,
+    "pilihan": [
+      "A. mayor",
+      "B. minor",
+      "C. kromatis",
+      "D. pentatonik"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 15,
+    "soal": "Lagu wajib nasional bertujuan untuk menumbuhkan …",
+    "gambar": null,
+    "pilihan": [
+      "A. kesedihan",
+      "B. semangat perjuangan",
+      "C. rasa takut",
+      "D. kemalasan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 16,
+    "soal": "Lagu “Rayuan Pulau Kelapa” memiliki tempo …",
+    "gambar": null,
+    "pilihan": [
+      "A. cepat",
+      "B. sedang",
+      "C. lambat",
+      "D. sangat cepat"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 17,
+    "soal": "Pola interval dalam tangga nada mayor adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 1–1–½–1–1–1–½",
+      "B. 1–½–1–1–½–1–1",
+      "C. ½–1–1–½–1–1–1",
+      "D. 1–1–1–½–1–1–½"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 18,
+    "soal": "Tangga nada diatonis terdiri atas …",
+    "gambar": null,
+    "pilihan": [
+      "A. 5 nada",
+      "B. 6 nada",
+      "C. 7 nada",
+      "D. 8 nada"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 19,
+    "soal": "Lagu wajib nasional dinyanyikan untuk menumbuhkan rasa …",
+    "gambar": null,
+    "pilihan": [
+      "A. sedih",
+      "B. cinta tanah air",
+      "C. takut",
+      "D. malas"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 20,
+    "soal": "Perbedaan tangga nada mayor dan minor terletak pada …",
+    "gambar": null,
+    "pilihan": [
+      "A. lirik lagu",
+      "B. tempo lagu",
+      "C. interval dan suasana lagu",
+      "D. pencipta lagu"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 21,
+    "soal": "Tangga nada pentatonik terdiri atas …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4 nada",
+      "B. 5 nada",
+      "C. 6 nada",
+      "D. 7 nada"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 22,
+    "soal": "Contoh lagu daerah yang menggunakan tangga nada pentatonik adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Indonesia Raya",
+      "B. Gugur Bunga",
+      "C. Ampar-Ampar Pisang",
+      "D. Syukur"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 23,
+    "soal": "Alat musik yang dimainkan dengan cara dipetik adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. seruling",
+      "B. gitar",
+      "C. drum",
+      "D. piano"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 24,
+    "soal": "Tempo lagu yang dinyanyikan dengan cepat disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. largo",
+      "B. moderato",
+      "C. andante",
+      "D. allegro"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 25,
+    "soal": "Dinamika dalam lagu berfungsi untuk menunjukkan …",
+    "gambar": null,
+    "pilihan": [
+      "A. tinggi rendah nada",
+      "B. cepat lambat lagu",
+      "C. keras lembut bunyi",
+      "D. panjang pendek nada"
+    ],
+    "jawaban_benar": "C"
+  }
+]

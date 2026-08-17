@@ -1,0 +1,327 @@
+[
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 1,
+    "soal": "The tote bag is 7,500 rupiah and the comic book is 4,000 rupiah. The tote bag is ______ than the comic book.",
+    "gambar": null,
+    "pilihan": [
+      "a.\tcheaper",
+      "b. smaller",
+      "c. more expensive",
+      "d. thinner"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 2,
+    "soal": "The comic book costs 4,000 rupiah. The comic book is ______.",
+    "gambar": null,
+    "pilihan": [
+      "a.\texpensive",
+      "b. cheap",
+      "c. bigger",
+      "d. thicker"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 3,
+    "soal": "The doll costs 10,000 rupiah. It is the ______ item.",
+    "gambar": null,
+    "pilihan": [
+      "a.\tcheapest",
+      "b. smallest",
+      "c. most expensive",
+      "d. thinnest"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 4,
+    "soal": "The bracelet costs 3,000 rupiah and the tote bag costs 7,500 rupiah. The bracelet is ______ than the tote bag.",
+    "gambar": null,
+    "pilihan": [
+      "a.\tcheaper",
+      "b. more expensive",
+      "c. bigger",
+      "d. thicker"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 5,
+    "soal": "If you have 5,000 rupiah, you can buy ______.",
+    "gambar": null,
+    "pilihan": [
+      "a.\ta doll",
+      "b. a tote bag",
+      "c. a pencil case",
+      "d. a comic book and bracelet"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 6,
+    "soal": "If you have 8,000 rupiah, what can you buy?",
+    "gambar": null,
+    "pilihan": [
+      "a.\ta doll",
+      "b. a comic book and a bracelet",
+      "c. a tote bag",
+      "d. a pencil case and a doll"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 7,
+    "soal": "The correct question to ask about price is …",
+    "gambar": null,
+    "pilihan": [
+      "a.\tWhat is this?",
+      "b. Where is it?",
+      "c. How much is it?",
+      "d. Who is it?"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 8,
+    "soal": "If the pencil is 5,000 rupiah and the eraser is 1,500 rupiah, how much are they?",
+    "gambar": null,
+    "pilihan": [
+      "a.\t5,500 rupiah",
+      "b. 6,000 rupiah",
+      "c. 6,500 rupiah",
+      "d. 7,000 rupiah"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 9,
+    "soal": "Where are Bara, Pipit, Mita, and Ferdinand?",
+    "gambar": null,
+    "pilihan": [
+      "a. At the canteen",
+      "b. At the school yard",
+      "c. At the library",
+      "d. At the classroom"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 10,
+    "soal": "What should you say to borrow a book politely?",
+    "gambar": null,
+    "pilihan": [
+      "a. Give me that book.",
+      "b. I want that book.",
+      "c. Can I borrow your book?",
+      "d. Take this book."
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 11,
+    "soal": "Which one is NOT allowed in the library?",
+    "gambar": null,
+    "pilihan": [
+      "a. Reading books",
+      "b. Eating food",
+      "c. Borrowing books",
+      "d. Studying"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 12,
+    "soal": "What does “Be quiet” mean?",
+    "gambar": null,
+    "pilihan": [
+      "a. No reading",
+      "b. No running",
+      "c. Do not make noise",
+      "d. Do not borrow books"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 13,
+    "soal": "Pipit borrowed the book titled ______.",
+    "gambar": null,
+    "pilihan": [
+      "a. Dinosaur Adventure",
+      "b. Beauty and the Beast",
+      "c. The Culture of India",
+      "d. How to Play Chess"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 14,
+    "soal": "Mita gave five stars to the book ______.",
+    "gambar": null,
+    "pilihan": [
+      "a. Dinosaur Adventure",
+      "b. Beauty and the Beast",
+      "c. How to Play Chess",
+      "d. The Culture of India"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 15,
+    "soal": "Why did Pipit give four stars to her book?",
+    "gambar": null,
+    "pilihan": [
+      "a. It was boring",
+      "b. It had too many pictures",
+      "c. It needed more pictures",
+      "d. It was too short"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 16,
+    "soal": "Ferdinand did not like his book because ______.",
+    "gambar": null,
+    "pilihan": [
+      "a. it was funny",
+      "b. he did not understand it",
+      "c. it had many pictures",
+      "d. it was about dinosaurs"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 17,
+    "soal": "What did the mouse deer see across the river?",
+    "gambar": null,
+    "pilihan": [
+      "a. Many crocodiles",
+      "b. A lot of fruit",
+      "c. Other animals",
+      "d. A big tree"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 18,
+    "soal": "Why did the mouse deer call the crocodiles?",
+    "gambar": null,
+    "pilihan": [
+      "a. To play with them",
+      "b. To count them",
+      "c. To fight them",
+      "d. To feed them"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 19,
+    "soal": "How did the mouse deer cross the river?",
+    "gambar": null,
+    "pilihan": [
+      "a. He swam across the river",
+      "b. He built a bridge",
+      "c. He jumped onto the crocodiles’ backs",
+      "d. He used a boat"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 20,
+    "soal": "What did the mouse deer promise the crocodiles?",
+    "gambar": null,
+    "pilihan": [
+      "a. To share himself equally",
+      "b. To bring them fruit",
+      "c. To swim with them",
+      "d. To give them fish"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 21,
+    "soal": "After reaching the other side, the mouse deer ______.",
+    "gambar": null,
+    "pilihan": [
+      "a. went home",
+      "b. ran quickly to the fruit",
+      "c. called the crocodiles again",
+      "d. slept under a tree"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 22,
+    "soal": "Who was Tomi in the story The Boy Who Cried Wolf?",
+    "gambar": null,
+    "pilihan": [
+      "a. A farmer",
+      "b. A villager",
+      "c. A shepherd boy",
+      "d. A hunter"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 23,
+    "soal": "Why did Tomi shout “Wolves! Wolves!” the first time?",
+    "gambar": null,
+    "pilihan": [
+      "a. Because he saw wolves",
+      "b. Because he was scared",
+      "c. Because he wanted help",
+      "d. Because he wanted to play a prank"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 24,
+    "soal": "How did the villagers feel when they did not find any wolf?",
+    "gambar": null,
+    "pilihan": [
+      "a. Happy",
+      "b. Angry",
+      "c. Disappointed",
+      "d. Excited"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Bahasa Inggris",
+    "nomor": 25,
+    "soal": "The second time Tomi shouted, the villagers ______.",
+    "gambar": null,
+    "pilihan": [
+      "a. did not come",
+      "b. ran to help him",
+      "c. laughed at him",
+      "d. called the police"
+    ],
+    "jawaban_benar": "B"
+  }
+]

@@ -1,0 +1,327 @@
+[
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 1,
+    "soal": "Apakah properti memiliki peran yang penting dalam sebuah tarian daerah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Tidak",
+      "B. Iya",
+      "C. Mungkin",
+      "D. Bisa jadi"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 2,
+    "soal": "Fungsi properti dalam tarian di bawah ini, kecuali …",
+    "gambar": null,
+    "pilihan": [
+      "A. Memberi unsur estetika",
+      "B. Memberi unsur keindahan",
+      "C. Memperdalam makna tarian",
+      "D. Memberi nama tarian"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 3,
+    "soal": "Properti apa yang digunakan dalam tari Tabot adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Piring",
+      "B. Tongkat",
+      "C. Sampur",
+      "D. Binggel"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 4,
+    "soal": "Properti apa yang digunakan dalam tari Andun adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Sanggul",
+      "B. Tongkat",
+      "C. Kendi",
+      "D. Baju pengantin"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 5,
+    "soal": "Tari Serumpun Sebalai dari Bengkulu mempunyai lantai berbentuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. Vertikal",
+      "B. Segi empat",
+      "C. Berbentuk V",
+      "D. Garis melengkung ke depan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 6,
+    "soal": "Bentuk atau formasi tertentu yang dibuat penari dalam sebuah tari dinamakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Pola gerak",
+      "B. Pola irama",
+      "C. Pola ruang",
+      "D. Pola lantai"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 7,
+    "soal": "Dapat mengatur tempo gerak sebagai pengiring, memberi suasana, dan sebagai sarana untuk mempertegas ekspresi gerak merupakan fungsi dari …",
+    "gambar": null,
+    "pilihan": [
+      "A. Musik",
+      "B. Pola lantai",
+      "C. Gerak tari",
+      "D. Iringan"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 8,
+    "soal": "Menurut jenisnya, tari dibedakan menjadi …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 9,
+    "soal": "Tari yang dilakukan oleh satu orang dinamakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Tunggal",
+      "B. Pasangan",
+      "C. Kelompok",
+      "D. Bersama"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 10,
+    "soal": "Secara umum, ada dua macam garis dalam pola lantai yaitu …",
+    "gambar": null,
+    "pilihan": [
+      "A. garis lurus dan garis lengkung",
+      "B. garis lurus dan garis diagonal",
+      "C. garis lurus dan garis melingkar",
+      "D. garis lengkung dan garis horizontal"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 11,
+    "soal": "Yang dimaksud dengan properti tari adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. pakaian yang digunakan penari",
+      "B. alat pendukung yang digunakan penari untuk memperkuat makna tari",
+      "C. musik pengiring tarian",
+      "D. tempat pementasan tari"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 12,
+    "soal": "Pola lantai dalam tarian berfungsi untuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. menentukan irama lagu",
+      "B. memperindah dan mengatur posisi penari",
+      "C. menentukan jenis tari",
+      "D. mengganti properti tari"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 13,
+    "soal": "Tari yang dibawakan oleh dua orang penari disebut tari …",
+    "gambar": null,
+    "pilihan": [
+      "A. tunggal",
+      "B. massal",
+      "C. pasangan",
+      "D. kelompok"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 14,
+    "soal": "Garis yang membentuk setengah lingkaran atau melingkar pada pola lantai disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. garis lurus",
+      "B. garis diagonal",
+      "C. garis horizontal",
+      "D. garis lengkung"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 15,
+    "soal": "Contoh fungsi musik dalam tarian adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. mengganti gerakan tari",
+      "B. menentukan jumlah penari",
+      "C. mengiringi dan memberi suasana tari",
+      "D. menentukan kostum tari"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 16,
+    "soal": "Properti tari adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. pakaian yang dikenakan penari",
+      "B. alat atau benda yang digunakan untuk mendukung tarian",
+      "C. gerakan kaki dan tangan penari",
+      "D. iringan musik tari"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 17,
+    "soal": "Contoh properti yang sering digunakan dalam tari daerah adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. sepatu olahraga",
+      "B. buku tulis",
+      "C. kipas",
+      "D. tas sekolah"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 18,
+    "soal": "Pola lantai dalam tari berfungsi untuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. menentukan warna kostum",
+      "B. mengatur formasi dan perpindahan penari",
+      "C. menentukan jenis musik",
+      "D. menentukan jenis tarian"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 19,
+    "soal": "Pola lantai garis lurus biasanya memberi kesan …",
+    "gambar": null,
+    "pilihan": [
+      "A. lembut dan santai",
+      "B. sederhana dan kuat",
+      "C. riang dan gembira",
+      "D. bebas dan tidak teratur"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 20,
+    "soal": "Pola lantai melingkar biasanya memberi kesan …",
+    "gambar": null,
+    "pilihan": [
+      "A. kaku dan tegas",
+      "B. kuat dan kokoh",
+      "C. lembut dan dinamis",
+      "D. membosankan"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 21,
+    "soal": "Tari daerah yang berasal dari Bengkulu adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Tari Piring",
+      "B. Tari Saman",
+      "C. Tari Tabot",
+      "D. Tari Jaipong"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 22,
+    "soal": "Tari yang dilakukan oleh satu orang penari disebut tari …",
+    "gambar": null,
+    "pilihan": [
+      "A. berpasangan",
+      "B. kelompok",
+      "C. massal",
+      "D. tunggal"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 23,
+    "soal": "Unsur utama dalam tari yang berkaitan dengan gerakan tubuh penari disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. irama",
+      "B. wiraga",
+      "C. properti",
+      "D. kostum"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 24,
+    "soal": "Unsur tari yang berkaitan dengan ekspresi dan perasaan penari disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. wirama",
+      "B. wiraga",
+      "C. wirasa",
+      "D. properti"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Seni Budaya",
+    "nomor": 25,
+    "soal": "Musik pengiring tari berfungsi untuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. menghias panggung",
+      "B. menentukan kostum penari",
+      "C. mengatur tempo dan suasana tarian",
+      "D. menentukan jumlah penari"
+    ],
+    "jawaban_benar": "C"
+  }
+]

@@ -1,0 +1,327 @@
+[
+  {
+    "sumber_file": "Matematika",
+    "nomor": 1,
+    "soal": "Di bazar, Ani membeli kg kue dan kg kue lagi. Jumlah kue yang dibeli Ani adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. kg ",
+      "B. kg ",
+      "C.kg ",
+      "D. 1 kg"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 2,
+    "soal": "Seorang pedagang membawa  kg gula. Ia menjual  kg. Sisa gula pedagang tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. kg",
+      "B. kg",
+      "C.  kg",
+      "D. 1 kg"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 3,
+    "soal": "Harga 1 bungkus roti adalah Rp2.500,00. Jika membeli 4 bungkus, maka uang yang harus dibayar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Rp7.500,00",
+      "B. Rp9.000,00",
+      "C. Rp10.000,00",
+      "D. Rp12.500,00"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 4,
+    "soal": "Ibu membeli kg tepung dan  kg tepung lagi. Jumlah tepung yang dibeli ibu adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. kg",
+      "B.   kg",
+      "C. 1  kg",
+      "D. kg"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 5,
+    "soal": "Di bazar, 1 gelas jus jeruk dijual Rp3.000,00. Jika Andi membeli 3 gelas, maka ia harus membayar …",
+    "gambar": null,
+    "pilihan": [
+      "A. Rp6.000,00",
+      "B. Rp7.500,00",
+      "C. Rp8.000,00",
+      "D. Rp9.000,00"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 6,
+    "soal": "Pecahan   jika diubah ke bentuk desimal adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 0,25",
+      "B. 0,4",
+      "C. 0,5",
+      "D. 0,75"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 7,
+    "soal": "Seorang pedagang memiliki 2 kg beras. Beras tersebut dibagi sama rata ke dalam 4 kantong. Berat tiap kantong adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. kg",
+      "B. kg",
+      "C. 1 kg",
+      "D. 2 kg"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 8,
+    "soal": "Rina membeli  kg apel. Jika harga 1 kg apel Rp10.000,00, maka harga apel yang dibeli Rina adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Rp5.000,00",
+      "B. Rp6.000,00",
+      "C. Rp7.000,00",
+      "D. Rp8.000,00"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 9,
+    "soal": "Kemasan cokelat berbentuk kubus memiliki ciri utama …",
+    "gambar": null,
+    "pilihan": [
+      "A. Semua rusuknya berbeda panjang",
+      "B. Memiliki 6 sisi berbentuk persegi",
+      "C. Memiliki 8 sisi berbentuk persegi panjang",
+      "D. Memiliki 12 sisi berbentuk segitiga"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 10,
+    "soal": "Bangun ruang yang memiliki panjang, lebar, dan tinggi yang berbeda disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kubus",
+      "B. Prisma",
+      "C. Balok",
+      "D. Tabung"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 11,
+    "soal": "Jumlah rusuk pada bangun ruang kubus adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 6",
+      "B. 8",
+      "C. 10",
+      "D. 12"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 12,
+    "soal": "Sebuah kemasan berbentuk kubus mempunyai panjang rusuk 5 cm. Volume kemasan tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 25 cm³",
+      "B. 75 cm³",
+      "C. 100 cm³",
+      "D. 125 cm³"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 13,
+    "soal": "Rumus volume kubus adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. p × l × t",
+      "B. s × s",
+      "C. s × s × s",
+      "D. 2 × (p + l)"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 14,
+    "soal": "Sebuah kemasan berbentuk balok memiliki panjang 10 cm, lebar 5 cm, dan tinggi 4 cm. Volume balok tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 200 cm³",
+      "B. 180 cm³",
+      "C. 150 cm³",
+      "D. 120 cm³"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 15,
+    "soal": "Jaring-jaring kubus terdiri dari …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4 persegi",
+      "B. 5 persegi",
+      "C. 6 persegi",
+      "D. 8 persegi"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 16,
+    "soal": "Kemasan sabun berbentuk balok. Jumlah sisi pada balok adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4",
+      "B. 6",
+      "C. 8",
+      "D. 12"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 17,
+    "soal": "Kecepatan adalah perbandingan antara …",
+    "gambar": null,
+    "pilihan": [
+      "A. jarak dan massa",
+      "B. waktu dan massa",
+      "C. jarak dan waktu",
+      "D. volume dan waktu"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 18,
+    "soal": "Rumus kecepatan yang benar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kecepatan = waktu × jarak",
+      "B. Kecepatan = jarak ÷ waktu",
+      "C. Kecepatan = waktu ÷ jarak",
+      "D. Kecepatan = jarak + waktu"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 19,
+    "soal": "Sebuah sepeda menempuh jarak 20 km dalam waktu 2 jam. Kecepatan sepeda tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 5 km/jam",
+      "B. 10 km/jam",
+      "C. 15 km/jam",
+      "D. 40 km/jam"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 20,
+    "soal": "Mobil melaju dengan kecepatan 60 km/jam selama 3 jam. Jarak yang ditempuh mobil adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 120 km",
+      "B. 150 km",
+      "C. 180 km",
+      "D. 200 km"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 21,
+    "soal": "Andi berjalan sejauh 900 m dalam waktu 15 menit. Kecepatan Andi adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 40 m/menit",
+      "B. 50 m/menit",
+      "C. 60 m/menit",
+      "D. 90 m/menit"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 22,
+    "soal": "Jika jarak suatu perjalanan 120 km dan kecepatannya 40 km/jam, maka waktu yang diperlukan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2 jam",
+      "B. 3 jam",
+      "C. 4 jam",
+      "D. 5 jam"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 23,
+    "soal": "Satuan yang tepat untuk menyatakan kecepatan kendaraan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. km",
+      "B. jam",
+      "C. km/jam",
+      "D. liter/jam"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 24,
+    "soal": "Seorang pelari menempuh jarak 400 m dalam waktu 80 detik. Kecepatan pelari tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4 m/detik",
+      "B. 5 m/detik",
+      "C. 6 m/detik",
+      "D. 8 m/detik"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 25,
+    "soal": "Jika kecepatan tetap dan jarak diperbesar, maka waktu tempuh akan …",
+    "gambar": null,
+    "pilihan": [
+      "A. tetap",
+      "B. berkurang",
+      "C. bertambah",
+      "D. hilang"
+    ],
+    "jawaban_benar": "C"
+  }
+]

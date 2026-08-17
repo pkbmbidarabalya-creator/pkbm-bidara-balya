@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "PAI",
+    "soal": "1. Q.S. Al-A‘la merupakan surah ke-… dalam Al-Qur’an.",
+    "gambar": null,
+    "pilihan": [
+      "A. 86",
+      "B. 87",
+      "C. 88",
+      "D. 89"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "2. Q.S. Al-A‘la termasuk surah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Madaniyah",
+      "B. Makkiyah",
+      "C. Panjang",
+      "D. Kisah"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "3. Jumlah ayat dalam Q.S. Al-A‘la adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 17 ayat",
+      "B. 18 ayat",
+      "C. 19 ayat",
+      "D. 20 ayat"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "4. Arti dari Al-A‘la adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Maha Pengasih",
+      "B. Maha Bijaksana",
+      "C. Maha Tinggi",
+      "D. Maha Kuasa"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "5. Perintah pada ayat pertama Q.S. Al-A‘la adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Berdoa",
+      "B. Bersyukur",
+      "C. Bertasbih kepada Allah",
+      "D. Berpuasa"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "6. Beriman kepada qaḍa dan qadar berarti percaya bahwa …",
+    "gambar": null,
+    "pilihan": [
+      "A. Semua peristiwa terjadi secara kebetulan",
+      "B. Segala sesuatu ditentukan Allah Swt.",
+      "C. Manusia tidak perlu berusaha",
+      "D. Hidup berjalan tanpa aturan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "7. Qaḍa menurut istilah berarti …",
+    "gambar": null,
+    "pilihan": [
+      "A. Ketentuan Allah sejak azali",
+      "B. Peristiwa yang sedang terjadi",
+      "C. Usaha manusia",
+      "D. Takdir yang dapat diubah"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "8. Qadar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Ketetapan Allah yang terjadi di akhirat",
+      "B. Pelaksanaan ketentuan Allah pada waktu tertentu",
+      "C. Keputusan manusia",
+      "D. Hukum adat"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "9. Contoh takdir mubram adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kepandaian belajar",
+      "B. Kesehatan tubuh",
+      "C. Jenis kelamin",
+      "D. Keberhasilan ujian"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "10. Contoh takdir mu‘allaq adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kelahiran",
+      "B. Kematian",
+      "C. Rezeki",
+      "D. Warna kulit"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "11. Lingkungan adalah segala sesuatu yang berada di sekitar …",
+    "gambar": null,
+    "pilihan": [
+      "A. Hewan saja",
+      "B. Tumbuhan saja",
+      "C. Manusia dan makhluk hidup lainnya",
+      "D. Bangunan saja"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "12. Lingkungan alam terdiri atas …",
+    "gambar": null,
+    "pilihan": [
+      "A. Jalan dan gedung",
+      "B. Sungai, tanah, udara, dan tumbuhan",
+      "C. Rumah dan pasar",
+      "D. Sekolah dan kantor"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "13. Menjaga kebersihan lingkungan merupakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Pilihan pribadi",
+      "B. Kewajiban pemerintah",
+      "C. Tanggung jawab bersama",
+      "D. Tugas petugas kebersihan saja"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "14. Manfaat lingkungan yang bersih dan sehat adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Mudah terkena penyakit",
+      "B. Tidak nyaman",
+      "C. Hidup menjadi sehat dan nyaman",
+      "D. Menimbulkan banjir"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "15. Salah satu manfaat peduli terhadap lingkungan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Lingkungan menjadi rusak",
+      "B. Terjadi pencemaran",
+      "C. Kelestarian alam terjaga",
+      "D. Sumber daya cepat habis"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "16. Puasa sunah adalah puasa yang …",
+    "gambar": null,
+    "pilihan": [
+      "A. Wajib dilakukan oleh setiap muslim",
+      "B. Dianjurkan dan berpahala jika dikerjakan",
+      "C. Haram dilakukan",
+      "D. Makruh dilakukan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "17. Hukum melaksanakan puasa sunah adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Wajib",
+      "B. Sunah",
+      "C. Makruh",
+      "D. Haram"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "18. Puasa sunah bertujuan untuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. Menyiksa diri",
+      "B. Mendekatkan diri kepada Allah Swt.",
+      "C. Mengurangi waktu makan",
+      "D. Menurunkan berat badan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "19. Puasa sunah yang dilakukan setiap hari Senin dan Kamis disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Puasa Daud",
+      "B. Puasa Ayyamul Bidh",
+      "C. Puasa Senin dan Kamis",
+      "D. Puasa Asyura"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "20. Puasa sunah Ayyamul Bidh dilaksanakan pada tanggal …",
+    "gambar": null,
+    "pilihan": [
+      "A. 1, 2, dan 3",
+      "B. 10 Muharram",
+      "C. 13, 14, dan 15",
+      "D. 27 Rajab"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "21. Khalifah ketiga dalam Islam adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Abu Bakar al-Ṣiddiq",
+      "B. Umar bin Khattab",
+      "C. Uṡman bin Affan",
+      "D. Ali bin Abi Ṭalib"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "22. Uṡman bin Affan mendapat julukan Żunnurain yang berarti …",
+    "gambar": null,
+    "pilihan": [
+      "A. Pemilik dua pedang",
+      "B. Pemilik dua cahaya",
+      "C. Pemilik dua kerajaan",
+      "D. Pemilik dua kehormatan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "23. Julukan Żunnurain diberikan kepada Uṡman bin Affan karena …",
+    "gambar": null,
+    "pilihan": [
+      "A. Keberaniannya dalam perang",
+      "B. Menikahi dua putri Rasulullah saw.",
+      "C. Kepandaiannya berdagang",
+      "D. Kedermawanannya"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "24. Salah satu jasa terbesar Uṡman bin Affan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Menyusun kalender Hijriah",
+      "B. Membukukan Al-Qur’an dalam satu mushaf",
+      "C. Memindahkan ibu kota",
+      "D. Menyusun baitul mal"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "PAI",
+    "soal": "25. Mushaf Al-Qur’an yang disusun pada masa Uṡman bin Affan dikenal dengan nama …",
+    "gambar": null,
+    "pilihan": [
+      "A. Mushaf Ali",
+      "B. Mushaf Madinah",
+      "C. Mushaf Uṡmani",
+      "D. Mushaf Hijaz"
+    ],
+    "jawaban_benar": "C"
+  }
+]

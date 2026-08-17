@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "Matematika",
+    "soal": "1. Lingkaran mempunyai … titik pusat.",
+    "gambar": null,
+    "pilihan": [
+      "A. dua",
+      "B. tiga",
+      "C. satu",
+      "D. tidak ada"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "2. Jarak dari titik pusat ke tepi lingkaran disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. diameter",
+      "B. jari-jari",
+      "C. busur",
+      "D. tali busur"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "3. Garis yang menghubungkan dua titik pada lingkaran dan melalui titik pusat disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. jari-jari",
+      "B. busur",
+      "C. diameter",
+      "D. tali busur"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "4. Panjang diameter suatu lingkaran adalah … kali panjang jari-jari.",
+    "gambar": null,
+    "pilihan": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "5. Bagian lingkaran yang berupa garis lengkung pada tepi lingkaran disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. busur",
+      "B. juring",
+      "C. tembereng",
+      "D. apotema"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "6. Daerah lingkaran yang dibatasi oleh dua jari-jari dan satu busur disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. tembereng",
+      "B. juring",
+      "C. tali busur",
+      "D. diameter"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "7. Garis yang menghubungkan titik pusat dengan tali busur dan tegak lurus disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. busur",
+      "B. jari-jari",
+      "C. apotema",
+      "D. diameter"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "8. Rumus luas lingkaran adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. π × r",
+      "B. π × d",
+      "C. π × r²",
+      "D. 2 × π × r"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "9. Bangun ruang yang memiliki dua sisi sejajar dan sama bentuk serta ukuran disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. limas",
+      "B. prisma",
+      "C. kerucut",
+      "D. bola"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "10. Benda berbentuk tabung yang sering dijumpai dalam kehidupan sehari-hari adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. lemari",
+      "B. tenda",
+      "C. gelas",
+      "D. atap rumah"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "11. Jumlah sisi pada bangun ruang tabung adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "12. Bangun ruang yang alasnya berbentuk lingkaran dan memiliki satu titik puncak disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. limas",
+      "B. prisma",
+      "C. tabung",
+      "D. kerucut"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "13. Bangun ruang yang tidak memiliki titik sudut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. prisma",
+      "B. limas",
+      "C. bola",
+      "D. kerucut"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "14. Atap rumah tradisional yang berbentuk segitiga bertemu di satu titik merupakan contoh bangun ruang …",
+    "gambar": null,
+    "pilihan": [
+      "A. prisma",
+      "B. limas",
+      "C. tabung",
+      "D. bola"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "15. Rumus volume prisma adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. luas alas × tinggi",
+      "B. ⅓ × luas alas × tinggi",
+      "C. π × r² × t",
+      "D. 4/3 × π × r³"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "16. Sebuah kaleng susu memiliki bentuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. bola",
+      "B. kerucut",
+      "C. tabung",
+      "D. prisma"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "17. Kegiatan mengumpulkan, mengolah, dan menyajikan data disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. aritmetika",
+      "B. statistika",
+      "C. geometri",
+      "D. aljabar"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "18. Diagram yang tepat untuk menunjukkan perbandingan bagian terhadap keseluruhan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. diagram batang",
+      "B. diagram garis",
+      "C. diagram lingkaran",
+      "D. tabel"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "19. Rata-rata dari data 4, 6, 8, 6 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 5",
+      "B. 6",
+      "C. 7",
+      "D. 8"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "20. Nilai tengah dari sekumpulan data yang telah diurutkan disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. mean",
+      "B. modus",
+      "C. median",
+      "D. frekuensi"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "21. Data: 5, 7, 7, 8, 9. Modus dari data tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 5",
+      "B. 7",
+      "C. 8",
+      "D. 9"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "22. Jika suatu data memiliki dua nilai yang sama-sama paling sering muncul, maka data tersebut memiliki …",
+    "gambar": null,
+    "pilihan": [
+      "A. satu modus",
+      "B. dua median",
+      "C. dua modus",
+      "D. tidak memiliki median"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "23. Diagram yang cocok digunakan untuk menunjukkan perubahan data dari waktu ke waktu adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. diagram lingkaran",
+      "B. diagram batang",
+      "C. diagram garis",
+      "D. piktogram"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "24. Jumlah data dibagi banyaknya data disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. median",
+      "B. modus",
+      "C. mean",
+      "D. jangkauan"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "25. Median dari data 3, 5, 7, 9, 11 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 5",
+      "B. 7",
+      "C. 9",
+      "D. 11"
+    ],
+    "jawaban_benar": "B"
+  }
+]

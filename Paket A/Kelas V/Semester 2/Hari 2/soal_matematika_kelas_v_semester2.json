@@ -1,0 +1,327 @@
+[
+  {
+    "sumber_file": "Matematika",
+    "nomor": 1,
+    "soal": "Denah adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. gambar pemandangan rumah",
+      "B. gambar yang menunjukkan letak bangunan dan jalan",
+      "C. gambar hiasan dinding",
+      "D. gambar benda tiga dimensi"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 2,
+    "soal": "Fungsi denah adalah untuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. memperindah ruangan",
+      "B. menghitung luas tanah",
+      "C. memudahkan menemukan suatu tempat",
+      "D. menentukan harga bangunan"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 3,
+    "soal": "Arah mata angin yang berlawanan dengan timur adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. barat",
+      "B. utara",
+      "C. selatan",
+      "D. tenggara"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 4,
+    "soal": "Jika suatu bangunan berada di sebelah utara rumah, maka bangunan tersebut terletak …",
+    "gambar": null,
+    "pilihan": [
+      "A. di kiri rumah",
+      "B. di kanan rumah",
+      "C. di atas rumah pada denah",
+      "D. di bawah rumah pada denah"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 5,
+    "soal": "Skala adalah perbandingan antara …",
+    "gambar": null,
+    "pilihan": [
+      "A. luas dan keliling",
+      "B. jarak pada denah dan jarak sebenarnya",
+      "C. panjang dan lebar",
+      "D. waktu dan jarak"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 6,
+    "soal": "Skala 1 : 100 berarti …",
+    "gambar": null,
+    "pilihan": [
+      "A. 1 cm pada denah sama dengan 1 m sebenarnya",
+      "B. 1 cm pada denah sama dengan 100 cm sebenarnya",
+      "C. 100 cm pada denah sama dengan 1 cm sebenarnya",
+      "D. 1 m pada denah sama dengan 100 m sebenarnya"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 7,
+    "soal": "Jarak pada denah adalah 5 cm. Jika skala denah 1 : 200, maka jarak sebenarnya adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 500 cm",
+      "B. 1.000 cm",
+      "C. 10.000 cm",
+      "D. 20.000 cm"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 8,
+    "soal": "Jarak sebenarnya antara rumah dan sekolah adalah 400 m. Jika digambar pada denah dengan skala 1 : 1.000, maka jarak pada denah adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4 cm",
+      "B. 40 cm",
+      "C. 400 cm",
+      "D. 1.000 cm"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 9,
+    "soal": "Arah mata angin yang berada di antara utara dan timur disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. barat laut",
+      "B. tenggara",
+      "C. timur laut",
+      "D. barat daya"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 10,
+    "soal": "Jika sekolah berada di sebelah barat rumah, maka pada denah sekolah digambar di …",
+    "gambar": null,
+    "pilihan": [
+      "A. sebelah kanan rumah",
+      "B. sebelah kiri rumah",
+      "C. bagian atas rumah",
+      "D. bagian bawah rumah"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 11,
+    "soal": "Perbandingan yang paling sederhana dari 10 : 20 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 10 : 20",
+      "B. 5 : 10",
+      "C. 2 : 4",
+      "D. 1 : 2"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 12,
+    "soal": "Pada denah rumah, dapur berada di sebelah selatan ruang tamu. Maka dapur terletak …",
+    "gambar": null,
+    "pilihan": [
+      "A. di atas ruang tamu",
+      "B. di bawah ruang tamu",
+      "C. di kiri ruang tamu",
+      "D. di kanan ruang tamu"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 13,
+    "soal": "Sensus penduduk adalah kegiatan untuk …",
+    "gambar": null,
+    "pilihan": [
+      "A. menghias lingkungan",
+      "B. menghitung jumlah penduduk dan data terkait",
+      "C. membagikan bantuan",
+      "D. memindahkan penduduk"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 14,
+    "soal": "Data yang biasanya dicatat dalam sensus penduduk adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. warna rumah",
+      "B. jenis tanaman",
+      "C. umur dan jenis kelamin",
+      "D. hobi penduduk"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 15,
+    "soal": "Orang yang bertugas mencatat data penduduk saat sensus disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. guru",
+      "B. ketua RT",
+      "C. petugas sensus",
+      "D. kepala desa"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 16,
+    "soal": "Cara pengumpulan data dengan mendatangi langsung rumah penduduk disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. survei daring",
+      "B. pengumpulan tidak langsung",
+      "C. pengumpulan langsung",
+      "D. pengamatan jarak jauh"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 17,
+    "soal": "Berikut yang bukan tujuan sensus penduduk adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. mengetahui jumlah penduduk",
+      "B. mengetahui persebaran penduduk",
+      "C. menentukan juara lomba",
+      "D. perencanaan pembangunan"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 18,
+    "soal": "Data penduduk yang disajikan dalam bentuk baris dan kolom disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. diagram",
+      "B. tabel",
+      "C. peta",
+      "D. grafik garis"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 19,
+    "soal": "Diagram yang menggunakan gambar untuk mewakili sejumlah data disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. diagram batang",
+      "B. diagram garis",
+      "C. piktogram",
+      "D. tabel"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 20,
+    "soal": "Diagram yang paling tepat untuk membandingkan jumlah penduduk beberapa daerah adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. diagram batang",
+      "B. diagram lingkaran",
+      "C. diagram gambar",
+      "D. tabel cerita"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 21,
+    "soal": "Data hasil sensus sebaiknya disajikan dalam bentuk diagram agar …",
+    "gambar": null,
+    "pilihan": [
+      "A. terlihat lebih panjang",
+      "B. mudah dibaca dan dipahami",
+      "C. terlihat penuh",
+      "D. sulit dianalisis"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 22,
+    "soal": "Jika satu gambar pada piktogram mewakili 10 orang, maka 5 gambar mewakili …",
+    "gambar": null,
+    "pilihan": [
+      "A. 15 orang",
+      "B. 30 orang",
+      "C. 50 orang",
+      "D. 100 orang"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 23,
+    "soal": "Data yang diperoleh langsung dari sumber pertama disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. data sekunder",
+      "B. data tambahan",
+      "C. data primer",
+      "D. data acak"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 24,
+    "soal": "Diagram lingkaran biasanya digunakan untuk menunjukkan …",
+    "gambar": null,
+    "pilihan": [
+      "A. perubahan waktu ke waktu",
+      "B. perbandingan bagian terhadap keseluruhan",
+      "C. urutan kejadian",
+      "D. nama-nama penduduk"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "nomor": 25,
+    "soal": "Jika jumlah penduduk laki-laki lebih banyak daripada perempuan, maka pada diagram batang …",
+    "gambar": null,
+    "pilihan": [
+      "A. batang perempuan lebih tinggi",
+      "B. batang laki-laki lebih tinggi",
+      "C. kedua batang sama",
+      "D. tidak ada batang"
+    ],
+    "jawaban_benar": "B"
+  }
+]
