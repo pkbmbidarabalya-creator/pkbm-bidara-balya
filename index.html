@@ -365,16 +365,21 @@
             const div = document.createElement("div");
             div.className = "soal-item";
 
-            let pilihanHTML = "";
-            q.pilihan.forEach((pil, pIdx) => {
-                pilihanHTML += `
-                    <label class="option-label">
-                        <input type="radio" name="soal_${idx}" value="${pIdx}"> ${pil}
-                    </label>
-                `;
-            });
+            // Mengambil teks dari kunci "soal" atau "pertanyaan"
+            const teksSoal = q.soal || q.pertanyaan || "";
 
-            div.innerHTML = `<p>${idx + 1}. ${q.pertanyaan}</p>${pilihanHTML}`;
+            let pilihanHTML = "";
+            if (q.pilihan && Array.isArray(q.pilihan)) {
+                q.pilihan.forEach((pil, pIdx) => {
+                    pilihanHTML += `
+                        <label class="option-label">
+                            <input type="radio" name="soal_${idx}" value="${pil}"> ${pil}
+                        </label>
+                    `;
+                });
+            }
+
+            div.innerHTML = `<p>${idx + 1}. ${teksSoal}</p>${pilihanHTML}`;
             container.appendChild(div);
         });
     }
@@ -385,8 +390,21 @@
 
         currentDataSoal.forEach((q, idx) => {
             const selected = document.querySelector(`input[name="soal_${idx}"]:checked`);
-            if (selected && parseInt(selected.value) === q.jawaban) {
-                skor++;
+            if (selected) {
+                const jawabanUser = selected.value.trim();
+                
+                // Menangani jika jawaban_benar berisi huruf "A", "B", "C", "D"
+                if (q.jawaban_benar) {
+                    const kunciHuruf = q.jawaban_benar.toString().trim().toUpperCase();
+                    if (jawabanUser.startsWith(kunciHuruf)) {
+                        skor++;
+                    }
+                } else if (q.jawaban !== undefined) {
+                    // Menangani format indeks angka
+                    if (parseInt(jawabanUser) === q.jawaban) {
+                        skor++;
+                    }
+                }
             }
         });
 
