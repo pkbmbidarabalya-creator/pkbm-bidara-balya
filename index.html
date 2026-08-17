@@ -4,41 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Pembelajaran & Ujian PKBM Bidara Balya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; margin: 0; padding: 20px; color: #333; }
-        .container { max-width: 750px; background: #fff; margin: 0 auto; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2 { text-align: center; color: #2c3e50; margin-top: 0; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-weight: bold; margin-bottom: 5px; color: #34495e; }
-        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; }
-        .btn { width: 100%; background: #27ae60; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
-        .btn:hover { background: #219150; }
-        .btn-drive { background: #e67e22; color: white; text-decoration: none; display: inline-block; text-align: center; padding: 10px 15px; border-radius: 6px; font-weight: bold; margin-top: 5px; }
-        .btn-drive:hover { background: #d35400; }
-        .btn-submit { background: #2980b9; }
-        .btn-submit:hover { background: #1f6391; }
-        .card { background: #ecf0f1; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
-        .mapel-btn { background: #8e44ad; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 15px; margin-top: 5px; }
-        .mapel-btn:hover { background: #732d91; }
+        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { 
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); 
+            margin: 0; 
+            padding: 20px 10px; 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container { 
+            width: 100%;
+            max-width: 650px; 
+            background: #ffffff; 
+            padding: 30px 25px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+        }
+        .header { text-align: center; margin-bottom: 25px; }
+        .header h1 { color: #1a365d; font-size: 24px; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h2 { color: #2b6cb0; font-size: 15px; margin: 5px 0 0 0; font-weight: 500; }
+        
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #2d3748; font-size: 14px; }
+        input[type="text"], select { 
+            width: 100%; 
+            padding: 12px 14px; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 8px; 
+            font-size: 14px; 
+            transition: all 0.3s ease;
+            outline: none;
+            background-color: #f8fafc;
+        }
+        input[type="text"]:focus, select:focus { 
+            border-color: #3182ce; 
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+        }
+        
+        .box-materi { 
+            background: #ebf8ff; 
+            border-left: 4px solid #3182ce; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 20px 0; 
+        }
+        .box-materi p { margin: 0 0 8px 0; font-weight: 600; color: #2b6cb0; font-size: 14px; }
+        .btn-drive { 
+            background: #3182ce; 
+            color: white; 
+            text-decoration: none; 
+            display: block; 
+            text-align: center; 
+            padding: 10px; 
+            border-radius: 6px; 
+            font-weight: 600; 
+            font-size: 13px;
+            transition: background 0.3s;
+        }
+        .btn-drive:hover { background: #2b6cb0; }
+        
+        .btn { 
+            width: 100%; 
+            background: #2b6cb0; 
+            color: white; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 15px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+        }
+        .btn:hover { background: #1a365d; transform: translateY(-1px); }
+        .btn-submit { background: #319795; box-shadow: 0 4px 12px rgba(49, 151, 149, 0.3); }
+        .btn-submit:hover { background: #234e52; }
+
+        .card { background: #f7fafc; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 15px; }
+        .mapel-card { background: #ffffff; border: 1px solid #cbd5e0; padding: 15px; border-radius: 10px; margin-bottom: 12px; }
+        .mapel-card h4 { margin: 0 0 10px 0; color: #2d3748; }
+        
+        .mapel-btn { 
+            background: #3182ce; 
+            color: white; 
+            border: none; 
+            padding: 10px 16px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: 500;
+        }
+        .mapel-btn:hover { background: #2b6cb0; }
+        
         .hidden { display: none; }
-        .soal-item { background: #f9f9f9; border-left: 4px solid #3498db; padding: 12px; margin-bottom: 15px; border-radius: 4px; }
-        .soal-item p { margin: 0 0 10px 0; font-weight: 600; }
-        .option-label { display: block; margin: 5px 0; cursor: pointer; font-weight: normal; }
-        .box-materi { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        
+        .soal-item { 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .soal-item p { margin: 0 0 12px 0; font-weight: 600; color: #2d3748; font-size: 15px; line-height: 1.5; }
+        .option-label { 
+            display: flex; 
+            align-items: center; 
+            margin: 8px 0; 
+            cursor: pointer; 
+            padding: 8px 12px; 
+            border-radius: 6px; 
+            border: 1px solid #edf2f7; 
+            transition: background 0.2s;
+            font-size: 14px;
+        }
+        .option-label:hover { background: #ebf8ff; border-color: #bee3f8; }
+        .option-label input { margin-right: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>PKBM BIDARA BALYA</h1>
-    <h2>Portal Pembelajaran & Ujian Kesetaraan</h2>
+    <div class="header">
+        <h1>PKBM BIDARA BALYA</h1>
+        <h2>Portal Pembelajaran & Ujian Kesetaraan</h2>
+    </div>
 
     <!-- LANGKAH 1: LOGIN SISWA & PILIH KELAS -->
     <div id="step-login">
         <div class="form-group">
             <label for="namaSiswa">Nama Lengkap Siswa:</label>
-            <input type="text" id="namaSiswa" placeholder="Masukkan nama lengkap Anda..." required>
+            <input type="text" id="namaSiswa" placeholder="Ketik nama lengkap sesuai absensi..." required>
         </div>
         <div class="form-group">
             <label for="pilihSemester">Pilih Kelas & Semester:</label>
@@ -70,17 +172,18 @@
 
         <!-- AKSES MATERI PEMBELAJARAN (DRIVE) -->
         <div id="boxMateri" class="box-materi hidden">
-            <p style="margin:0 0 8px 0; font-weight:bold;">📚 Materi & Modul Pembelajaran:</p>
-            <a id="btnDriveMateri" href="#" target="_blank" class="btn-drive">Buka Folder Materi Pembelajaran (Google Drive) 📂</a>
+            <p>📚 Modul & Materi Pembelajaran:</p>
+            <a id="btnDriveMateri" href="#" target="_blank" class="btn-drive">Buka Folder Modul Pembelajaran (Google Drive) 📂</a>
         </div>
 
-        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+        <div style="margin: 20px 0 15px 0; text-align:center; font-weight:600; color:#4a5568; font-size:14px; border-top:1px solid #e2e8f0; padding-top:15px;">
+            UJIAN ONLINE
+        </div>
 
-        <h3>Masuk ke Ujian Online:</h3>
         <div class="form-group">
             <label for="pilihHari">Pilih Hari Ujian:</label>
             <select id="pilihHari">
-                <option value="">-- Pilih Hari --</option>
+                <option value="">-- Pilih Hari Ujian --</option>
                 <option value="Hari 1">Hari 1</option>
                 <option value="Hari 2">Hari 2</option>
                 <option value="Hari 3">Hari 3</option>
@@ -88,25 +191,25 @@
         </div>
         <div class="form-group">
             <label for="tokenUjian">Token Ujian Harian:</label>
-            <input type="text" id="tokenUjian" placeholder="Masukkan token dari pengawas..." required>
+            <input type="text" id="tokenUjian" placeholder="Ketik token dari pengawas..." required>
         </div>
-        <button class="btn" onclick="verifikasiToken()">Masuk & Tampilkan Ujian 🚀</button>
+        <button class="btn" onclick="verifikasiToken()">Masuk Ruang Ujian 🚀</button>
     </div>
 
     <!-- LANGKAH 2: DAFTAR MATA PELAJARAN -->
     <div id="step-mapel" class="hidden">
         <div class="card">
-            <p><strong>Nama Siswa:</strong> <span id="dispNama"></span></p>
-            <p><strong>Ujian:</strong> <span id="dispSem"></span> (<span id="dispHari"></span>)</p>
+            <p style="margin:0 0 5px 0; color:#4a5568;"><strong>Siswa:</strong> <span id="dispNama"></span></p>
+            <p style="margin:0; color:#4a5568;"><strong>Jadwal:</strong> <span id="dispSem"></span> (<span id="dispHari"></span>)</p>
         </div>
-        <h3>Mata Pelajaran Hari Ini:</h3>
+        <h3 style="color:#1a365d; font-size:16px;">Mata Pelajaran Hari Ini:</h3>
         <div id="daftarMapelContainer"></div>
     </div>
 
     <!-- LANGKAH 3: LEMBAR SOAL UJIAN -->
     <div id="step-soal" class="hidden">
-        <div class="card">
-            <h3 id="judulMapel"></h3>
+        <div class="card" style="border-left: 4px solid #3182ce;">
+            <h3 id="judulMapel" style="margin:0; color:#1a365d; font-size:16px;"></h3>
         </div>
         <form id="formSoal">
             <div id="soalContainer"></div>
@@ -221,7 +324,7 @@
 
         mapelHariIni.forEach(item => {
             const card = document.createElement("div");
-            card.className = "card";
+            card.className = "mapel-card";
             card.innerHTML = `
                 <h4>${item.mapel}</h4>
                 <button class="mapel-btn" onclick="muatSoal('${item.mapel}', '${item.link}')">Mulai Kerjakan Soal 📝</button>
