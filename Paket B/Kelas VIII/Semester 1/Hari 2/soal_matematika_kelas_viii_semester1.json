@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "Matematika",
+    "soal": "1. Deret 2, 5, 8, 11, … merupakan contoh dari barisan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Geometri",
+      "B. Aritmetika",
+      "C. Fibonacci",
+      "D. Campuran"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "2. Pada barisan 7, 11, 15, 19, … nilai beda (b) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "3. Rumah pada sisi kanan jalan umumnya diberi nomor …",
+    "gambar": null,
+    "pilihan": [
+      "A. Ganjil",
+      "B. Genap",
+      "C. Acak",
+      "D. Bergantian"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "4. Rumah pada sisi kiri jalan biasanya memakai nomor …",
+    "gambar": null,
+    "pilihan": [
+      "A. Ganjil",
+      "B. Genap",
+      "C. Kelipatan 5",
+      "D. Bilangan prima"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "5. Jika rumah bernomor 4, 8, 12, 16, … maka suku ke-6 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 24",
+      "B. 28",
+      "C. 30",
+      "D. 32"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "6. Barisan 3, 9, 27, 81 … adalah contoh barisan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Aritmetika",
+      "B. Geometri",
+      "C. Campuran",
+      "D. Konstan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "7. Nomor rumah di sebuah blok bertambah 3 setiap rumah. Jika rumah pertama bernomor 10, maka rumah ke-5 bernomor …",
+    "gambar": null,
+    "pilihan": [
+      "A. 19",
+      "B. 22",
+      "C. 25",
+      "D. 28"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "8. Dalam sistem koordinat kartesius, titik (0,0) disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kuadran I",
+      "B. Kuadran II",
+      "C. Titik pusat",
+      "D. Titik diagonal"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "9. Perhatikan himpunan berikut:\n(i) {(x,y) | y = 2x – 2, x,y ∈ R}\n(ii) {(x,y) | y = –x + 2, x,y ∈ R}\n(iii) {(x,y) | x = 2, x,y ∈ R}\n(iv) {(x,y) | y = x², x,y ∈ R}\nHimpunan tersebut bila digambar berupa garis lurus, kecuali …",
+    "gambar": null,
+    "pilihan": [
+      "A. (i)",
+      "B. (ii)",
+      "C. (iii)",
+      "D. (iv)"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "10. Perhatikan pernyataan berikut:\n(i) Gradien adalah komponen y dibanding komponen x suatu garis\n(ii) Gradien adalah komponen x dibanding komponen y suatu garis\n(iii) Gradien adalah komponen x dikali komponen y suatu garis\n(iv) Gradien adalah komponen x dikurang komponen y suatu garis\nPernyataan yang benar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. (i)",
+      "B. (ii)",
+      "C. (iii)",
+      "D. (iv)"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "11. Gradien garis dengan persamaan y = 2 – x adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2",
+      "B. –2",
+      "C. –1",
+      "D. 1"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "12. Gradien garis dengan persamaan x = –2 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2",
+      "B. 0",
+      "C. –2",
+      "D. Tak terdefinisi"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "13. Gradien garis yang melalui titik A(3, –5) dan B(–5, –7) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4",
+      "B. 1",
+      "C. –2",
+      "D. –4"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "14. Diketahui garis g dengan persamaan 2x – 3y = 6. Titik-titik berikut terletak pada garis g, kecuali …",
+    "gambar": null,
+    "pilihan": [
+      "A. (6, 2)",
+      "B. (3, –4)",
+      "C. (0, –2)",
+      "D. (–3, 0)"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "15. Perhatikan pernyataan berikut:\n(i) Garis g sejajar garis h, maka mg = mh\n(ii) Garis g tegak lurus garis h, maka mg × mh = –1\n(iii) Garis g tegak lurus garis h, maka mg = mh\n(iv) Garis g tegak lurus garis h, maka mg × mh = 1\nPernyataan yang benar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. (i) dan (iv)",
+      "B. (ii) dan (iv)",
+      "C. (i) dan (ii)",
+      "D. (ii) dan (iii)"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "16. Ibu Budi menabung Rp3.000.000 di awal. Tabungan bertambah Rp500.000 setiap bulan. Persamaan tabungan setelah x bulan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. y = 3.000.000 – 2.000.000x",
+      "B. y = 3.000.000 + 500.000x",
+      "C. y = 3.000.000 + 2.000.000x",
+      "D. y = 2.000.000 + 500.000x"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "17. Berdasarkan teorema Pythagoras, pernyataan yang benar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. a² + b² = c²",
+      "B. a² = b² + c²",
+      "C. a² + c² = b²",
+      "D. c² = a² – b²"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "18. Tigaan bilangan berikut yang bukan tripel Pythagoras adalah …\n(i) 24, 25, 8\n(ii) 7, 25, 24\n(iii) 8, 17, 15\n(iv) 12, 9, 15",
+    "gambar": null,
+    "pilihan": [
+      "A. (i)",
+      "B. (ii)",
+      "C. (iii)",
+      "D. (iv)"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "19. Pada segitiga siku-siku dengan sisi 8,5 cm dan 7,5 cm, sisi ketiga merupakan sisi terpendek. Panjang sisi tersebut adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 6,5 cm",
+      "B. 8,0 cm",
+      "C. 4,5 cm",
+      "D. 4,0 cm"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "20. Tinggi layang-layang Ali jika benang 85 m dan jarak ke gapura 40 m adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 75 m",
+      "B. 70 m",
+      "C. 65 m",
+      "D. 60 m"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "21. Adik berjalan ke utara lalu ke timur sejauh yang sama, kembali ke titik awal menempuh 60 m. Jarak Adik berjalan ke utara adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 30√3 m",
+      "B. 30√2 m",
+      "C. 20√3 m",
+      "D. 20√2 m"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "22. Panjang ruas garis AB untuk titik A(3, –2) dan B(–2, 10) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 10",
+      "B. 13",
+      "C. 12",
+      "D. 15"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "23. Panjang AG pada gambar balok adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 91 cm",
+      "B. 77 cm",
+      "C. 61 cm",
+      "D. 65 cm"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "24. Keliling belah ketupat 136 cm dan diagonal salah satunya 32 cm. Diagonal lainnya adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 96 cm",
+      "B. 108 cm",
+      "C. 72 cm",
+      "D. 52 cm"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "25. Kubus rusuk 10 cm, pojok dipotong seperti limas. Banyak titik sudut setelah dipotong adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 11",
+      "B. 18",
+      "C. 24",
+      "D. 32"
+    ],
+    "jawaban_benar": "A"
+  }
+]

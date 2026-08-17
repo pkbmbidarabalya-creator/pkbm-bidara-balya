@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "matematika",
+    "soal": "1. Satuan standar sudut yang diperoleh dari membagi satu lingkaran menjadi 360 bagian sama besar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Radian",
+      "B. Derajat",
+      "C. Gradian",
+      "D. Meter"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "2. Pada segitiga siku-siku, sinus suatu sudut didefinisikan sebagai …",
+    "gambar": null,
+    "pilihan": [
+      "A. Sisi miring dibagi sisi di hadapan sudut",
+      "B. Sisi di dekat sudut dibagi sisi miring",
+      "C. Sisi di hadapan sudut dibagi sisi miring",
+      "D. Sisi miring dibagi sisi di dekat sudut"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "3. Besar sudut 180° dalam satuan radian sama dengan …",
+    "gambar": null,
+    "pilihan": [
+      "A. π/2",
+      "B. π",
+      "C. 2π",
+      "D. 3π"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "4. Nilai sin 30° berdasarkan tabel sudut istimewa adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 0",
+      "B. 1",
+      "C. ½",
+      "D. √3/2"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "5. Dalam sebuah segitiga siku-siku, perbandingan sisi hadap sudut terhadap sisi miring disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Cosinus",
+      "B. Secan",
+      "C. Sinus",
+      "D. Cotangen"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "6. Nilai tan 60° adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 0",
+      "B. 1",
+      "C. √2",
+      "D. √3"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "7. Jika sin φ = AC/AB dan cos φ = BC/AB, maka tan φ dapat ditulis sebagai …",
+    "gambar": null,
+    "pilihan": [
+      "A. AB/AC",
+      "B. AC/BC",
+      "C. AB/BC",
+      "D. BC/AC"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "8. Jika sin 45° + cos 45°, maka hasilnya adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 1",
+      "B. √2",
+      "C. √3",
+      "D. 2"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "9. Nilai sin 60° berdasarkan konstruksi segitiga sama sisi adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. ½",
+      "B. √3/2",
+      "C. √2/2",
+      "D. 1"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "10. Sudut 120° berada pada kuadran …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kuadran I",
+      "B. Kuadran II",
+      "C. Kuadran III",
+      "D. Kuadran IV"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "11. Nilai maksimum fungsi sinus y = sin x adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. –1",
+      "B. 0",
+      "C. ½",
+      "D. 1"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "12. Pada kuadran III, tanda nilai tan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Positif",
+      "B. Negatif",
+      "C. Nol",
+      "D. Tidak terdefinisi"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "13. Fungsi tangen memiliki periode sebesar …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2π",
+      "B. π",
+      "C. π/2",
+      "D. 3π"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "14. Nilai sin 36° dapat dinyatakan dalam sudut komplemennya sebagai …",
+    "gambar": null,
+    "pilihan": [
+      "A. cos 36°",
+      "B. cos 54°",
+      "C. tan 54°",
+      "D. sec 36°"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "15. Pada penerapan masalah nyata, tinggi pohon yang diamati dengan jarak mendatar d dan sudut elevasi θ dirumuskan dengan …",
+    "gambar": null,
+    "pilihan": [
+      "A. h = d × sin θ",
+      "B. h = d × cos θ",
+      "C. h = tan θ ÷ d",
+      "D. h = d × tan θ"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "16. Nilai sin 210° dapat ditentukan melalui sudut berelasi sebagai …",
+    "gambar": null,
+    "pilihan": [
+      "A. –sin 30°",
+      "B. –sin 60°",
+      "C. sin 30°",
+      "D. sin 60°"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "17. Jika sebuah layang-layang ditarik dengan benang panjang 65 meter dengan sudut elevasi 70°, maka tinggi layang-layang dapat ditentukan menggunakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. sin 70° = tinggi/65",
+      "B. cos 70° = tinggi/65",
+      "C. tan 70° = 65/tinggi",
+      "D. sec 70° = tinggi × 65"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "18. Jika cos β = √3/2 dan β berada di kuadran I, maka nilai tan β adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. ½",
+      "B. √3",
+      "C. √3/3",
+      "D. –√3/3"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "19. Nilai identitas trigonometri dasar adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. sin φ + cos φ = 1",
+      "B. sin² φ – cos² φ = 1",
+      "C. tan² φ – sec² φ = 1",
+      "D. sin² φ + cos² φ = 1"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "20. Sebuah tangga bersandar pada tembok dengan panjang 12 m dan tinggi tembok 6 m. Besar sudut di bawah tangga mendekati …",
+    "gambar": null,
+    "pilihan": [
+      "A. 15°",
+      "B. 20°",
+      "C. 25°",
+      "D. 30°"
+    ],
+    "jawaban_benar": "E"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "21. Nilai sin 30° berdasarkan tabel sudut istimewa adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 0",
+      "B. 1",
+      "C. ½",
+      "D. √3/2"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "22. Fungsi tangen memiliki periode sebesar …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2π",
+      "B. π",
+      "C. π/2",
+      "D. 3π"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "23. Sudut 120° berada pada kuadran …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kuadran I",
+      "B. Kuadran II",
+      "C. Kuadran III",
+      "D. Kuadran IV"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "24. Dalam sebuah segitiga siku-siku, perbandingan sisi hadap sudut terhadap sisi miring disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Cosinus",
+      "B. Secan",
+      "C. Sinus",
+      "D. Cotangen"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "25. Nilai maksimum fungsi sinus y = sin x adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. –1",
+      "B. 0",
+      "C. ½",
+      "D. 1"
+    ],
+    "jawaban_benar": "D"
+  }
+]

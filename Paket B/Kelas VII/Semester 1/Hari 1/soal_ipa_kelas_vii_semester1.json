@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "1. Pengukuran merupakan kegiatan membandingkan suatu besaran yang diukur dengan alat ukur yang digunakan sebagai…",
+    "gambar": null,
+    "pilihan": [
+      "A. besaran pokok",
+      "B. besaran turunan",
+      "C. satuan",
+      "D. besaran skala"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "2. Panjang papan tulis 2 meter. Satuan besaran yang digunakan pada pernyataan tersebut adalah…",
+    "gambar": null,
+    "pilihan": [
+      "A. papan tulis",
+      "B. meter",
+      "C. 2 meter",
+      "D. panjang"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "3. Massa sebuah sepeda motor adalah 100 kg. Maka massa tersebut menunjukkan…",
+    "gambar": null,
+    "pilihan": [
+      "A. nilai",
+      "B. satuan",
+      "C. besaran",
+      "D. pengukuran"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "4. Kelompok besaran turunan di bawah ini yang diturunkan dari besaran panjang adalah…",
+    "gambar": null,
+    "pilihan": [
+      "A. luas dan volume",
+      "B. volume dan percepatan",
+      "C. kecepatan dan perpindahan",
+      "D. luas dan kecepatan"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "5. Definisi dari Massa adalah…",
+    "gambar": null,
+    "pilihan": [
+      "A. memiliki nilai sama dengan berat",
+      "B. mendekati massa 1 liter air murni pada suhu 4°C",
+      "C. besarnya gaya tarik bumi (gravitasi) terhadap suatu benda",
+      "D. kuantitas yang terkandung pada suatu benda"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "6. Konversi 2,5 m adalah…",
+    "gambar": null,
+    "pilihan": [
+      "A. 250 mm",
+      "B. 2600 cm",
+      "C. 0,25 hm",
+      "D. 0,25 km"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "7. Suhu suatu benda adalah 100°C, setara dengan…",
+    "gambar": null,
+    "pilihan": [
+      "A. 435°F",
+      "B. 373°F",
+      "C. 273°F",
+      "D. 300°F"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "8. Sebuah balok memiliki panjang 20 cm, lebar 5 cm, dan tinggi 1 cm. Volume balok tersebut adalah…",
+    "gambar": null,
+    "pilihan": [
+      "A. 100 cm³",
+      "B. 20 cm³",
+      "C. 1,0 cm³",
+      "D. 0,01 cm³"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "9. Di antara contoh berikut ini manakah yang termasuk makhluk hidup …",
+    "gambar": null,
+    "pilihan": [
+      "A. Batu",
+      "B. Burung elang",
+      "C. Air",
+      "D. Kelereng"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "10. Di antara contoh berikut ini manakah yang termasuk benda tak hidup …",
+    "gambar": null,
+    "pilihan": [
+      "A. Kucing",
+      "B. Pintu kayu",
+      "C. Ayam",
+      "D. Ulat"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "11. Di antara karakteristik/ciri berikut ini manakah yang bukan termasuk ciri-ciri makhluk hidup …",
+    "gambar": null,
+    "pilihan": [
+      "A. Ukuran",
+      "B. Pertambahan ukuran",
+      "C. Bergerak",
+      "D. Tumbuh dan berkembang biak secara kawin"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "12. Di antara contoh berikut ini manakah yang termasuk proses perkembangbiakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Biji",
+      "B. Telur",
+      "C. Anak",
+      "D. Penempelan mata tunas"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "13. Tanaman jati menggugurkan daunnya pada musim kemarau untuk bisa bertahan hidup merupakan ciri …",
+    "gambar": null,
+    "pilihan": [
+      "A. Berkembang biak",
+      "B. Bergerak",
+      "C. Peka terhadap rangsang",
+      "D. Menyesuaikan diri terhadap lingkungan"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "14. Di antara contoh berikut ini yang termasuk proses perkembangbiakan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Bertambah tinggi",
+      "B. Kucing bertambah gemuk",
+      "C. Kucing bertambah pintar",
+      "D. Kucing bertambah banyak"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "15. Puteri malu menguncupkan daunnya ketika disentuh merupakan ciri …",
+    "gambar": null,
+    "pilihan": [
+      "A. Berkembang biak",
+      "B. Bergerak",
+      "C. Peka terhadap rangsang",
+      "D. Menyesuaikan diri terhadap lingkungan"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "16. Berikut contoh berkembang biak secara vegetatif …",
+    "gambar": null,
+    "pilihan": [
+      "A. Pepaya berkembang biak dengan biji",
+      "B. Ayam berkembang biak dengan telur",
+      "C. Tumbuhan melati berkembang biak dengan stek batang",
+      "D. Kucing berkembang biak dengan melahirkan anak"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "17. Suhu suatu benda menunjukkan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Jumlah massanya",
+      "B. Tingkat panas atau dinginnya",
+      "C. Tekanan pada benda",
+      "D. Warna benda"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "18. Alat untuk mengukur suhu adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Barometer",
+      "B. Higrometer",
+      "C. Termometer",
+      "D. Altimeter"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "19. Titik tetap atas pada termometer Celcius adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 0°C",
+      "B. 25°C",
+      "C. 100°C",
+      "D. –273°C"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "20. Zat yang tidak digunakan untuk mengisi termometer karena membasahi dinding adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Alkohol",
+      "B. Air",
+      "C. Raksa",
+      "D. Minyak"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "21. Peristiwa pemuaian terjadi ketika benda …",
+    "gambar": null,
+    "pilihan": [
+      "A. Didinginkan",
+      "B. Dipanaskan",
+      "C. Dibekukan",
+      "D. Dibiarkan di tempat gelap"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "22. Kalor berpindah dari benda bersuhu …",
+    "gambar": null,
+    "pilihan": [
+      "A. Rendah ke tinggi",
+      "B. Tinggi ke rendah",
+      "C. Sama ke sama",
+      "D. Rendah ke sama"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "23. Perpindahan kalor tanpa zat perantara disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Konduksi",
+      "B. Konveksi",
+      "C. Radiasi",
+      "D. Evaporasi"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "24. Energi yang dimiliki benda karena ketinggiannya disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Energi kinetik",
+      "B. Energi potensial gravitasi",
+      "C. Energi listrik",
+      "D. Energi panas"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Ilmu Pengetahuan Alam",
+    "soal": "25. Energi yang dimiliki benda karena geraknya disebut …",
+    "gambar": null,
+    "pilihan": [
+      "A. Energi potensial",
+      "B. Energi kimia",
+      "C. Energi kinetik",
+      "D. Energi cahaya"
+    ],
+    "jawaban_benar": "C"
+  }
+]

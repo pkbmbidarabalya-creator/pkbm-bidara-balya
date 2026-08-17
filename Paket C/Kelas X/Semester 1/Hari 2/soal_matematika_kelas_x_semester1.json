@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "matematika",
+    "soal": "1. Bentuk umum persamaan linear satu variabel adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. ax + b = c",
+      "B. ax² + bx + c = 0",
+      "C. a/x + b = c",
+      "D. ax + by = c"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "2. Hasil penyelesaian dari persamaan 4x – 12 = –8 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. x = –4",
+      "B. x = –1",
+      "C. x = 1",
+      "D. x = 2"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "3. Persamaan 2x + y = 4 dan 5x – 2y = 1 termasuk jenis …",
+    "gambar": null,
+    "pilihan": [
+      "A. PLSV",
+      "B. Persamaan kuadrat",
+      "C. SPLDV",
+      "D. Pertidaksamaan linear"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "4. Himpunan penyelesaian dari 2x + 6 < 0 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. x > –3",
+      "B. x < –3",
+      "C. x ≥ –3",
+      "D. x ≤ –3"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "5. Jika |x – 4| ≤ 1,5 maka nilai x berada pada interval …",
+    "gambar": null,
+    "pilihan": [
+      "A. x < –1,5",
+      "B. –2,5 ≤ x ≤ 5,5",
+      "C. 1,5 ≤ x ≤ 4",
+      "D. x > 5,5"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "6. Pertidaksamaan 3x + 12 ≥ 0 memiliki penyelesaian …",
+    "gambar": null,
+    "pilihan": [
+      "A. x ≤ –4",
+      "B. x ≥ –4",
+      "C. x > –4",
+      "D. x < –4"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "7. Pada persamaan 3x + 2y = 65.000, variabel x dan y dapat diartikan sebagai …",
+    "gambar": null,
+    "pilihan": [
+      "A. harga total",
+      "B. jumlah uang",
+      "C. harga bawang merah dan bawang putih",
+      "D. jumlah barang"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "8. Jika 8y – 4 < 3y + 9, maka himpunan penyelesaian y adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. y > 13/5",
+      "B. y < 13/5",
+      "C. y ≥ 13/5",
+      "D. y ≤ 13/5"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "9. Bentuk umum sistem persamaan linear tiga variabel adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. ax + b = c",
+      "B. ax + by + cz = d",
+      "C. ax² + by² + cz² = d",
+      "D. ax + by = c dan dz = e"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "10. Dalam konteks bisnis, sistem persamaan linear tiga variabel sering digunakan untuk menghitung …",
+    "gambar": null,
+    "pilihan": [
+      "A. Jumlah total barang saja",
+      "B. Grafik peluang",
+      "C. Biaya produksi, harga jual, dan keuntungan",
+      "D. Jumlah karyawan"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "11. Model matematika pembelian buah berikut: Budi membeli 3 kg jeruk, 2 kg anggur, dan 5 kg melon seharga Rp 129.000,-. Persamaannya adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 3x + 2y + 5z = 129.000",
+      "B. 2x + 3y + z = 129.000",
+      "C. x + y + z = 129.000",
+      "D. 3x + 5y + 2z = 129.000"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "12. Nilai x dari SPLTV berikut:\n\n2x + y + z = 7\nx + 2y – z = 2\n3x – y + 2z = 7",
+    "gambar": null,
+    "pilihan": [
+      "A. 0",
+      "B. 1",
+      "C. 2",
+      "D. 3"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "13. Jika 5x + 3y + 2z = 1.000.000 mewakili pembelian 5 box mangga, 3 box jeruk, dan 2 box manggis, maka x, y, z melambangkan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Jumlah box buah",
+      "B. Harga per box buah",
+      "C. Berat per box",
+      "D. Jumlah modal"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "14. Metode SPLTV yang menyamakan koefisien untuk menghilangkan variabel adalah metode …",
+    "gambar": null,
+    "pilihan": [
+      "A. Campuran",
+      "B. Substitusi",
+      "C. Eliminasi",
+      "D. Faktorisasi"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "15. Jika diketahui:\n\nx + y + z = 6\n4x + 2y + z = 7\n9x + 3y + z = 12\n\nMaka nilai (x – y – z) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 16",
+      "B. 6",
+      "C. –2",
+      "D. –6"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "16. Dalam SPLTV, himpunan penyelesaian ditulis sebagai …",
+    "gambar": null,
+    "pilihan": [
+      "A. (x, y)",
+      "B. (x)",
+      "C. {(x₀, y₀, z₀)}",
+      "D. x = a, y = b"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "17. Relasi dari himpunan A ke himpunan B disebut fungsi jika …",
+    "gambar": null,
+    "pilihan": [
+      "A. Setiap anggota B memiliki pasangan dari A",
+      "B. Setiap anggota A memiliki tepat satu pasangan di B",
+      "C. Beberapa anggota A memiliki lebih dari satu pasangan",
+      "D. Anggota B memiliki pasangan lebih banyak dari A"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "18. Berdasarkan diagram relasi pada halaman materi, fungsi injektif adalah fungsi yang …",
+    "gambar": null,
+    "pilihan": [
+      "A. Semua anggota A tidak punya pasangan",
+      "B. Setiap anggota B mendapat 2 pasangan dari A",
+      "C. Setiap anggota A dipetakan ke anggota B yang berbeda",
+      "D. Semua anggota B mendapat pasangan dari A"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "19. Fungsi surjektif (onto) ditandai dengan …",
+    "gambar": null,
+    "pilihan": [
+      "A. Daerah asal = daerah hasil",
+      "B. Daerah hasil = daerah kawan",
+      "C. Daerah asal ⊂ daerah hasil",
+      "D. Semua anggota A tidak berpasangan"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "20. Jika f(x) = x² – 2x + 3, maka nilai f(2) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 5"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "21. Jika f(x) = 3x + 2 dan g(x) = x – 2, maka (f o g)(x) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 3x + 4",
+      "B. 3x – 4",
+      "C. 3x – 2",
+      "D. 3x + 2"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "22. Komposisi fungsi (g o f)(x) = g(f(x)) dapat didefinisikan jika …",
+    "gambar": null,
+    "pilihan": [
+      "A. Df ∩ Dg = ∅",
+      "B. Rf ∩ Dg ≠ ∅",
+      "C. Rg ∩ Df ≠ ∅",
+      "D. Domain g = domain f"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "23. Fungsi invers f⁻¹(x) hanya ada jika fungsi f bersifat …",
+    "gambar": null,
+    "pilihan": [
+      "A. Konstan",
+      "B. Linear",
+      "C. Bijektif",
+      "D. Surjektif saja"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "24. Jika f(x) = x + 5, maka f⁻¹(2) bernilai …",
+    "gambar": null,
+    "pilihan": [
+      "A. –7",
+      "B. –5",
+      "C. –3",
+      "D. 0"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "matematika",
+    "soal": "25. Jika (f o g)(x) = 12x – 2 dan f(x) = 4x + 2, maka g(x) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2x – 1",
+      "B. 3x – 1",
+      "C. 3x – 2",
+      "D. 3x – 3"
+    ],
+    "jawaban_benar": "B"
+  }
+]

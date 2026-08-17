@@ -1,0 +1,302 @@
+[
+  {
+    "sumber_file": "Matematika",
+    "soal": "1. Pada pagi hari suhu di kota Tokyo adalah –5°C, dan perkiraan cuaca menyatakan akan naik 3°C, berarti suhu pada siang hari di kota Tokyo adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 3°C",
+      "B. –2°C",
+      "C. –1°C",
+      "D. –2°C"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "2. Jika n kurang dari 4 dan lebih dari –2, maka himpunan bilangan bulat untuk n adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. {1, 2, 3, 4, 5}",
+      "B. {–1, 0, 1, 2, 3}",
+      "C. {–1, 0, 1, 2, 3}",
+      "D. {–1, 0, 1, 2}"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "3. Urutkan naik dari bilangan –3, –7, 8, 2, 4 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. –3, –7, 8, 2, 4",
+      "B. –3, –7, 2, 8",
+      "C. –7, –3, 2, 4, 8",
+      "D. 8, 2, 3, –7"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "4. Sandi membeli satu pak pensil yang berisi 10 buah dengan harga Rp 26.000,00, kemudian ia jual per hari dengan harga per buahnya sebesar Rp 3.000,00, maka keadaan yang dialami Sandi adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Untung Rp 4.500,00",
+      "B. Untung Rp 4.000,00",
+      "C. Rugi Rp 4.500,00",
+      "D. Rugi Rp 5.000,00"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "5. Nilai dari 12 + (–3) + 7 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. –22",
+      "B. –16",
+      "C. 16",
+      "D. 22"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "6. Jika m = 2, n = –3, dan p = 4, maka nilai m + n – p adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. –5",
+      "B. –1",
+      "C. 3",
+      "D. 9"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "7. Sifat yang berlaku untuk (a + b) + c = a + (b + c) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Sifat komutatif",
+      "B. Sifat asosiatif",
+      "C. Sifat distributif",
+      "D. Sifat invers"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "8. Di bawah ini yang merupakan sifat pengurangan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. a + b = b – a",
+      "B. a – b = a + (–b)",
+      "C. a – (b + c) = (a – b) + c",
+      "D. a – (b – c) = (a – b) + c"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "9. Bentuk aljabar dari “dua kali sebuah bilangan dikurangi empat” adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 4 – 2x",
+      "B. 2x – 4",
+      "C. x – 4",
+      "D. 4x – 2"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "10. Koefisien dari suku 7a² adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. a²",
+      "B. 14",
+      "C. 7",
+      "D. 2"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "11. Suku berikut yang merupakan suku sejenis adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 3a dan 3b",
+      "B. 2x dan 5x",
+      "C. 4m² dan 4m",
+      "D. 7p dan 7p²"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "12. Bentuk sederhana dari 3a + 5a – 2 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 3a + 5a – 2",
+      "B. 8a – 2",
+      "C. 15a – 2",
+      "D. 2a – 2"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "13. Hasil penyederhanaan dari 2(x + 3) adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 2x + 3",
+      "B. 2x + 6",
+      "C. 2x + 3x",
+      "D. x + 6"
+    ],
+    "jawaban_benar": "B"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "14. Persamaan linear satu variabel adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 3x + 2 = 11",
+      "B. 3xy = 12",
+      "C. x² + 5 = 10",
+      "D. 5/x = 2"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "15. Penyelesaian dari 3a – 5 = 4 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. a = 3",
+      "B. a = –3",
+      "C. a = 4",
+      "D. a = –4"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "16. Nilai x yang memenuhi x – 5 = 4x adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. x = –5/3",
+      "B. x = 5/3",
+      "C. x = –3",
+      "D. x = 3"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "17. Jika tinggi badan Arip satu setengah kali dari tinggi Robi. Jika tinggi Robi 100 cm, maka tinggi Arip adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 75 cm",
+      "B. 115 cm",
+      "C. 125 cm",
+      "D. 150 cm"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "18. Jika pendapatan Budi dua kali pendapatan yang diperoleh Joni, maka pendapatan Joni jika pendapatan Budi sebesar Rp 2.000.000,00 adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. Rp 500.000,00",
+      "B. Rp 750.000,00",
+      "C. Rp 1.000.000,00",
+      "D. Rp 1.250.000,00"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "19. Umur Faizal adalah 4 : 5 umur Ahmad, maka jika umur Ahmad 20 tahun umur Faizal adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 10 tahun",
+      "B. 12 tahun",
+      "C. 14 tahun",
+      "D. 16 tahun"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "20. Minyak yang diperlukan untuk menggoreng 400 goreng tempe adalah 2 liter, maka banyaknya minyak jika akan menggoreng sebanyak 1000 tempe adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 5 liter",
+      "B. 6 liter",
+      "C. 7 liter",
+      "D. 8 liter"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "21. 3 liter bensin cukup untuk perjalanan 30 km, berapa maka banyaknya bensin yang diperlukan untuk 150 km adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 18 liter",
+      "B. 17 liter",
+      "C. 16 liter",
+      "D. 15 liter"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "22. Persediaan makanan untuk 40 ekor bebek cukup untuk 25 hari, jika kemudian membeli 10 ekor lagi, maka persediaan akan cukup untuk … hari",
+    "gambar": null,
+    "pilihan": [
+      "A. 17",
+      "B. 18",
+      "C. 19",
+      "D. 20"
+    ],
+    "jawaban_benar": "D"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "23. Persediaan beras untuk 5 anggota keluarga cukup untuk 30 hari, jika 5 anggota keluarga nambah lagi, maka persediaan akan cukup untuk … hari",
+    "gambar": null,
+    "pilihan": [
+      "A. 7",
+      "B. 10",
+      "C. 15",
+      "D. 20"
+    ],
+    "jawaban_benar": "C"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "24. Suatu pekerjaan bisa selesai dalam waktu 30 hari oleh 40 pekerja, karena sesuatu hal maka pekerjaan harus selesai dalam waktu 20 hari, maka berapa banyak tambahan yang diperlukan adalah …",
+    "gambar": null,
+    "pilihan": [
+      "A. 20 orang",
+      "B. 40 orang",
+      "C. 60 orang",
+      "D. 80 orang"
+    ],
+    "jawaban_benar": "A"
+  },
+  {
+    "sumber_file": "Matematika",
+    "soal": "25. Sebuah karikatur berukuran 40 cm × 80 cm, difotocopi 80% dari ukuran sebenarnya, berapa ukuran karikatur setelah difotokopi tersebut?",
+    "gambar": null,
+    "pilihan": [
+      "A. 32 cm × 40 cm",
+      "B. 32 cm × 48 cm",
+      "C. 32 cm × 50 cm",
+      "D. 32 cm × 64 cm"
+    ],
+    "jawaban_benar": "D"
+  }
+]
