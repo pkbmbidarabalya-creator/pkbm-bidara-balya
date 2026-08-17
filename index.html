@@ -3,363 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PKBM Bidara Balya</title>
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="theme-color" content="#0284c7">
+    <title>Portal Pembelajaran & Ujian PKBM Bidara Balya</title>
     <style>
-        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
-        body { background-color: #f8fafc; color: #1e293b; display: flex; justify-content: center; min-height: 100vh; }
-        
-        .app-container { width: 100%; max-width: 430px; background: #ffffff; min-height: 100vh; position: relative; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); overflow-x: hidden; }
-        .screen { display: none; padding-bottom: 30px; }
-        .active { display: block; animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* Welcome Screen */
-        .welcome-hero { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 50px 24px 40px; text-align: center; border-bottom-left-radius: 32px; border-bottom-right-radius: 32px; }
-        .welcome-icon { font-size: 70px; margin-bottom: 12px; filter: drop-shadow(0 10px 8px rgba(0,0,0,0.15)); }
-        .welcome-title { font-size: 22px; font-weight: 700; line-height: 1.3; }
-        .welcome-subtitle { font-size: 13px; color: #bae6fd; margin-top: 8px; }
-        .welcome-body { padding: 35px 24px; text-align: center; }
-
-        /* Form Controls */
-        .form-group { text-align: left; margin-bottom: 18px; }
-        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
-        .form-group input { width: 100%; padding: 14px 16px; border: 1.5px solid #e2e8f0; border-radius: 12px; font-size: 14px; outline: none; transition: 0.2s; background: #f8fafc; }
-        .form-group input:focus { border-color: #0284c7; background: #ffffff; box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1); }
-
-        /* Password Wrapper khusus Ikon Mata */
-        .password-wrapper { position: relative; width: 100%; }
-        .password-wrapper input { padding-right: 48px; }
-        .toggle-password-btn {
-            position: absolute;
-            right: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-            color: #64748b;
-            user-select: none;
-        }
-
-        /* Buttons */
-        .btn-primary { width: 100%; padding: 15px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; border: none; border-radius: 14px; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3); transition: 0.2s; text-decoration: none; display: inline-block; text-align: center; }
-        .btn-primary:active { transform: scale(0.98); }
-        .btn-outline { background: #ffffff; color: #0284c7; border: 1.5px solid #0284c7; border-radius: 10px; padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 8px; }
-
-        /* Header Navigation Universal */
-        .app-header { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 20px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; display: flex; align-items: center; justify-content: space-between; }
-        .app-header h2 { font-size: 17px; font-weight: 600; }
-        .btn-header-back { background: rgba(255, 255, 255, 0.2); border: none; color: white; padding: 8px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: 0.2s; }
-        .btn-header-back:active { background: rgba(255, 255, 255, 0.35); transform: scale(0.95); }
-
-        /* User Banner Card */
-        .user-banner { background: white; margin: -20px 20px 20px; padding: 16px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 14px; border: 1px solid #f1f5f9; }
-        .avatar { width: 48px; height: 48px; background: #e0f2fe; color: #0284c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
-        .user-info h4 { font-size: 15px; font-weight: 600; color: #0f172a; }
-        .user-info p { font-size: 12px; color: #64748b; }
-
-        /* Card Menu Options */
-        .card-container { padding: 0 20px; }
-        .paket-card { background: white; border-radius: 20px; padding: 20px; margin-bottom: 16px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); cursor: pointer; transition: 0.25s; position: relative; overflow: hidden; }
-        .paket-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .paket-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
-        
-        .paket-a::before { background: #f59e0b; }
-        .paket-b::before { background: #10b981; }
-        .paket-c::before { background: #6366f1; }
-
-        .paket-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-        .paket-badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
-        .badge-a { background: #fef3c7; color: #d97706; }
-        .badge-b { background: #d1fae5; color: #059669; }
-        .badge-c { background: #e0e7ff; color: #4f46e5; }
-
-        .paket-title { font-size: 18px; font-weight: 700; color: #1e293b; }
-        .paket-sub { font-size: 13px; color: #64748b; margin-top: 2px; }
-
-        /* Class Items */
-        .kelas-box { background: white; border-radius: 16px; padding: 18px; margin-bottom: 16px; border: 1px solid #f1f5f9; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
-        .kelas-title { font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-
-        /* Tabs Material & Ujian */
-        .tab-menu { display: flex; background: #f1f5f9; padding: 4px; border-radius: 12px; margin: 0 20px 20px; }
-        .tab-item { flex: 1; text-align: center; padding: 10px; font-size: 13px; font-weight: 600; color: #64748b; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-        .tab-item.active-tab { background: white; color: #0284c7; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-
-        /* Box Kartu Utama */
-        .main-drive-box { background: white; border-radius: 20px; padding: 24px; text-align: center; border: 1.5px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
-        .main-drive-icon { font-size: 60px; margin-bottom: 12px; }
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 750px; background: #fff; margin: 0 auto; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1, h2 { text-align: center; color: #2c3e50; margin-top: 0; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #34495e; }
+        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; }
+        .btn { width: 100%; background: #27ae60; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+        .btn:hover { background: #219150; }
+        .btn-drive { background: #e67e22; color: white; text-decoration: none; display: inline-block; text-align: center; padding: 10px 15px; border-radius: 6px; font-weight: bold; margin-top: 5px; }
+        .btn-drive:hover { background: #d35400; }
+        .btn-submit { background: #2980b9; }
+        .btn-submit:hover { background: #1f6391; }
+        .card { background: #ecf0f1; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .mapel-btn { background: #8e44ad; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 15px; margin-top: 5px; }
+        .mapel-btn:hover { background: #732d91; }
+        .hidden { display: none; }
+        .soal-item { background: #f9f9f9; border-left: 4px solid #3498db; padding: 12px; margin-bottom: 15px; border-radius: 4px; }
+        .soal-item p { margin: 0 0 10px 0; font-weight: 600; }
+        .option-label { display: block; margin: 5px 0; cursor: pointer; font-weight: normal; }
+        .box-materi { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
-<div class="app-container">
+<div class="container">
+    <h1>PKBM BIDARA BALYA</h1>
+    <h2>Portal Pembelajaran & Ujian Kesetaraan</h2>
 
-    <!-- 1. SELAMAT DATANG -->
-    <div id="screen-welcome" class="screen active">
-        <div class="welcome-hero">
-            <div class="welcome-icon">🎓</div>
-            <h1 class="welcome-title">Selamat Datang Di<br>PKBM Bidara Balya</h1>
-            <p class="welcome-subtitle">Platform Belajar Digital Pendidikan Kesetaraan Paket A, B, & C</p>
+    <!-- LANGKAH 1: LOGIN SISWA & PILIH KELAS -->
+    <div id="step-login">
+        <div class="form-group">
+            <label for="namaSiswa">Nama Lengkap Siswa:</label>
+            <input type="text" id="namaSiswa" placeholder="Masukkan nama lengkap Anda..." required>
         </div>
-        <div class="welcome-body">
-            <p style="color:#64748b; font-size: 14px; margin-bottom: 30px;">Akses materi pembelajaran dan ujian secara fleksibel.</p>
-            <button class="btn-primary" onclick="showScreen('screen-login')">Masuk Ke Aplikasi 🚀</button>
+        <div class="form-group">
+            <label for="pilihSemester">Pilih Kelas & Semester:</label>
+            <select id="pilihSemester" onchange="cekLinkMateri()">
+                <option value="">-- Pilih Kelas & Semester --</option>
+                <!-- PAKET A -->
+                <option value="Kelas 4 - Semester 1">Paket A: Kelas IV - Semester 1</option>
+                <option value="Kelas 4 - Semester 2">Paket A: Kelas IV - Semester 2</option>
+                <option value="Kelas 5 - Semester 1">Paket A: Kelas V - Semester 1</option>
+                <option value="Kelas 5 - Semester 2">Paket A: Kelas V - Semester 2</option>
+                <option value="Kelas 6 - Semester 1">Paket A: Kelas VI - Semester 1</option>
+                <option value="Kelas 6 - Semester 2">Paket A: Kelas VI - Semester 2</option>
+                <!-- PAKET B -->
+                <option value="Kelas 7 - Semester 1">Paket B: Kelas VII - Semester 1</option>
+                <option value="Kelas 7 - Semester 2">Paket B: Kelas VII - Semester 2</option>
+                <option value="Kelas 8 - Semester 1">Paket B: Kelas VIII - Semester 1</option>
+                <option value="Kelas 8 - Semester 2">Paket B: Kelas VIII - Semester 2</option>
+                <option value="Kelas 9 - Semester 1">Paket B: Kelas IX - Semester 1</option>
+                <option value="Kelas 9 - Semester 2">Paket B: Kelas IX - Semester 2</option>
+                <!-- PAKET C -->
+                <option value="Kelas 10 - Semester 1">Paket C: Kelas X - Semester 1</option>
+                <option value="Kelas 10 - Semester 2">Paket C: Kelas X - Semester 2</option>
+                <option value="Kelas 11 - Semester 1">Paket C: Kelas XI - Semester 1</option>
+                <option value="Kelas 11 - Semester 2">Paket C: Kelas XI - Semester 2</option>
+                <option value="Kelas 12 - Semester 1">Paket C: Kelas XII - Semester 1</option>
+                <option value="Kelas 12 - Semester 2">Paket C: Kelas XII - Semester 2</option>
+            </select>
         </div>
+
+        <!-- AKSES MATERI PEMBELAJARAN (DRIVE) -->
+        <div id="boxMateri" class="box-materi hidden">
+            <p style="margin:0 0 8px 0; font-weight:bold;">📚 Materi & Modul Pembelajaran:</p>
+            <a id="btnDriveMateri" href="#" target="_blank" class="btn-drive">Buka Folder Materi Pembelajaran (Google Drive) 📂</a>
+        </div>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+
+        <h3>Masuk ke Ujian Online:</h3>
+        <div class="form-group">
+            <label for="pilihHari">Pilih Hari Ujian:</label>
+            <select id="pilihHari">
+                <option value="">-- Pilih Hari --</option>
+                <option value="Hari 1">Hari 1</option>
+                <option value="Hari 2">Hari 2</option>
+                <option value="Hari 3">Hari 3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tokenUjian">Token Ujian Harian:</label>
+            <input type="text" id="tokenUjian" placeholder="Masukkan token dari pengawas..." required>
+        </div>
+        <button class="btn" onclick="verifikasiToken()">Masuk & Tampilkan Ujian 🚀</button>
     </div>
 
-    <!-- 2. LOGIN -->
-    <div id="screen-login" class="screen">
-        <div class="app-header">
-            <button class="btn-header-back" onclick="showScreen('screen-welcome')">⬅ Kembali</button>
-            <h2>Halaman Login</h2>
-            <div style="width: 50px;"></div>
+    <!-- LANGKAH 2: DAFTAR MATA PELAJARAN -->
+    <div id="step-mapel" class="hidden">
+        <div class="card">
+            <p><strong>Nama Siswa:</strong> <span id="dispNama"></span></p>
+            <p><strong>Ujian:</strong> <span id="dispSem"></span> (<span id="dispHari"></span>)</p>
         </div>
-        <div style="padding: 30px 24px;">
-            <div class="form-group">
-                <label>Nama Siswa</label>
-                <input type="text" id="username" placeholder="Masukkan Nama Panggilan">
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <div class="password-wrapper">
-                    <input type="password" id="password" placeholder="Masukkan Password">
-                    <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility()" id="btn-toggle-eye">👁️</button>
-                </div>
-            </div>
-            <button class="btn-primary" style="margin-top: 10px;" onclick="handleLogin()">Login</button>
-        </div>
+        <h3>Mata Pelajaran Hari Ini:</h3>
+        <div id="daftarMapelContainer"></div>
     </div>
 
-    <!-- 3. MENU UTAMA (PAKET A, B, C) -->
-    <div id="screen-paket" class="screen">
-        <div class="app-header">
-            <button class="btn-header-back" onclick="showScreen('screen-login')">⬅ Logout</button>
-            <h2>Menu Paket</h2>
-            <div style="width: 50px;"></div>
+    <!-- LANGKAH 3: LEMBAR SOAL UJIAN -->
+    <div id="step-soal" class="hidden">
+        <div class="card">
+            <h3 id="judulMapel"></h3>
         </div>
-
-        <div style="margin-top: 20px;"></div>
-
-        <!-- Banner Profil Siswa -->
-        <div class="user-banner">
-            <div class="avatar" id="avatar-initial">S</div>
-            <div class="user-info">
-                <h4 id="display-name">Nama Siswa</h4>
-                <p>Status: Siswa Aktif</p>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 12px;">Daftar Program Paket:</p>
-
-            <div class="paket-card paket-a" onclick="selectPaket('Paket A', ['Kelas 4', 'Kelas 5', 'Kelas 6'])">
-                <div class="paket-header">
-                    <span class="paket-title">Paket A</span>
-                    <span class="paket-badge badge-a">Setara SD</span>
-                </div>
-                <p class="paket-sub">Kelas 4, Kelas 5, dan Kelas 6</p>
-            </div>
-
-            <div class="paket-card paket-b" onclick="selectPaket('Paket B', ['Kelas 7', 'Kelas 8', 'Kelas 9'])">
-                <div class="paket-header">
-                    <span class="paket-title">Paket B</span>
-                    <span class="paket-badge badge-b">Setara SMP</span>
-                </div>
-                <p class="paket-sub">Kelas 7, Kelas 8, dan Kelas 9</p>
-            </div>
-
-            <div class="paket-card paket-c" onclick="selectPaket('Paket C', ['Kelas 10', 'Kelas 11', 'Kelas 12'])">
-                <div class="paket-header">
-                    <span class="paket-title">Paket C</span>
-                    <span class="paket-badge badge-c">Setara SMA</span>
-                </div>
-                <p class="paket-sub">Kelas 10, Kelas 11, dan Kelas 12</p>
-            </div>
-        </div>
+        <form id="formSoal">
+            <div id="soalContainer"></div>
+            <button type="button" class="btn btn-submit" onclick="hitungDanKirimNilai()">Selesai & Kirim Jawaban 📤</button>
+        </form>
     </div>
-
-    <!-- 4. PILIH KELAS & SEMESTER -->
-    <div id="screen-kelas" class="screen">
-        <div class="app-header">
-            <button class="btn-header-back" onclick="showScreen('screen-paket')">⬅ Kembali</button>
-            <h2 id="judul-paket">Detail Paket</h2>
-            <div style="width: 50px;"></div>
-        </div>
-
-        <div class="card-container" style="margin-top: 20px;" id="daftar-kelas"></div>
-    </div>
-
-    <!-- 5. MATERI & TEST -->
-    <div id="screen-konten" class="screen">
-        <div class="app-header">
-            <button class="btn-header-back" onclick="showScreen('screen-kelas')">⬅ Kembali</button>
-            <h2 id="judul-konten">Detail Semester</h2>
-            <div style="width: 50px;"></div>
-        </div>
-
-        <div style="margin-top: 20px;"></div>
-
-        <!-- Tab Menu -->
-        <div class="tab-menu">
-            <div id="tab-materi" class="tab-item active-tab" onclick="switchTab('materi')">📁 Google Drive Materi</div>
-            <div id="tab-ujian" class="tab-item" onclick="switchTab('ujian')">📝 Test / Ujian</div>
-        </div>
-
-        <!-- TAB MATERI -->
-        <div id="content-materi" class="card-container">
-            <div class="main-drive-box">
-                <div class="main-drive-icon">📂</div>
-                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Materi Pembelajaran</h3>
-                <p id="desc-materi" style="font-size:12px; color:#64748b; margin-bottom:20px;">Akses modul pelajaran di Folder Google Drive.</p>
-                
-                <a id="link-drive-utama" href="#" target="_blank" class="btn-primary">
-                    Buka Google Drive Materi 🚀
-                </a>
-            </div>
-        </div>
-
-        <!-- TAB UJIAN -->
-        <div id="content-ujian" class="card-container" style="display: none;">
-            <div class="main-drive-box">
-                <div class="main-drive-icon">✍️</div>
-                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Lembar Test / Ujian Siswa</h3>
-                <p id="desc-ujian" style="font-size:12px; color:#64748b; margin-bottom:20px;">Klik tombol di bawah untuk membuka lembar soal ujian via Google Form.</p>
-                
-                <a id="link-ujian-utama" href="#" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                    Mulai Kerjakan Ujian 📝
-                </a>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <script>
-    // =========================================================================
-    // PASSWORD LOGIN APLIKASI
-    // =========================================================================
-    const PASSWORD_LOGIN = "123"; 
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxl-kk96fJ4mPazFjr4eVMUSs73Zcrr-LNuvnvd6ILGApqtQ8f66zZLk7vaiv7KtFvFcA/exec";
 
-    // =========================================================================
-    // DAFTAR LINK GOOGLE DRIVE & GOOGLE FORM UNTUK KELAS & SEMESTER
-    // =========================================================================
     const databaseLink = {
-        // --- PAKET A ---
-        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu", form: "https://forms.google.com" },
-        "Kelas 4 - Semester 2": { drive: "https://drive.google.com/drive/folders/1MdJnOIf4ZsrodoySo0G7T2oi3TFJin5K", form: "https://forms.google.com" },
-        "Kelas 5 - Semester 1": { drive: "https://drive.google.com/drive/folders/1nOip4hKrldfGhZKzy6eiszg7KpWqi_oN", form: "https://forms.google.com" },
-        "Kelas 5 - Semester 2": { drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKoSAS-kBNNMJed", form: "https://forms.google.com" },
-        "Kelas 6 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gHvv32-BptZqmxmJ641rR8PkYOZeYmF5", form: "https://forms.google.com" },
-        "Kelas 6 - Semester 2": { drive: "https://drive.google.com/drive/folders/1glq-8mNk4mpwGn0-eRlw0xARm2-0kujt", form: "https://forms.google.com" },
+        // PAKET A
+        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu", ujian: [] },
+        "Kelas 4 - Semester 2": { drive: "https://drive.google.com/drive/folders/1MdJnOiF4ZsrodoySo0G7T2oi3TFJin5K", ujian: [] },
+        "Kelas 5 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/1nOip4hKrldfGhZKzy6eiszg7KpWqi_oN", 
+            ujian: [
+                // HARI 1
+                { mapel: "Pendidikan Agama", hari: "Hari 1", token: "HARI1KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 1/soal_agama_kelas_v_semester1.json" },
+                { mapel: "Bahasa Indonesia", hari: "Hari 1", token: "HARI1KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 1/soal_bahasa_indonesia_kelas_v_semester1.json" },
+                { mapel: "Bahasa Inggris", hari: "Hari 1", token: "HARI1KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 1/soal_bahasa_inggris_kelas_v_semester1.json" },
+                // HARI 2
+                { mapel: "IPA", hari: "Hari 2", token: "HARI2KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 2/soal_ipa_kelas_v_semester1.json" },
+                { mapel: "IPS", hari: "Hari 2", token: "HARI2KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 2/soal_ips_kelas_v_semester1.json" },
+                { mapel: "Matematika", hari: "Hari 2", token: "HARI2KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 2/soal_matematika_kelas_v_semester1.json" },
+                // HARI 3
+                { mapel: "PJOK", hari: "Hari 3", token: "HARI3KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 3/soal_pjok_kelas_v_semester1.json" },
+                { mapel: "PPKn", hari: "Hari 3", token: "HARI3KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 3/soal_ppkn_kelas_v_semester1.json" },
+                { mapel: "Seni Budaya", hari: "Hari 3", token: "HARI3KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 3/soal_senibudaya_v_semester1.json" }
+            ]
+        },
+        "Kelas 5 - Semester 2": { drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKOSAS-kBNnMJed", ujian: [] },
+        "Kelas 6 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gHvv32-BptZqmxmJ641rR8PKoZEymF5", ujian: [] },
+        "Kelas 6 - Semester 2": { drive: "https://drive.google.com/drive/folders/1glq-8mNk4mpwGn0-eRlw0xARm2-0kujt", ujian: [] },
 
-        // --- PAKET B ---
-        "Kelas 7 - Semester 1": { drive: "https://drive.google.com/drive/folders/12CIwFtxLQ4tkRtVE7BcpqESgQgFWf0k5", form: "https://forms.google.com" },
-        "Kelas 7 - Semester 2": { drive: "https://drive.google.com/drive/folders/1_Fs4rE_8JtTxagQNL0SpwH0ull40kAJG", form: "https://forms.google.com" },
-        "Kelas 8 - Semester 1": { drive: "https://drive.google.com/drive/folders/179lFArQl9k5ZJZuMOUAN-eRLLt6PpJQZ", form: "https://forms.google.com" },
-        "Kelas 8 - Semester 2": { drive: "https://drive.google.com/drive/folders/1D0SUl2vsWIDR6jnJPHVEGHQzKFeWJP8V", form: "https://forms.google.com" },
-        "Kelas 9 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gvQOnP8UbAz10YJCwIAO53QBDOAUbPmu", form: "https://forms.google.com" },
-        "Kelas 9 - Semester 2": { drive: "https://drive.google.com/drive/folders/1VTkkaiTFg2ITSVh6KJIKfMwA6Xb73E7A", form: "https://forms.google.com" },
+        // PAKET B
+        "Kelas 7 - Semester 1": { drive: "https://drive.google.com/drive/folders/12CIwFtxLQ4tkRtVE7BcpqESgQgFWf0k5", ujian: [] },
+        "Kelas 7 - Semester 2": { drive: "https://drive.google.com/drive/folders/1_Fs4RE_8JtTxagQNL0SpwH0ull40kAJG", ujian: [] },
+        "Kelas 8 - Semester 1": { drive: "https://drive.google.com/drive/folders/1791FarQ19k5ZJUmoUAN-erLLt6PpJQZ", ujian: [] },
+        "Kelas 8 - Semester 2": { drive: "https://drive.google.com/drive/folders/1D0SU12vsWIDR6jnJPHVEGHQzKFeWJP8V", ujian: [] },
+        "Kelas 9 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gvQOnP8UbAz10YJCwiAO53QBDOAUbPmu", ujian: [] },
+        "Kelas 9 - Semester 2": { drive: "https://drive.google.com/drive/folders/1VTkkaiTfg2ITSVh6KJIKfMwa6Xb73E7A", ujian: [] },
 
-        // --- PAKET C ---
-        "Kelas 10 - Semester 1": { drive: "https://drive.google.com/drive/folders/1LFG3bduMUqFzzifBojlFrSoZNjTAFHS0", form: "https://forms.google.com" },
-        "Kelas 10 - Semester 2": { drive: "https://drive.google.com/drive/folders/18pRkl4JT6zlgfC73MI42-NYej67DXpif", form: "https://forms.google.com" },
-        "Kelas 11 - Semester 1": { drive: "https://drive.google.com/drive/folders/1lBpzFSrqw8pIT5Fh5Jx6hma6rsVcGysw", form: "https://forms.google.com" },
-        "Kelas 11 - Semester 2": { drive: "https://drive.google.com/drive/folders/1E7bIcVfnFRBtT3SsA2H9BlHcSYvQu_72", form: "https://forms.google.com" },
-        "Kelas 12 - Semester 1": { drive: "https://drive.google.com/drive/folders/1M9F66dNuo2tbAzLYUHU8l3Q0aQ064UNn", form: "https://forms.google.com" },
-        "Kelas 12 - Semester 2": { drive: "https://drive.google.com/drive/folders/1ee9wlItMzhkWktKYXulxs52nr2qfl_fj", form: "https://forms.google.com" }
+        // PAKET C
+        "Kelas 10 - Semester 1": { drive: "https://drive.google.com/drive/folders/1LFG3bduMUqFzzifBojlFrSoZNjTAFHS0", ujian: [] },
+        "Kelas 10 - Semester 2": { drive: "https://drive.google.com/drive/folders/18pRK14JT6zlgFC73mi4Z-Nyej67DXpiF", ujian: [] },
+        "Kelas 11 - Semester 1": { drive: "https://drive.google.com/drive/folders/11BpzFSrqw8pIT5Fh5Jx6hma6rsVCGysw", ujian: [] },
+        "Kelas 11 - Semester 2": { drive: "https://drive.google.com/drive/folders/1E7bICVfnFRbTT3SsA2H9B1HCsyVqu_72", ujian: [] },
+        "Kelas 12 - Semester 1": { drive: "https://drive.google.com/drive/folders/1M9F66dNuo2tbAzLYUHU813Q0aQ064Unn", ujian: [] },
+        "Kelas 12 - Semester 2": { drive: "https://drive.google.com/drive/folders/1ee9wL1tzMhkwkTKylXuls52rq2f1_fj", ujian: [] }
     };
 
-    // =========================================================================
-    // LOGIKA OPERASIONAL APLIKASI
-    // =========================================================================
-    function showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-        document.getElementById(screenId).classList.add('active');
-    }
+    let currentSiswa = "";
+    let currentSemester = "";
+    let currentHari = "";
+    let currentMapel = "";
+    let currentDataSoal = [];
 
-    // FITUR INTIP PASSWORD (LIHAT / SEMBUNYIKAN)
-    function togglePasswordVisibility() {
-        const passwordInput = document.getElementById('password');
-        const toggleBtn = document.getElementById('btn-toggle-eye');
-        
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            toggleBtn.innerText = '🙈'; // Berubah jadi emoji tutup mata saat password terlihat
+    function cekLinkMateri() {
+        const sem = document.getElementById("pilihSemester").value;
+        const boxMateri = document.getElementById("boxMateri");
+        const btnDrive = document.getElementById("btnDriveMateri");
+
+        if (sem && databaseLink[sem] && databaseLink[sem].drive) {
+            btnDrive.href = databaseLink[sem].drive;
+            boxMateri.classList.remove("hidden");
         } else {
-            passwordInput.type = 'password';
-            toggleBtn.innerText = '👁️'; // Berubah kembali ke ikon mata
+            boxMateri.classList.add("hidden");
         }
     }
 
-    function handleLogin() {
-        const u = document.getElementById('username').value.trim();
-        const p = document.getElementById('password').value.trim();
+    function verifikasiToken() {
+        const nama = document.getElementById("namaSiswa").value.trim();
+        const sem = document.getElementById("pilihSemester").value;
+        const hari = document.getElementById("pilihHari").value;
+        const token = document.getElementById("tokenUjian").value.trim();
 
-        if (!u) {
-            alert('Silakan masukkan Nama Lengkap Siswa terlebih dahulu!');
+        if (!nama || !sem || !hari || !token) {
+            alert("Harap isi Nama, Kelas/Semester, Hari Ujian, dan Token!");
             return;
         }
 
-        if (p === PASSWORD_LOGIN) {
-            document.getElementById('display-name').innerText = u;
-            document.getElementById('avatar-initial').innerText = u.charAt(0).toUpperCase();
-            showScreen('screen-paket');
-        } else {
-            alert('Password salah! Silakan periksa kembali password kamu.');
+        const dataSem = databaseLink[sem];
+        if (!dataSem || !dataSem.ujian) {
+            alert("Data ujian untuk kelas/semester ini belum diatur.");
+            return;
         }
-    }
 
-    function selectPaket(namaPaket, listKelas) {
-        document.getElementById('judul-paket').innerText = namaPaket;
-        const container = document.getElementById('daftar-kelas');
-        container.innerHTML = '';
+        const mapelHariIni = dataSem.ujian.filter(item => item.hari === hari);
 
-        listKelas.forEach(kelas => {
-            container.innerHTML += `
-                <div class="kelas-box">
-                    <div class="kelas-title">📌 ${kelas}</div>
-                    <button class="btn-outline" style="margin-bottom: 6px;" onclick="openSemester('${kelas} - Semester 1')">Semester 1</button>
-                    <button class="btn-outline" onclick="openSemester('${kelas} - Semester 2')">Semester 2</button>
-                </div>
+        if (mapelHariIni.length === 0) {
+            alert("Belum ada daftar soal untuk kelas/hari ini.");
+            return;
+        }
+
+        if (mapelHariIni[0].token !== token) {
+            alert("Token Ujian Salah!");
+            return;
+        }
+
+        currentSiswa = nama;
+        currentSemester = sem;
+        currentHari = hari;
+
+        document.getElementById("dispNama").innerText = nama;
+        document.getElementById("dispSem").innerText = sem;
+        document.getElementById("dispHari").innerText = hari;
+
+        const container = document.getElementById("daftarMapelContainer");
+        container.innerHTML = "";
+
+        mapelHariIni.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <h4>${item.mapel}</h4>
+                <button class="mapel-btn" onclick="muatSoal('${item.mapel}', '${item.link}')">Mulai Kerjakan Soal 📝</button>
             `;
+            container.appendChild(card);
         });
-        showScreen('screen-kelas');
+
+        document.getElementById("step-login").classList.add("hidden");
+        document.getElementById("step-mapel").classList.remove("hidden");
     }
 
-    function openSemester(keySemester) {
-        document.getElementById('judul-konten').innerText = keySemester;
+    function muatSoal(mapel, jsonLink) {
+        currentMapel = mapel;
+        document.getElementById("judulMapel").innerText = "Mata Pelajaran: " + mapel;
         
-        const data = databaseLink[keySemester] || { 
-            drive: "https://drive.google.com", 
-            form: "https://forms.google.com" 
+        fetch(jsonLink)
+            .then(res => {
+                if(!res.ok) throw new Error("Gagal mengambil data soal.");
+                return res.json();
+            })
+            .then(data => {
+                currentDataSoal = data;
+                tampilkanLembarSoal(data);
+                document.getElementById("step-mapel").classList.add("hidden");
+                document.getElementById("step-soal").classList.remove("hidden");
+            })
+            .catch(err => {
+                alert("Gagal memuat soal. Pastikan jalur file JSON sudah benar!");
+                console.error(err);
+            });
+    }
+
+    function tampilkanLembarSoal(soalArray) {
+        const container = document.getElementById("soalContainer");
+        container.innerHTML = "";
+
+        soalArray.forEach((q, idx) => {
+            const div = document.createElement("div");
+            div.className = "soal-item";
+
+            let pilihanHTML = "";
+            q.pilihan.forEach((pil, pIdx) => {
+                pilihanHTML += `
+                    <label class="option-label">
+                        <input type="radio" name="soal_${idx}" value="${pIdx}"> ${pil}
+                    </label>
+                `;
+            });
+
+            div.innerHTML = `<p>${idx + 1}. ${q.pertanyaan}</p>${pilihanHTML}`;
+            container.appendChild(div);
+        });
+    }
+
+    function hitungDanKirimNilai() {
+        let skor = 0;
+        const totalSoal = currentDataSoal.length;
+
+        currentDataSoal.forEach((q, idx) => {
+            const selected = document.querySelector(`input[name="soal_${idx}"]:checked`);
+            if (selected && parseInt(selected.value) === q.jawaban) {
+                skor++;
+            }
+        });
+
+        const nilaiFinal = Math.round((skor / totalSoal) * 100);
+
+        if (!confirm(`Yakin ingin mengirim jawaban ${currentMapel}?\n\nNilai Anda: ${nilaiFinal}`)) {
+            return;
+        }
+
+        const payload = {
+            nama: currentSiswa,
+            semester: currentSemester,
+            hari: currentHari,
+            mapel: currentMapel,
+            nilai: nilaiFinal
         };
 
-        document.getElementById('link-drive-utama').href = data.drive;
-        document.getElementById('link-ujian-utama').href = data.form;
-        
-        document.getElementById('desc-materi').innerText = `Akses modul pelajaran untuk ${keySemester} di Folder Google Drive.`;
-        document.getElementById('desc-ujian').innerText = `Lembar soal dan ujian via Google Form untuk ${keySemester}.`;
-
-        showScreen('screen-konten');
-    }
-
-    function switchTab(type) {
-        if(type === 'materi') {
-            document.getElementById('tab-materi').classList.add('active-tab');
-            document.getElementById('tab-ujian').classList.remove('active-tab');
-            document.getElementById('content-materi').style.display = 'block';
-            document.getElementById('content-ujian').style.display = 'none';
-        } else {
-            document.getElementById('tab-ujian').classList.add('active-tab');
-            document.getElementById('tab-materi').classList.remove('active-tab');
-            document.getElementById('content-materi').style.display = 'none';
-            document.getElementById('content-ujian').style.display = 'block';
-        }
+        fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        })
+        .then(() => {
+            alert("Nilai Anda berhasil dikirim!");
+            document.getElementById("step-soal").classList.add("hidden");
+            document.getElementById("step-mapel").classList.remove("hidden");
+        })
+        .catch(err => {
+            alert("Gagal mengirim nilai.");
+            console.error(err);
+        });
     }
 </script>
 
