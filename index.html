@@ -365,8 +365,9 @@
             const div = document.createElement("div");
             div.className = "soal-item";
 
-            // Mengambil teks dari kunci "soal" atau "pertanyaan"
-            const teksSoal = q.soal || q.pertanyaan || "";
+            // Mengambil teks soal dan membersihkan angka di awal jika ada
+            let teksSoal = q.soal || q.pertanyaan || "";
+            teksSoal = teksSoal.replace(/^\d+[\.\)]\s*/, '');
 
             let pilihanHTML = "";
             if (q.pilihan && Array.isArray(q.pilihan)) {
@@ -393,14 +394,12 @@
             if (selected) {
                 const jawabanUser = selected.value.trim();
                 
-                // Menangani jika jawaban_benar berisi huruf "A", "B", "C", "D"
                 if (q.jawaban_benar) {
                     const kunciHuruf = q.jawaban_benar.toString().trim().toUpperCase();
                     if (jawabanUser.startsWith(kunciHuruf)) {
                         skor++;
                     }
                 } else if (q.jawaban !== undefined) {
-                    // Menangani format indeks angka
                     if (parseInt(jawabanUser) === q.jawaban) {
                         skor++;
                     }
@@ -410,7 +409,7 @@
 
         const nilaiFinal = Math.round((skor / totalSoal) * 100);
 
-        if (!confirm(`Yakin ingin mengirim jawaban ${currentMapel}?\n\nNilai Anda: ${nilaiFinal}`)) {
+        if (!confirm(`Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ujian ${currentMapel}?`)) {
             return;
         }
 
@@ -429,12 +428,12 @@
             body: JSON.stringify(payload)
         })
         .then(() => {
-            alert("Nilai Anda berhasil dikirim!");
+            alert("Jawaban Anda berhasil dikirim ke sistem!");
             document.getElementById("step-soal").classList.add("hidden");
             document.getElementById("step-mapel").classList.remove("hidden");
         })
         .catch(err => {
-            alert("Gagal mengirim nilai.");
+            alert("Gagal mengirim jawaban. Silakan coba lagi.");
             console.error(err);
         });
     }
