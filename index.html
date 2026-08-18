@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PKBM Bidara Balya</title>
+    <title>PKBM Bidara Balya - Portal Pembelajaran</title>
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#0284c7">
@@ -85,11 +85,6 @@
         .kelas-box { background: white; border-radius: 16px; padding: 18px; margin-bottom: 16px; border: 1px solid #f1f5f9; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
         .kelas-title { font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 
-        /* Tabs Material & Ujian */
-        .tab-menu { display: flex; background: #f1f5f9; padding: 4px; border-radius: 12px; margin: 0 20px 20px; }
-        .tab-item { flex: 1; text-align: center; padding: 10px; font-size: 13px; font-weight: 600; color: #64748b; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-        .tab-item.active-tab { background: white; color: #0284c7; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-
         /* Box Kartu Utama */
         .main-drive-box { background: white; border-radius: 20px; padding: 24px; text-align: center; border: 1.5px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
         .main-drive-icon { font-size: 60px; margin-bottom: 12px; }
@@ -107,8 +102,8 @@
             <p class="welcome-subtitle">Platform Belajar Digital Pendidikan Kesetaraan Paket A, B, & C</p>
         </div>
         <div class="welcome-body">
-            <p style="color:#64748b; font-size: 14px; margin-bottom: 30px;">Akses materi pembelajaran dan ujian secara fleksibel.</p>
-            <button class="btn-primary" onclick="showScreen('screen-login')">Masuk Ke Aplikasi 🚀</button>
+            <p style="color:#64748b; font-size: 14px; margin-bottom: 30px;">Akses modul dan materi pembelajaran secara fleksibel.</p>
+            <button class="btn-primary" onclick="showScreen('screen-login')">Masuk Ke Portal Belajar 🚀</button>
         </div>
     </div>
 
@@ -194,7 +189,7 @@
         <div class="card-container" style="margin-top: 20px;" id="daftar-kelas"></div>
     </div>
 
-    <!-- 5. MATERI & TEST -->
+    <!-- 5. MATERI PEMBELAJARAN (DRIVE) -->
     <div id="screen-konten" class="screen">
         <div class="app-header">
             <button class="btn-header-back" onclick="showScreen('screen-kelas')">⬅ Kembali</button>
@@ -202,36 +197,17 @@
             <div style="width: 50px;"></div>
         </div>
 
-        <div style="margin-top: 20px;"></div>
+        <div style="margin-top: 25px;"></div>
 
-        <!-- Tab Menu -->
-        <div class="tab-menu">
-            <div id="tab-materi" class="tab-item active-tab" onclick="switchTab('materi')">📁 Google Drive Materi</div>
-            <div id="tab-ujian" class="tab-item" onclick="switchTab('ujian')">📝 Test / Ujian</div>
-        </div>
-
-        <!-- TAB MATERI -->
-        <div id="content-materi" class="card-container">
+        <!-- AKSES FOLDER DRIVE -->
+        <div class="card-container">
             <div class="main-drive-box">
                 <div class="main-drive-icon">📂</div>
-                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Materi Pembelajaran</h3>
+                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Materi & Modul Pembelajaran</h3>
                 <p id="desc-materi" style="font-size:12px; color:#64748b; margin-bottom:20px;">Akses modul pelajaran di Folder Google Drive.</p>
                 
                 <a id="link-drive-utama" href="#" target="_blank" class="btn-primary">
                     Buka Google Drive Materi 🚀
-                </a>
-            </div>
-        </div>
-
-        <!-- TAB UJIAN -->
-        <div id="content-ujian" class="card-container" style="display: none;">
-            <div class="main-drive-box">
-                <div class="main-drive-icon">✍️</div>
-                <h3 style="font-size:16px; color:#0f172a; margin-bottom:6px;">Lembar Test / Ujian Siswa</h3>
-                <p id="desc-ujian" style="font-size:12px; color:#64748b; margin-bottom:20px;">Klik tombol di bawah untuk membuka lembar soal ujian via Google Form.</p>
-                
-                <a id="link-ujian-utama" href="#" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                    Mulai Kerjakan Ujian 📝
                 </a>
             </div>
         </div>
@@ -246,32 +222,32 @@
     const PASSWORD_LOGIN = "123"; 
 
     // =========================================================================
-    // DAFTAR LINK GOOGLE DRIVE & GOOGLE FORM UNTUK KELAS & SEMESTER
+    // DAFTAR LINK GOOGLE DRIVE UNTUK KELAS & SEMESTER
     // =========================================================================
     const databaseLink = {
         // --- PAKET A ---
-        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu", form: "https://forms.google.com" },
-        "Kelas 4 - Semester 2": { drive: "https://drive.google.com/drive/folders/1MdJnOIf4ZsrodoySo0G7T2oi3TFJin5K", form: "https://forms.google.com" },
-        "Kelas 5 - Semester 1": { drive: "https://drive.google.com/drive/folders/1nOip4hKrldfGhZKzy6eiszg7KpWqi_oN", form: "https://forms.google.com" },
-        "Kelas 5 - Semester 2": { drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKoSAS-kBNNMJed", form: "https://forms.google.com" },
-        "Kelas 6 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gHvv32-BptZqmxmJ641rR8PkYOZeYmF5", form: "https://forms.google.com" },
-        "Kelas 6 - Semester 2": { drive: "https://drive.google.com/drive/folders/1glq-8mNk4mpwGn0-eRlw0xARm2-0kujt", form: "https://forms.google.com" },
+        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu" },
+        "Kelas 4 - Semester 2": { drive: "https://drive.google.com/drive/folders/1MdJnOiF4ZsrodoySo0G7T2oi3TFJin5K" },
+        "Kelas 5 - Semester 1": { drive: "https://drive.google.com/drive/folders/1nOip4hKrldfGhZKzy6eiszg7KpWqi_oN" },
+        "Kelas 5 - Semester 2": { drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKOSAS-kBNnMJed" },
+        "Kelas 6 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gHvv32-BptZqmxmJ641rR8PKoZEymF5" },
+        "Kelas 6 - Semester 2": { drive: "https://drive.google.com/drive/folders/1glq-8mNk4mpwGn0-eRlw0xARm2-0kujt" },
 
         // --- PAKET B ---
-        "Kelas 7 - Semester 1": { drive: "https://drive.google.com/drive/folders/12CIwFtxLQ4tkRtVE7BcpqESgQgFWf0k5", form: "https://forms.google.com" },
-        "Kelas 7 - Semester 2": { drive: "https://drive.google.com/drive/folders/1_Fs4rE_8JtTxagQNL0SpwH0ull40kAJG", form: "https://forms.google.com" },
-        "Kelas 8 - Semester 1": { drive: "https://drive.google.com/drive/folders/179lFArQl9k5ZJZuMOUAN-eRLLt6PpJQZ", form: "https://forms.google.com" },
-        "Kelas 8 - Semester 2": { drive: "https://drive.google.com/drive/folders/1D0SUl2vsWIDR6jnJPHVEGHQzKFeWJP8V", form: "https://forms.google.com" },
-        "Kelas 9 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gvQOnP8UbAz10YJCwIAO53QBDOAUbPmu", form: "https://forms.google.com" },
-        "Kelas 9 - Semester 2": { drive: "https://drive.google.com/drive/folders/1VTkkaiTFg2ITSVh6KJIKfMwA6Xb73E7A", form: "https://forms.google.com" },
+        "Kelas 7 - Semester 1": { drive: "https://drive.google.com/drive/folders/12CIwFtxLQ4tkRtVE7BcpqESgQgFWf0k5" },
+        "Kelas 7 - Semester 2": { drive: "https://drive.google.com/drive/folders/1_Fs4RE_8JtTxagQNL0SpwH0ull40kAJG" },
+        "Kelas 8 - Semester 1": { drive: "https://drive.google.com/drive/folders/1791FarQ19k5ZJUmoUAN-erLLt6PpJQZ" },
+        "Kelas 8 - Semester 2": { drive: "https://drive.google.com/drive/folders/1D0SU12vsWIDR6jnJPHVEGHQzKFeWJP8V" },
+        "Kelas 9 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gvQOnP8UbAz10YJCwiAO53QBDOAUbPmu" },
+        "Kelas 9 - Semester 2": { drive: "https://drive.google.com/drive/folders/1VTkkaiTfg2ITSVh6KJIKfMwa6Xb73E7A" },
 
         // --- PAKET C ---
-        "Kelas 10 - Semester 1": { drive: "https://drive.google.com/drive/folders/1LFG3bduMUqFzzifBojlFrSoZNjTAFHS0", form: "https://forms.google.com" },
-        "Kelas 10 - Semester 2": { drive: "https://drive.google.com/drive/folders/18pRkl4JT6zlgfC73MI42-NYej67DXpif", form: "https://forms.google.com" },
-        "Kelas 11 - Semester 1": { drive: "https://drive.google.com/drive/folders/1lBpzFSrqw8pIT5Fh5Jx6hma6rsVcGysw", form: "https://forms.google.com" },
-        "Kelas 11 - Semester 2": { drive: "https://drive.google.com/drive/folders/1E7bIcVfnFRBtT3SsA2H9BlHcSYvQu_72", form: "https://forms.google.com" },
-        "Kelas 12 - Semester 1": { drive: "https://drive.google.com/drive/folders/1M9F66dNuo2tbAzLYUHU8l3Q0aQ064UNn", form: "https://forms.google.com" },
-        "Kelas 12 - Semester 2": { drive: "https://drive.google.com/drive/folders/1ee9wlItMzhkWktKYXulxs52nr2qfl_fj", form: "https://forms.google.com" }
+        "Kelas 10 - Semester 1": { drive: "https://drive.google.com/drive/folders/1LFG3bduMUqFzzifBojlFrSoZNjTAFHS0" },
+        "Kelas 10 - Semester 2": { drive: "https://drive.google.com/drive/folders/18pRK14JT6zlgFC73mi4Z-Nyej67DXpiF" },
+        "Kelas 11 - Semester 1": { drive: "https://drive.google.com/drive/folders/11BpzFSrqw8pIT5Fh5Jx6hma6rsVCGysw" },
+        "Kelas 11 - Semester 2": { drive: "https://drive.google.com/drive/folders/1E7bICVfnFRbTT3SsA2H9B1HCsyVqu_72" },
+        "Kelas 12 - Semester 1": { drive: "https://drive.google.com/drive/folders/1M9F66dNuo2tbAzLYUHU813Q0aQ064Unn" },
+        "Kelas 12 - Semester 2": { drive: "https://drive.google.com/drive/folders/1ee9wL1tzMhkwkTKylXuls52rq2f1_fj" }
     };
 
     // =========================================================================
@@ -289,10 +265,10 @@
         
         if (passwordInput.type === 'password') {
             passwordInput.type = 'text';
-            toggleBtn.innerText = '🙈'; // Berubah jadi emoji tutup mata saat password terlihat
+            toggleBtn.innerText = '🙈';
         } else {
             passwordInput.type = 'password';
-            toggleBtn.innerText = '👁️'; // Berubah kembali ke ikon mata
+            toggleBtn.innerText = '👁️';
         }
     }
 
@@ -335,31 +311,13 @@
         document.getElementById('judul-konten').innerText = keySemester;
         
         const data = databaseLink[keySemester] || { 
-            drive: "https://drive.google.com", 
-            form: "https://forms.google.com" 
+            drive: "https://drive.google.com" 
         };
 
         document.getElementById('link-drive-utama').href = data.drive;
-        document.getElementById('link-ujian-utama').href = data.form;
-        
         document.getElementById('desc-materi').innerText = `Akses modul pelajaran untuk ${keySemester} di Folder Google Drive.`;
-        document.getElementById('desc-ujian').innerText = `Lembar soal dan ujian via Google Form untuk ${keySemester}.`;
 
         showScreen('screen-konten');
-    }
-
-    function switchTab(type) {
-        if(type === 'materi') {
-            document.getElementById('tab-materi').classList.add('active-tab');
-            document.getElementById('tab-ujian').classList.remove('active-tab');
-            document.getElementById('content-materi').style.display = 'block';
-            document.getElementById('content-ujian').style.display = 'none';
-        } else {
-            document.getElementById('tab-ujian').classList.add('active-tab');
-            document.getElementById('tab-materi').classList.remove('active-tab');
-            document.getElementById('content-materi').style.display = 'none';
-            document.getElementById('content-ujian').style.display = 'block';
-        }
     }
 </script>
 
