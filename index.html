@@ -209,84 +209,120 @@
 <script>
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxl-kk96fJ4mPazFjr4eVMUSs73Zcrr-LNuvnvd6ILGApqtQ8f66zZLk7vaiv7KtFvFcA/exec";
 
+    // Fungsi Pembantu Pembuat Daftar Soal Ujian Standard
+    function buatJadwalUjian(paket, kelas, sem, tokenPrefix) {
+        return [
+            // HARI 1
+            { mapel: "Pendidikan Agama", hari: "Hari 1", token: tokenPrefix + "1", link: `${paket}/${kelas}/${sem}/Hari 1/soal_agama_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            { mapel: "Bahasa Indonesia", hari: "Hari 1", token: tokenPrefix + "1", link: `${paket}/${kelas}/${sem}/Hari 1/soal_bahasa_indonesia_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            { mapel: "Bahasa Inggris", hari: "Hari 1", token: tokenPrefix + "1", link: `${paket}/${kelas}/${sem}/Hari 1/soal_bahasa_inggris_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            
+            // HARI 2
+            { mapel: "IPA / Sosiologi", hari: "Hari 2", token: tokenPrefix + "2", link: `${paket}/${kelas}/${sem}/Hari 2/soal_ipa_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            { mapel: "IPS / Geografi", hari: "Hari 2", token: tokenPrefix + "2", link: `${paket}/${kelas}/${sem}/Hari 2/soal_ips_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            { mapel: "Matematika", hari: "Hari 2", token: tokenPrefix + "2", link: `${paket}/${kelas}/${sem}/Hari 2/soal_matematika_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            
+            // HARI 3
+            { mapel: "PJOK", hari: "Hari 3", token: tokenPrefix + "3", link: `${paket}/${kelas}/${sem}/Hari 3/soal_pjok_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            { mapel: "PPKn", hari: "Hari 3", token: "HARI3KELAS5", link: `${paket}/${kelas}/${sem}/Hari 3/soal_ppkn_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` },
+            { mapel: "Seni Budaya", hari: "Hari 3", token: tokenPrefix + "3", link: `${paket}/${kelas}/${sem}/Hari 3/soal_senibudaya_${kelas.toLowerCase().replace(' ', '')}_${sem.toLowerCase().replace(' ', '')}.json` }
+        ];
+    }
+
     const databaseLink = {
         // ==========================================
         // PAKET A
         // ==========================================
-        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu", ujian: [] },
-        "Kelas 4 - Semester 2": { drive: "https://drive.google.com/drive/folders/1MdJnOiF4ZsrodoySo0G7T2oi3TFJin5K", ujian: [] },
+        "Kelas 4 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu", 
+            ujian: buatJadwalUjian("Paket A", "Kelas IV", "Semester 1", "HARI1KELAS4").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS4" : i < 6 ? "HARI2KELAS4" : "HARI3KELAS4" }))
+        },
+        "Kelas 4 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1MdJnOiF4ZsrodoySo0G7T2oi3TFJin5K", 
+            ujian: buatJadwalUjian("Paket A", "Kelas IV", "Semester 2", "HARI1KELAS4S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS4S2" : i < 6 ? "HARI2KELAS4S2" : "HARI3KELAS4S2" }))
+        },
         "Kelas 5 - Semester 1": { 
             drive: "https://drive.google.com/drive/folders/1nOip4hKrldfGhZKzy6eiszg7KpWqi_oN", 
             ujian: [
-                // HARI 1
                 { mapel: "Pendidikan Agama", hari: "Hari 1", token: "HARI1KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 1/soal_agama_kelas_v_semester1.json" },
                 { mapel: "Bahasa Indonesia", hari: "Hari 1", token: "HARI1KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 1/soal_bahasa_indonesia_kelas_v_semester1.json" },
                 { mapel: "Bahasa Inggris", hari: "Hari 1", token: "HARI1KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 1/soal_bahasa_inggris_kelas_v_semester1.json" },
-                // HARI 2
                 { mapel: "IPA", hari: "Hari 2", token: "HARI2KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 2/soal_ipa_kelas_v_semester1.json" },
                 { mapel: "IPS", hari: "Hari 2", token: "HARI2KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 2/soal_ips_kelas_v_semester1.json" },
                 { mapel: "Matematika", hari: "Hari 2", token: "HARI2KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 2/soal_matematika_kelas_v_semester1.json" },
-                // HARI 3
                 { mapel: "PJOK", hari: "Hari 3", token: "HARI3KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 3/soal_pjok_kelas_v_semester1.json" },
                 { mapel: "PPKn", hari: "Hari 3", token: "HARI3KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 3/soal_ppkn_kelas_v_semester1.json" },
                 { mapel: "Seni Budaya", hari: "Hari 3", token: "HARI3KELAS5", link: "Paket A/Kelas V/Semester 1/Hari 3/soal_senibudaya_v_semester1.json" }
             ]
         },
-        "Kelas 5 - Semester 2": { drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKOSAS-kBNnMJed", ujian: [] },
-        "Kelas 6 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gHvv32-BptZqmxmJ641rR8PKoZEymF5", ujian: [] },
-        "Kelas 6 - Semester 2": { drive: "https://drive.google.com/drive/folders/1glq-8mNk4mpwGn0-eRlw0xARm2-0kujt", ujian: [] },
+        "Kelas 5 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKOSAS-kBNnMJed", 
+            ujian: buatJadwalUjian("Paket A", "Kelas V", "Semester 2", "HARI1KELAS5S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS5S2" : i < 6 ? "HARI2KELAS5S2" : "HARI3KELAS5S2" }))
+        },
+        "Kelas 6 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/1gHvv32-BptZqmxmJ641rR8PKoZEymF5", 
+            ujian: buatJadwalUjian("Paket A", "Kelas VI", "Semester 1", "HARI1KELAS6").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS6" : i < 6 ? "HARI2KELAS6" : "HARI3KELAS6" }))
+        },
+        "Kelas 6 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1glq-8mNk4mpwGn0-eRlw0xARm2-0kujt", 
+            ujian: buatJadwalUjian("Paket A", "Kelas VI", "Semester 2", "HARI1KELAS6S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS6S2" : i < 6 ? "HARI2KELAS6S2" : "HARI3KELAS6S2" }))
+        },
 
         // ==========================================
         // PAKET B
         // ==========================================
         "Kelas 7 - Semester 1": { 
             drive: "https://drive.google.com/drive/folders/12CIwFtxLQ4tkRtVE7BcpqESgQgFWf0k5", 
-            ujian: [
-                // HARI 1
-                { mapel: "Pendidikan Agama", hari: "Hari 1", token: "HARI1KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 1/soal_agama_kelas_vii_semester1.json" },
-                { mapel: "Bahasa Indonesia", hari: "Hari 1", token: "HARI1KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 1/soal_bahasa_indonesia_kelas_vii_semester1.json" },
-                { mapel: "Bahasa Inggris", hari: "Hari 1", token: "HARI1KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 1/soal_bahasa_inggris_kelas_vii_semester1.json" },
-                // HARI 2
-                { mapel: "IPA", hari: "Hari 2", token: "HARI2KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 2/soal_ipa_kelas_vii_semester1.json" },
-                { mapel: "IPS", hari: "Hari 2", token: "HARI2KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 2/soal_ips_kelas_vii_semester1.json" },
-                { mapel: "Matematika", hari: "Hari 2", token: "HARI2KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 2/soal_matematika_kelas_vii_semester1.json" },
-                // HARI 3
-                { mapel: "PJOK", hari: "Hari 3", token: "HARI3KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 3/soal_pjok_kelas_vii_semester1.json" },
-                { mapel: "PPKn", hari: "Hari 3", token: "HARI3KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 3/soal_ppkn_kelas_vii_semester1.json" },
-                { mapel: "Seni Budaya", hari: "Hari 3", token: "HARI3KELAS7", link: "Paket B/Kelas VII/Semester 1/Hari 3/soal_senibudaya_kelas_vii_semester1.json" }
-            ]
+            ujian: buatJadwalUjian("Paket B", "Kelas VII", "Semester 1", "HARI1KELAS7").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS7" : i < 6 ? "HARI2KELAS7" : "HARI3KELAS7" }))
         },
-        "Kelas 7 - Semester 2": { drive: "https://drive.google.com/drive/folders/1_Fs4RE_8JtTxagQNL0SpwH0ull40kAJG", ujian: [] },
-        "Kelas 8 - Semester 1": { drive: "https://drive.google.com/drive/folders/1791FarQ19k5ZJUmoUAN-erLLt6PpJQZ", ujian: [] },
-        "Kelas 8 - Semester 2": { drive: "https://drive.google.com/drive/folders/1D0SU12vsWIDR6jnJPHVEGHQzKFeWJP8V", ujian: [] },
-        "Kelas 9 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gvQOnP8UbAz10YJCwiAO53QBDOAUbPmu", ujian: [] },
-        "Kelas 9 - Semester 2": { drive: "https://drive.google.com/drive/folders/1VTkkaiTfg2ITSVh6KJIKfMwa6Xb73E7A", ujian: [] },
+        "Kelas 7 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1_Fs4RE_8JtTxagQNL0SpwH0ull40kAJG", 
+            ujian: buatJadwalUjian("Paket B", "Kelas VII", "Semester 2", "HARI1KELAS7S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS7S2" : i < 6 ? "HARI2KELAS7S2" : "HARI3KELAS7S2" }))
+        },
+        "Kelas 8 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/1791FarQ19k5ZJUmoUAN-erLLt6PpJQZ", 
+            ujian: buatJadwalUjian("Paket B", "Kelas VIII", "Semester 1", "HARI1KELAS8").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS8" : i < 6 ? "HARI2KELAS8" : "HARI3KELAS8" }))
+        },
+        "Kelas 8 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1D0SU12vsWIDR6jnJPHVEGHQzKFeWJP8V", 
+            ujian: buatJadwalUjian("Paket B", "Kelas VIII", "Semester 2", "HARI1KELAS8S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS8S2" : i < 6 ? "HARI2KELAS8S2" : "HARI3KELAS8S2" }))
+        },
+        "Kelas 9 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/1gvQOnP8UbAz10YJCwiAO53QBDOAUbPmu", 
+            ujian: buatJadwalUjian("Paket B", "Kelas IX", "Semester 1", "HARI1KELAS9").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS9" : i < 6 ? "HARI2KELAS9" : "HARI3KELAS9" }))
+        },
+        "Kelas 9 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1VTkkaiTfg2ITSVh6KJIKfMwa6Xb73E7A", 
+            ujian: buatJadwalUjian("Paket B", "Kelas IX", "Semester 2", "HARI1KELAS9S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS9S2" : i < 6 ? "HARI2KELAS9S2" : "HARI3KELAS9S2" }))
+        },
 
         // ==========================================
         // PAKET C
         // ==========================================
         "Kelas 10 - Semester 1": { 
             drive: "https://drive.google.com/drive/folders/1LFG3bduMUqFzzifBojlFrSoZNjTAFHS0", 
-            ujian: [
-                // HARI 1
-                { mapel: "Pendidikan Agama", hari: "Hari 1", token: "HARI1KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 1/soal_agama_kelas_x_semester1.json" },
-                { mapel: "Bahasa Indonesia", hari: "Hari 1", token: "HARI1KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 1/soal_bahasa_indonesia_kelas_x_semester1.json" },
-                { mapel: "Bahasa Inggris", hari: "Hari 1", token: "HARI1KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 1/soal_bahasa_inggris_kelas_x_semester1.json" },
-                // HARI 2
-                { mapel: "Sosiologi / IPA", hari: "Hari 2", token: "HARI2KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 2/soal_sosiologi_kelas_x_semester1.json" },
-                { mapel: "Geografi / IPS", hari: "Hari 2", token: "HARI2KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 2/soal_geografi_kelas_x_semester1.json" },
-                { mapel: "Matematika", hari: "Hari 2", token: "HARI2KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 2/soal_matematika_kelas_x_semester1.json" },
-                // HARI 3
-                { mapel: "PJOK", hari: "Hari 3", token: "HARI3KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 3/soal_pjok_kelas_x_semester1.json" },
-                { mapel: "PPKn", hari: "Hari 3", token: "HARI3KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 3/soal_ppkn_kelas_x_semester1.json" },
-                { mapel: "Seni Budaya", hari: "Hari 3", token: "HARI3KELAS10", link: "Paket C/Kelas X/Semester 1/Hari 3/soal_senibudaya_kelas_x_semester1.json" }
-            ]
+            ujian: buatJadwalUjian("Paket C", "Kelas X", "Semester 1", "HARI1KELAS10").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS10" : i < 6 ? "HARI2KELAS10" : "HARI3KELAS10" }))
         },
-        "Kelas 10 - Semester 2": { drive: "https://drive.google.com/drive/folders/18pRK14JT6zlgFC73mi4Z-Nyej67DXpiF", ujian: [] },
-        "Kelas 11 - Semester 1": { drive: "https://drive.google.com/drive/folders/11BpzFSrqw8pIT5Fh5Jx6hma6rsVCGysw", ujian: [] },
-        "Kelas 11 - Semester 2": { drive: "https://drive.google.com/drive/folders/1E7bICVfnFRbTT3SsA2H9B1HCsyVqu_72", ujian: [] },
-        "Kelas 12 - Semester 1": { drive: "https://drive.google.com/drive/folders/1M9F66dNuo2tbAzLYUHU813Q0aQ064Unn", ujian: [] },
-        "Kelas 12 - Semester 2": { drive: "https://drive.google.com/drive/folders/1ee9wL1tzMhkwkTKylXuls52rq2f1_fj", ujian: [] }
+        "Kelas 10 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/18pRK14JT6zlgFC73mi4Z-Nyej67DXpiF", 
+            ujian: buatJadwalUjian("Paket C", "Kelas X", "Semester 2", "HARI1KELAS10S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS10S2" : i < 6 ? "HARI2KELAS10S2" : "HARI3KELAS10S2" }))
+        },
+        "Kelas 11 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/11BpzFSrqw8pIT5Fh5Jx6hma6rsVCGysw", 
+            ujian: buatJadwalUjian("Paket C", "Kelas XI", "Semester 1", "HARI1KELAS11").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS11" : i < 6 ? "HARI2KELAS11" : "HARI3KELAS11" }))
+        },
+        "Kelas 11 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1E7bICVfnFRbTT3SsA2H9B1HCsyVqu_72", 
+            ujian: buatJadwalUjian("Paket C", "Kelas XI", "Semester 2", "HARI1KELAS11S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS11S2" : i < 6 ? "HARI2KELAS11S2" : "HARI3KELAS11S2" }))
+        },
+        "Kelas 12 - Semester 1": { 
+            drive: "https://drive.google.com/drive/folders/1M9F66dNuo2tbAzLYUHU813Q0aQ064Unn", 
+            ujian: buatJadwalUjian("Paket C", "Kelas XII", "Semester 1", "HARI1KELAS12").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS12" : i < 6 ? "HARI2KELAS12" : "HARI3KELAS12" }))
+        },
+        "Kelas 12 - Semester 2": { 
+            drive: "https://drive.google.com/drive/folders/1ee9wL1tzMhkwkTKylXuls52rq2f1_fj", 
+            ujian: buatJadwalUjian("Paket C", "Kelas XII", "Semester 2", "HARI1KELAS12S2").map((u, i) => ({ ...u, token: i < 3 ? "HARI1KELAS12S2" : i < 6 ? "HARI2KELAS12S2" : "HARI3KELAS12S2" }))
+        }
     };
 
     let currentSiswa = "";
@@ -388,7 +424,7 @@
             .then(data => {
                 currentDataSoal = data;
                 tampilkanLembarSoal(data);
-                mulaiTimer(60); // Pengaturan durasi waktu ujian (60 Menit)
+                mulaiTimer(60); // Durasi 60 Menit
                 document.getElementById("step-mapel").classList.add("hidden");
                 document.getElementById("step-soal").classList.remove("hidden");
             })
