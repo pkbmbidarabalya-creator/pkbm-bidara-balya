@@ -160,11 +160,11 @@
 
   /* nav footer */
   .footer-nav{
-    display:flex; gap:12px; margin-top:36px; padding-top:20px;
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:36px; padding-top:20px;
     border-top:1px solid var(--line);
   }
   .btn{
-    flex:1; text-align:center; padding:14px 16px; border-radius:12px;
+    flex:1 1 auto; min-width:110px; text-align:center; padding:12px 14px; border-radius:12px;
     font-weight:600; font-size:15px; cursor:pointer; border:none;
     font-family:'Work Sans',sans-serif;
   }
@@ -305,9 +305,9 @@
   <p class="estimasi-note">Ganti link tombol di atas sesuai lokasi file PDF kamu di GitHub / Drive.</p>
 
   <div class="footer-nav">
-    <button class="btn btn-primary" style="width:100%" onclick="window.close()">✕ Tutup & Kembali ke Portal</button>
+    <a href="index.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Kembali ke Portal</a>
+    <a href="modul-tema2.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Lanjut ke Tema 2 →</a>
   </div>
-  <div class="estimasi-note">Jika tab tidak tertutup otomatis, tutup tab ini secara manual untuk kembali ke portal.</div>
 
 </div>
 
