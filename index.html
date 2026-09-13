@@ -206,6 +206,9 @@
 
         <div style="margin-top: 25px;"></div>
 
+        <!-- MODUL INTERAKTIF (muncul otomatis jika tersedia) -->
+        <div class="card-container" id="modul-container" style="margin-bottom: 16px;"></div>
+
         <!-- AKSES FOLDER DRIVE -->
         <div class="card-container">
             <div class="main-drive-box">
@@ -233,7 +236,9 @@
     // =========================================================================
     const databaseLink = {
         // --- PAKET A ---
-        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu" },
+        "Kelas 4 - Semester 1": { drive: "https://drive.google.com/drive/folders/1gi2b0OpL-x43l_QSinKZHpGJCkBuOkDu", modul: [
+            { mapel: "B. Indonesia - Tema 1", link: "modul-tema1.html" }
+        ] },
         "Kelas 4 - Semester 2": { drive: "https://drive.google.com/drive/folders/1MdJnOIf4ZsrodoySo0G7T2oi3TFJin5K" },
         "Kelas 5 - Semester 1": { drive: "https://drive.google.com/drive/folders/1nOip4hKrldfGhZKzy6eiszg7KpWqi_oN" },
         "Kelas 5 - Semester 2": { drive: "https://drive.google.com/drive/folders/1s6hAeHiF92dwnfip1hKoSAS-kBNNMJed" },
@@ -322,6 +327,18 @@
 
         document.getElementById('link-drive-utama').href = data.drive;
         document.getElementById('desc-materi').innerText = `Akses modul pelajaran untuk ${keySemester} di Folder Google Drive.`;
+
+        // Tampilkan tombol modul interaktif jika tersedia untuk kelas-semester ini
+        const modulContainer = document.getElementById('modul-container');
+        modulContainer.innerHTML = '';
+        if (data.modul && data.modul.length > 0) {
+            let html = '<div class="kelas-box"><div class="kelas-title">✨ Modul Interaktif</div>';
+            data.modul.forEach(m => {
+                html += `<a href="${m.link}" target="_blank" class="btn-outline" style="display:block; text-decoration:none; margin-bottom:6px;">${m.mapel}</a>`;
+            });
+            html += '</div>';
+            modulContainer.innerHTML = html;
+        }
 
         showScreen('screen-konten');
     }
