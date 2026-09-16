@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 2: Hidup Tenang dengan Kejujuran, Amanah, dan Istiqamah — PKBM Bidara Balya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2B2620;
+    --paper:#FAF6ED;
+    --paper-2:#F1EADA;
+    --forest:#1B4D3E;
+    --forest-dark:#123329;
+    --gold:#E8A33D;
+    --gold-dark:#C97F1E;
+    --coral:#C65D3B;
+    --line:rgba(43,38,32,0.14);
+    --ok:#3D7A4E;
+    --bad:#B5493A;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:0 20px 64px;}
+
+  /* progress bar */
+  .progressbar{
+    position:sticky; top:0; z-index:20;
+    background:var(--paper);
+    padding:14px 20px 10px;
+    border-bottom:1px solid var(--line);
+  }
+  .progressbar-inner{max-width:640px;margin:0 auto;}
+  .progress-track{
+    height:6px; background:var(--paper-2); border-radius:99px; overflow:hidden;
+  }
+  .progress-fill{
+    height:100%; width:14%; background:var(--forest);
+    border-radius:99px; transition:width .5s ease;
+  }
+  .progress-label{
+    font-size:12.5px; color:var(--ink); opacity:0.65;
+    margin-top:6px; display:flex; justify-content:space-between;
+  }
+
+  /* hero */
+  .hero{padding:28px 0 22px;}
+  .eyebrow-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--forest); color:var(--paper);
+    padding:6px 12px; border-radius:99px;
+    font-size:13px; font-weight:600;
+  }
+  .eyebrow-badge svg{width:14px;height:14px;flex-shrink:0;}
+  h1.title{
+    font-family:'Fraunces',serif; font-weight:600;
+    font-size:30px; line-height:1.15;
+    margin:16px 0 8px; letter-spacing:-0.01em;
+  }
+  .subtitle{font-size:15.5px; color:var(--ink); opacity:0.72; margin:0;}
+  .meta-row{
+    display:flex; gap:18px; margin-top:16px;
+    font-size:13.5px; color:var(--forest-dark); font-weight:600;
+  }
+  .meta-row span{display:flex; align-items:center; gap:6px;}
+
+  /* section card */
+  .section{
+    margin-top:26px; padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .section-tag{
+    font-size:13px; font-weight:600; color:var(--gold-dark);
+    margin-bottom:6px;
+  }
+  h2.section-title{
+    font-family:'Fraunces',serif; font-weight:600;
+    font-size:21px; margin:0 0 12px; line-height:1.3;
+  }
+  p{margin:0 0 14px; font-size:15.5px;}
+
+  /* concept box */
+  .concept-box{
+    background:var(--forest); color:var(--paper);
+    border-radius:14px; padding:18px 20px; margin:16px 0;
+  }
+  .concept-box p{margin:0 0 8px; font-size:15px; color:var(--paper);}
+  .concept-box p:last-child{margin-bottom:0;}
+  .concept-box strong{color:var(--gold);}
+
+  /* example text card */
+  .example-card{
+    background:var(--paper-2); border-radius:14px;
+    padding:18px 20px; margin:16px 0;
+    border-left:4px solid var(--gold);
+  }
+  .example-card .label{
+    font-size:12.5px; font-weight:700; text-transform:uppercase;
+    letter-spacing:0.04em; color:var(--gold-dark); margin-bottom:8px;
+  }
+  .example-card p{font-size:15px; margin-bottom:10px;}
+  .example-card p:last-child{margin-bottom:0;}
+
+  .highlight-sentence{
+    background:rgba(232,163,61,0.28);
+    padding:1px 3px; border-radius:3px;
+  }
+
+  /* mini interactive: tap to reveal */
+  .reveal-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--gold); color:var(--forest-dark);
+    border:none; border-radius:99px; padding:10px 18px;
+    font-family:'Work Sans',sans-serif; font-weight:600; font-size:14.5px;
+    cursor:pointer; margin-top:6px;
+  }
+  .reveal-btn:active{transform:scale(0.98);}
+  .reveal-answer{
+    display:none; margin-top:12px; padding:14px 16px;
+    background:var(--paper); border:1px solid var(--line); border-radius:10px;
+    font-size:14.5px;
+  }
+  .reveal-answer.show{display:block;}
+
+  /* quiz */
+  .quiz-card{
+    background:var(--paper-2); border-radius:14px; padding:20px;
+    margin:16px 0;
+  }
+  .quiz-q{font-weight:600; font-size:15.5px; margin-bottom:14px;}
+  .quiz-options{display:flex; flex-direction:column; gap:10px;}
+  .quiz-option{
+    background:var(--paper); border:1.5px solid var(--line);
+    border-radius:10px; padding:12px 14px; font-size:14.5px;
+    cursor:pointer; text-align:left; font-family:'Work Sans',sans-serif;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .quiz-option:hover{border-color:var(--gold);}
+  .quiz-option.correct{
+    background:rgba(61,122,78,0.12); border-color:var(--ok); color:var(--ok);
+    font-weight:600;
+  }
+  .quiz-option.incorrect{
+    background:rgba(181,73,58,0.1); border-color:var(--bad); color:var(--bad);
+  }
+  .quiz-feedback{
+    margin-top:12px; font-size:14px; font-weight:600; display:none;
+  }
+  .quiz-feedback.show{display:block;}
+  .quiz-feedback.ok-text{color:var(--ok);}
+  .quiz-feedback.bad-text{color:var(--bad);}
+
+  /* nav footer */
+  .footer-nav{
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:36px; padding-top:20px;
+    border-top:1px solid var(--line);
+  }
+  .btn{
+    flex:1 1 auto; min-width:110px; text-align:center; padding:12px 14px; border-radius:12px;
+    font-weight:600; font-size:15px; cursor:pointer; border:none;
+    font-family:'Work Sans',sans-serif;
+  }
+  .btn-primary{background:var(--forest); color:var(--paper);}
+  .btn-secondary{background:transparent; color:var(--forest); border:1.5px solid var(--forest);}
+
+  .estimasi-note{
+    font-size:13px; color:var(--ink); opacity:0.6; text-align:center; margin-top:14px;
+  }
+
+  /* listen / TTS button */
+  .listen-btn{
+    display:inline-flex; align-items:center; gap:6px;
+    background:transparent; border:1.5px solid var(--forest);
+    color:var(--forest); border-radius:99px; padding:6px 14px;
+    font-family:'Work Sans',sans-serif; font-weight:600; font-size:13px;
+    cursor:pointer; margin-bottom:12px;
+  }
+  .listen-btn:active{transform:scale(0.97);}
+  .listen-btn.speaking{
+    background:var(--forest); color:var(--paper);
+  }
+  .listen-btn svg{width:14px; height:14px; flex-shrink:0;}
+  .listen-row{display:flex; margin-bottom:8px;}
+
+  /* pdf link button */
+  .pdf-btn{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    background:var(--gold); color:var(--forest-dark);
+    text-decoration:none; border-radius:12px; padding:14px 16px;
+    font-weight:700; font-size:15px; margin:20px 0;
+  }
+  .pdf-btn svg{width:18px; height:18px; flex-shrink:0;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progressbar">
+  <div class="progressbar-inner">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span>PAI · Kelas 7</span>
+      <span id="progressPct">Bab 1</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow-badge">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5V6.5C4 5.4 4.9 4.5 6 4.5H18C19.1 4.5 20 5.4 20 6.5V16.5C20 17.6 19.1 18.5 18 18.5H7.5L4 21V19.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      Pendidikan Agama Islam dan Budi Pekerti
+    </span>
+    <h1 class="title">Bab 2: Hidup Tenang dengan Kejujuran, Amanah, dan Istiqamah</h1>
+    <p class="subtitle">Kejujuran, amanah, dan istiqamah dalam kehidupan sehari-hari.</p>
+    <div class="meta-row">
+      <span>⏱ ±6 menit</span>
+      <span>📖 Ringkasan + 4 latihan</span>
+    </div>
+  </div>
+
+  <!-- RANGKUMAN -->
+  <div class="section">
+    <div class="section-tag">Rangkuman</div>
+    <h2 class="section-title">Hidup Tenang dengan Kejujuran, Amanah, dan Istiqamah</h2>
+    <div class="listen-row">
+      <button class="listen-btn" data-target="p-rangkuman" onclick="toggleSpeak(this)">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Dengarkan
+      </button>
+    </div>
+    <div class="concept-box">
+      <p id="p-rangkuman">1. Jujur adalah kesesuaian sikap antara perkataan dan perbuatan yang sebenarnya. Manfaatnya: dipercaya orang lain dan hidup tenteram.<br>
+      2. Amanah artinya terpercaya, ada tiga macam: amanah terhadap Allah, terhadap sesama manusia, dan terhadap diri sendiri.<br>
+      3. Istiqamah berarti tegak, lurus, tekun, dan ulet — diwujudkan dengan selalu menjalankan perintah Allah, salat tepat waktu, dan belajar terus-menerus.</p>
+    </div>
+  </div>
+
+  <!-- LATIHAN -->
+  <div class="section">
+    <div class="section-tag">Latihan Contoh</div>
+    <h2 class="section-title">Coba dulu sebelum baca buku lengkap</h2>
+
+    <div class="quiz-card">
+      <div class="quiz-q">1. Kesesuaian sikap antara perkataan dan perbuatan yang sebenarnya disebut...</div>
+      <div class="quiz-options" id="q1-options">
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Jujur</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Amanah</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Istiqamah</button>
+      </div>
+      <div class="quiz-feedback" id="q1-feedback"></div>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-q">2. Sifat terpercaya disebut...</div>
+      <div class="quiz-options" id="q2-options">
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Jujur</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Amanah</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Istiqamah</button>
+      </div>
+      <div class="quiz-feedback" id="q2-feedback"></div>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-q">3. Sikap tegak, lurus, tekun, dan ulet disebut...</div>
+      <div class="quiz-options" id="q3-options">
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Jujur</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Amanah</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Istiqamah</button>
+      </div>
+      <div class="quiz-feedback" id="q3-feedback"></div>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-q">4. Berikut termasuk wujud istiqamah, kecuali...</div>
+      <div class="quiz-options" id="q4-options">
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Salat tepat waktu</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Belajar terus-menerus</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Menunda salat tanpa alasan</button>
+      </div>
+      <div class="quiz-feedback" id="q4-feedback"></div>
+    </div>
+  </div>
+
+  <a href="../materi/pai7-buku-siswa-kelas7.pdf" target="_blank" class="pdf-btn">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    Baca materi lengkap di PDF
+  </a>
+  <p class="estimasi-note">Ganti link tombol di atas sesuai lokasi file PDF kamu di GitHub / Drive.</p>
+
+  <div class="footer-nav">
+    <a href="modul-pai7-bab1.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Bab 1</a>
+    <a href="index.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">Portal</a>
+    <a href="modul-pai7-bab3.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Bab 3 →</a>
+  </div>
+
+</div>
+
+<script>
+function toggleReveal(id, btn){
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+  btn.textContent = el.classList.contains('show') ? '🙈 Sembunyikan jawaban' : '💡 Lihat jawaban';
+}
+
+const quizState = {};
+function answerQuiz(btn, qid, isCorrect){
+  if(quizState[qid]) return; // sudah dijawab
+  quizState[qid] = true;
+  const options = btn.parentElement.querySelectorAll('.quiz-option');
+  options.forEach(o => o.style.pointerEvents = 'none');
+  const feedback = document.getElementById(qid + '-feedback');
+  if(isCorrect){
+    btn.classList.add('correct');
+    feedback.textContent = '✓ Betul! Kamu sudah paham konsepnya.';
+    feedback.className = 'quiz-feedback show ok-text';
+  } else {
+    btn.classList.add('incorrect');
+    feedback.textContent = '✗ Belum tepat. Coba baca lagi Bagian 1 di atas.';
+    feedback.className = 'quiz-feedback show bad-text';
+  }
+  updateProgress();
+}
+
+// ---- Fitur Dengarkan (Text-to-Speech) ----
+let currentUtterance = null;
+let currentBtn = null;
+let idVoice = null;
+
+function pickIndonesianVoice(){
+  const voices = window.speechSynthesis.getVoices();
+  idVoice = voices.find(v => v.lang === 'id-ID') || voices.find(v => v.lang.startsWith('id')) || null;
+}
+if('speechSynthesis' in window){
+  pickIndonesianVoice();
+  window.speechSynthesis.onvoiceschanged = pickIndonesianVoice;
+}
+
+function toggleSpeak(btn){
+  if(!('speechSynthesis' in window)){
+    alert('Maaf, perangkat/browser ini belum mendukung fitur suara. Coba pakai Chrome terbaru.');
+    return;
+  }
+  // kalau tombol yang sama diklik lagi saat sedang bicara -> stop
+  if(currentBtn === btn && window.speechSynthesis.speaking){
+    window.speechSynthesis.cancel();
+    resetBtn(btn);
+    return;
+  }
+  // kalau tombol lain sedang bicara, hentikan dulu
+  window.speechSynthesis.cancel();
+  if(currentBtn) resetBtn(currentBtn);
+
+  const targetId = btn.getAttribute('data-target');
+  const el = document.getElementById(targetId);
+  const text = el.innerText || el.textContent;
+
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'id-ID';
+  if(idVoice) utter.voice = idVoice;
+  utter.rate = 0.95;
+
+  utter.onend = () => resetBtn(btn);
+  utter.onerror = () => resetBtn(btn);
+
+  currentUtterance = utter;
+  currentBtn = btn;
+  if(!btn.dataset.label) btn.dataset.label = btn.lastChild.textContent;
+  btn.classList.add('speaking');
+  btn.lastChild.textContent = ' Berhenti';
+  window.speechSynthesis.speak(utter);
+}
+
+function resetBtn(btn){
+  btn.classList.remove('speaking');
+  const original = btn.dataset.label || ' Dengarkan';
+  btn.lastChild.textContent = original;
+  if(currentBtn === btn){ currentBtn = null; currentUtterance = null; }
+}
+
+function updateProgress(){
+  const answered = Object.keys(quizState).length;
+  const pct = 20 + (answered * 20); // mulai 20% setelah rangkuman, +20% tiap soal (4 soal)
+  document.getElementById('progressFill').style.width = Math.min(pct,100) + '%';
+  if(answered === 4){
+    document.getElementById('progressPct').textContent = 'Selesai — lanjut ke bagian berikutnya';
+  }
+}
+</script>
+
+</body>
+</html>
