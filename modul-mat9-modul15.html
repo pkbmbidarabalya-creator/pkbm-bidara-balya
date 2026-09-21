@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modul 13: Petani Pintar, Hasil Panen Maksimal — PKBM Bidara Balya</title>
+<title>Modul 15: Membedah Isi Rumah — PKBM Bidara Balya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -211,7 +211,7 @@
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
       <span>Matematika · Paket B</span>
-      <span id="progressPct">Modul 13</span>
+      <span id="progressPct">Modul 15</span>
     </div>
   </div>
 </div>
@@ -223,8 +223,8 @@
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5V6.5C4 5.4 4.9 4.5 6 4.5H18C19.1 4.5 20 5.4 20 6.5V16.5C20 17.6 19.1 18.5 18 18.5H7.5L4 21V19.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
       Kelas 9 Tingkatan III
     </span>
-    <h1 class="title">Modul 13: Petani Pintar, Hasil Panen Maksimal</h1>
-    <p class="subtitle">Fungsi kuadrat.</p>
+    <h1 class="title">Modul 15: Membedah Isi Rumah</h1>
+    <p class="subtitle">Bangun ruang sisi lengkung (tabung, kerucut, bola). Penutup buku Kelas IX.</p>
     <div class="meta-row">
       <span>⏱ ±6 menit</span>
       <span>📖 Ringkasan + 4 latihan</span>
@@ -242,7 +242,7 @@
       </button>
     </div>
     <div class="concept-box">
-      <p id="p-rangkuman">1. Fungsi kuadrat berbentuk f(x) = ax<sup>2</sup> + bx + c, dengan a &ne; 0. Grafik fungsi kuadrat berupa parabola: terbuka ke atas jika a &gt; 0 (memiliki nilai minimum), dan terbuka ke bawah jika a &lt; 0 (memiliki nilai maksimum).<br>2. Sumbu simetri grafik fungsi kuadrat dirumuskan x = -b/2a, sedangkan nilai optimum (maksimum/minimum) dirumuskan y = -D/4a, dengan D = b<sup>2</sup> - 4ac.<br>3. Diskriminan menentukan letak grafik terhadap sumbu X: jika D &gt; 0 grafik memotong sumbu X di dua titik; jika D = 0 grafik menyinggung sumbu X (satu titik); jika D &lt; 0 grafik tidak memotong sumbu X sama sekali.<br>4. Titik puncak (titik ekstrem) grafik fungsi kuadrat digunakan untuk menentukan nilai maksimum atau minimum dalam permasalahan sehari-hari, misalnya menentukan hasil panen maksimal, luas lahan maksimum, atau keuntungan optimal.</p>
+      <p id="p-rangkuman">1. Tabung adalah bangun ruang sisi lengkung dengan alas dan tutup berbentuk lingkaran yang sama besar (kongruen). Luas permukaan tabung = 2&pi;r(r+t); volume tabung = &pi;r<sup>2</sup>t.<br>2. Kerucut adalah bangun ruang beralas lingkaran dengan selimut berbentuk juring lingkaran (garis pelukis s). Luas permukaan kerucut = &pi;r(r+s); volume kerucut = 1/3 &times; &pi;r<sup>2</sup>t.<br>3. Bola adalah bangun ruang sisi lengkung tanpa rusuk dan tanpa titik sudut. Luas permukaan bola = 4&pi;r<sup>2</sup>; volume bola = 4/3 &times; &pi;r<sup>3</sup>.<br>4. Tabung, kerucut, dan bola termasuk kelompok bangun ruang sisi lengkung, berbeda dengan bangun ruang sisi datar (kubus, balok, prisma, limas) yang seluruh sisinya berupa bidang datar.</p>
     </div>
   </div>
 
@@ -252,56 +252,55 @@
     <h2 class="section-title">Coba dulu sebelum baca PDF</h2>
 
     <div class="quiz-card">
-      <div class="quiz-q">1. Grafik dari fungsi kuadrat f(x) = ax<sup>2</sup>+bx+c berbentuk...</div>
+      <div class="quiz-q">1. Rumus volume tabung dengan jari-jari r dan tinggi t adalah...</div>
       <div class="quiz-options" id="q1-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Garis lurus</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Parabola</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Lingkaran</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">&pi;r<sup>2</sup>t</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">1/3 &times; &pi;r<sup>2</sup>t</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">4/3 &times; &pi;r<sup>3</sup></button>
       </div>
       <div class="quiz-feedback" id="q1-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">2. Rumus sumbu simetri grafik fungsi kuadrat y = ax<sup>2</sup>+bx+c adalah...</div>
+      <div class="quiz-q">2. Rumus volume kerucut dengan jari-jari r dan tinggi t adalah...</div>
       <div class="quiz-options" id="q2-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">x = -b/2a</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">x = -D/4a</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">x = c/a</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">&pi;r<sup>2</sup>t</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">1/3 &times; &pi;r<sup>2</sup>t</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">4&pi;r<sup>2</sup></button>
       </div>
       <div class="quiz-feedback" id="q2-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">3. Jika nilai diskriminan D &lt; 0, maka grafik fungsi kuadrat terhadap sumbu X akan...</div>
+      <div class="quiz-q">3. Rumus volume bola dengan jari-jari r adalah...</div>
       <div class="quiz-options" id="q3-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Memotong di dua titik</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Menyinggung sumbu X</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Tidak memotong sumbu X</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">4&pi;r<sup>2</sup></button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">1/3 &times; &pi;r<sup>2</sup>t</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">4/3 &times; &pi;r<sup>3</sup></button>
       </div>
       <div class="quiz-feedback" id="q3-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">4. Titik puncak grafik fungsi kuadrat digunakan untuk menentukan...</div>
+      <div class="quiz-q">4. Kelompok bangun ruang yang termasuk bangun ruang sisi lengkung adalah...</div>
       <div class="quiz-options" id="q4-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Panjang sumbu X saja</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Nilai maksimum atau minimum suatu fungsi</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Jumlah akar-akar persamaan linear</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Kubus, balok, dan prisma</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Tabung, kerucut, dan bola</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Limas dan prisma</button>
       </div>
       <div class="quiz-feedback" id="q4-feedback"></div>
     </div>
   </div>
 
-  <a href="../materi/mat9-modul13.pdf" target="_blank" class="pdf-btn">
+  <a href="../materi/mat9-modul15.pdf" target="_blank" class="pdf-btn">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
     Baca materi lengkap di PDF
   </a>
   <p class="estimasi-note">Ganti link tombol di atas sesuai lokasi file PDF kamu di GitHub / Drive.</p>
 
   <div class="footer-nav">
-    <a href="modul-mat9-modul12.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 12</a>
+    <a href="modul-mat9-modul14.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 14</a>
     <a href="index.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Kembali ke Portal</a>
-    <a href="modul-mat9-modul14.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Modul 14 →</a>
   </div>
 
 </div>
