@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modul 10: Idaman Pedagang — PKBM Bidara Balya</title>
+<title>Modul 12: Mengelola Tempat Parkir — PKBM Bidara Balya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -211,7 +211,7 @@
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
       <span>Matematika · Paket B</span>
-      <span id="progressPct">Modul 10</span>
+      <span id="progressPct">Modul 12</span>
     </div>
   </div>
 </div>
@@ -221,10 +221,10 @@
   <div class="hero">
     <span class="eyebrow-badge">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5V6.5C4 5.4 4.9 4.5 6 4.5H18C19.1 4.5 20 5.4 20 6.5V16.5C20 17.6 19.1 18.5 18 18.5H7.5L4 21V19.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      Kelas 8 Tingkatan III
+      Kelas 9 Tingkatan III
     </span>
-    <h1 class="title">Modul 10: Idaman Pedagang</h1>
-    <p class="subtitle">Peluang dan statistika. Penutup buku Kelas VIII.</p>
+    <h1 class="title">Modul 12: Mengelola Tempat Parkir</h1>
+    <p class="subtitle">Persamaan kuadrat.</p>
     <div class="meta-row">
       <span>⏱ ±6 menit</span>
       <span>📖 Ringkasan + 4 latihan</span>
@@ -234,7 +234,7 @@
   <!-- RANGKUMAN -->
   <div class="section">
     <div class="section-tag">Rangkuman</div>
-    <h2 class="section-title">Inti materi Unit 1</h2>
+    <h2 class="section-title">Inti materi Unit 1–3</h2>
     <div class="listen-row">
       <button class="listen-btn" data-target="p-rangkuman" onclick="toggleSpeak(this)">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -242,10 +242,7 @@
       </button>
     </div>
     <div class="concept-box">
-      <p id="p-rangkuman">1. Peluang adalah cabang matematika yang mempelajari kemungkinan terjadinya suatu kejadian, meliputi titik sampel, ruang sampel, dan kejadian.<br>
-      2. Peluang empirik adalah peluang yang dihitung berdasarkan hasil percobaan/pengamatan nyata, sedangkan peluang teoritik dihitung berdasarkan perhitungan matematis.<br>
-      3. Statistika mencakup pendistribusian data, ukuran pemusatan data (nilai tengah/median dan modus), penyebaran data (jangkauan dan kuartil), serta penafsiran data.<br>
-      4. Kuartil adalah nilai yang membagi data terurut menjadi empat bagian sama besar: kuartil bawah, kuartil tengah (median), dan kuartil atas.</p>
+      <p id="p-rangkuman">1. Persamaan kuadrat adalah persamaan polinom derajat dua dalam satu variabel, dengan bentuk umum ax<sup>2</sup> + bx + c = 0, a &ne; 0.<br>2. Cara menentukan akar persamaan kuadrat: (a) pemfaktoran, (b) melengkapkan bentuk kuadrat sempurna, (c) rumus kuadrat (rumus abc): x<sub>1,2</sub> = (-b &plusmn; &radic;D) / 2a, dengan D = diskriminan.<br>3. Diskriminan D = b<sup>2</sup> - 4ac menentukan jenis akar: jika D &gt; 0 persamaan memiliki dua akar nyata berbeda; jika D = 0 memiliki satu akar nyata (kembar); jika D &lt; 0 tidak memiliki akar nyata/real.<br>4. Jika x<sub>1</sub> dan x<sub>2</sub> adalah akar-akar dari ax<sup>2</sup>+bx+c=0, maka berlaku x<sub>1</sub> + x<sub>2</sub> = -b/a dan x<sub>1</sub> &times; x<sub>2</sub> = c/a.</p>
     </div>
   </div>
 
@@ -255,56 +252,56 @@
     <h2 class="section-title">Coba dulu sebelum baca PDF</h2>
 
     <div class="quiz-card">
-      <div class="quiz-q">1. Cabang matematika yang mempelajari kemungkinan terjadinya suatu kejadian disebut...</div>
+      <div class="quiz-q">1. Bentuk umum persamaan kuadrat adalah...</div>
       <div class="quiz-options" id="q1-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Statistika</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Peluang</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Geometri</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">ax + b = 0</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">ax<sup>2</sup> + bx + c = 0, a &ne; 0</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">ax<sup>3</sup> + bx + c = 0</button>
       </div>
       <div class="quiz-feedback" id="q1-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">2. Peluang yang dihitung berdasarkan hasil percobaan/pengamatan nyata disebut peluang...</div>
+      <div class="quiz-q">2. Rumus diskriminan persamaan kuadrat ax<sup>2</sup>+bx+c=0 adalah...</div>
       <div class="quiz-options" id="q2-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Teoritik</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Empirik</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Pasti</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">D = b<sup>2</sup> - 4ac</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">D = b<sup>2</sup> + 4ac</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">D = 4ac - b<sup>2</sup></button>
       </div>
       <div class="quiz-feedback" id="q2-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">3. Nilai yang membagi data terurut menjadi empat bagian sama besar disebut...</div>
+      <div class="quiz-q">3. Jika nilai diskriminan D &lt; 0, maka persamaan kuadrat tersebut...</div>
       <div class="quiz-options" id="q3-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Modus</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Rata-rata</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Kuartil</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Memiliki dua akar real berbeda</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Memiliki satu akar kembar</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Tidak memiliki akar real</button>
       </div>
       <div class="quiz-feedback" id="q3-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">4. Data yang paling sering muncul dalam sekumpulan data disebut...</div>
+      <div class="quiz-q">4. Jika x<sub>1</sub> dan x<sub>2</sub> adalah akar-akar persamaan ax<sup>2</sup>+bx+c=0, maka x<sub>1</sub> &times; x<sub>2</sub> sama dengan...</div>
       <div class="quiz-options" id="q4-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Median</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Modus</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Jangkauan</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">-b/a</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">c/a</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">b/a</button>
       </div>
       <div class="quiz-feedback" id="q4-feedback"></div>
     </div>
   </div>
 
-  <a href="../materi/mat8-modul10.pdf" target="_blank" class="pdf-btn">
+  <a href="../materi/mat9-modul12.pdf" target="_blank" class="pdf-btn">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
     Baca materi lengkap di PDF
   </a>
   <p class="estimasi-note">Ganti link tombol di atas sesuai lokasi file PDF kamu di GitHub / Drive.</p>
 
   <div class="footer-nav">
-    <a href="modul-mat8-modul9.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 9</a>
+    <a href="modul-mat9-modul11.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 11</a>
     <a href="index.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Kembali ke Portal</a>
-    <a href="modul-mat9-modul11.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Modul 11 →</a>
+    <a href="modul-mat9-modul13.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Modul 13 →</a>
   </div>
 
 </div>
