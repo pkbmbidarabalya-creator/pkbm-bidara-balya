@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modul 10: Penerapan Integral dalam Kehidupan Masyarakat Sehari-hari — PKBM Bidara Balya</title>
+<title>Modul 12: Mengolah Data, Mengungkap Fakta — PKBM Bidara Balya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -211,7 +211,7 @@
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
       <span>Matematika · Paket C</span>
-      <span id="progressPct">Modul 10</span>
+      <span id="progressPct">Modul 12</span>
     </div>
   </div>
 </div>
@@ -221,10 +221,10 @@
   <div class="hero">
     <span class="eyebrow-badge">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5V6.5C4 5.4 4.9 4.5 6 4.5H18C19.1 4.5 20 5.4 20 6.5V16.5C20 17.6 19.1 18.5 18 18.5H7.5L4 21V19.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      Kelas 11 Tingkatan V
+      Kelas 12 Tingkatan VI
     </span>
-    <h1 class="title">Modul 10: Penerapan Integral dalam Kehidupan Masyarakat Sehari-hari</h1>
-    <p class="subtitle">Integral tak tentu, integral tentu, serta penerapannya pada posisi benda, luas daerah, dan volume benda putar.</p>
+    <h1 class="title">Modul 12: Mengolah Data, Mengungkap Fakta</h1>
+    <p class="subtitle">Statistika: penyajian data, ukuran pemusatan data (mean, median, modus), dan ukuran penyebaran data.</p>
     <div class="meta-row">
       <span>⏱ ±6 menit</span>
       <span>📖 Ringkasan + 4 latihan</span>
@@ -234,7 +234,7 @@
   <!-- RANGKUMAN -->
   <div class="section">
     <div class="section-tag">Rangkuman</div>
-    <h2 class="section-title">Penerapan Integral</h2>
+    <h2 class="section-title">Statistika: Ukuran Pemusatan & Penyebaran Data</h2>
     <div class="listen-row">
       <button class="listen-btn" data-target="p-rangkuman" onclick="toggleSpeak(this)">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -242,7 +242,7 @@
       </button>
     </div>
     <div class="concept-box">
-      <p id="p-rangkuman">1. Integral tak tentu merupakan kebalikan (antiturunan) dari turunan; rumus dasarnya ∫axⁿ dx = a/(n+1) xⁿ⁺¹ + C, dengan C adalah konstanta integrasi.<br>2. Jika kecepatan suatu benda dinyatakan sebagai fungsi waktu v(t), maka posisi benda pada waktu t dapat ditentukan dengan mengintegralkan fungsi kecepatan tersebut terhadap waktu.<br>3. Integral tentu ∫ f(x) dx dari a sampai b digunakan untuk menghitung luas daerah yang dibatasi oleh kurva f(x), sumbu-x, serta garis x = a dan x = b.<br>4. Integral juga digunakan untuk menghitung volume benda putar, yaitu benda yang terbentuk dari suatu daerah kurva yang diputar mengelilingi sumbu-x atau sumbu-y sejauh satu putaran penuh.<br>5. Penerapan integral dalam kehidupan sehari-hari antara lain menghitung jarak tempuh dari kecepatan, luas lahan atau bidang tak beraturan, serta volume benda seperti tangki atau bangunan hasil putaran kurva.</p>
+      <p id="p-rangkuman">1. Penyajian data dilakukan agar data hasil penelitian mudah dipahami dan dianalisis, yaitu dalam bentuk tabel/daftar atau dalam bentuk diagram.<br>2. Ukuran pemusatan data adalah ukuran yang menunjukkan pusat segugus data yang telah diurutkan, meliputi mean (rataan), median (nilai tengah), dan modus (nilai yang paling sering muncul).<br>3. Rataan (mean) adalah hasil bagi jumlah data dengan banyaknya data; median adalah nilai tengah dari data yang telah diurutkan; modus adalah nilai yang mempunyai frekuensi tertinggi (bisa lebih dari satu).<br>4. Ukuran penyebaran data menyatakan seberapa besar nilai-nilai data bervariasi terhadap nilai pusatnya, meliputi jangkauan (range), simpangan rata-rata, ragam (varian), dan simpangan baku.<br>5. Jangkauan (R) adalah selisih data terbesar dan data terkecil; simpangan rata-rata menyatakan penyebaran nilai dari rataan; ragam (varian, S²) menunjukkan besarnya penyebaran data; simpangan baku (S) adalah akar kuadrat dari varian.</p>
     </div>
   </div>
 
@@ -251,56 +251,56 @@
     <div class="section-tag">Latihan Contoh</div>
     <h2 class="section-title">Coba dulu sebelum baca PDF</h2>
     <div class="quiz-card">
-      <div class="quiz-q">1. Integral tak tentu merupakan kebalikan dari operasi...</div>
+      <div class="quiz-q">1. Penyajian data bisa dilakukan dalam bentuk tabel/daftar atau dalam bentuk...</div>
       <div class="quiz-options" id="q1-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Penjumlahan</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Turunan</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Perkalian</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Diagram</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Cerita</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Puisi</button>
       </div>
       <div class="quiz-feedback" id="q1-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">2. Jika diketahui fungsi kecepatan v(t) suatu benda, posisi benda pada waktu t diperoleh dengan cara...</div>
+      <div class="quiz-q">2. Nilai yang paling sering muncul dalam sekumpulan data disebut...</div>
       <div class="quiz-options" id="q2-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Menurunkan v(t)</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Mengintegralkan v(t)</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Mengalikan v(t) dengan t</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Median</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Modus</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Jangkauan</button>
       </div>
       <div class="quiz-feedback" id="q2-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">3. Integral tentu ∫ f(x) dx dari a sampai b dapat digunakan untuk menghitung...</div>
+      <div class="quiz-q">3. Rataan (mean) diperoleh dengan cara membagi...</div>
       <div class="quiz-options" id="q3-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Kecepatan sesaat</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Luas daerah di bawah kurva</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Turunan fungsi f(x)</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Data terbesar dengan data terkecil</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Jumlah data dengan banyaknya data</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Median dengan modus</button>
       </div>
       <div class="quiz-feedback" id="q3-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">4. Volume benda yang terbentuk dari suatu kurva yang diputar mengelilingi sumbu disebut volume benda...</div>
+      <div class="quiz-q">4. Ukuran penyebaran data yang merupakan akar kuadrat dari varian disebut...</div>
       <div class="quiz-options" id="q4-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Putar</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Datar</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Lurus</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Jangkauan</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Simpangan baku</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Rataan</button>
       </div>
       <div class="quiz-feedback" id="q4-feedback"></div>
     </div>
 
   </div>
 
-  <a href="../materi/mtk11-modul10.pdf" target="_blank" class="pdf-btn">
+  <a href="../materi/mtk12-modul12.pdf" target="_blank" class="pdf-btn">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
     Baca materi lengkap di PDF
   </a>
   <p class="estimasi-note">Ganti link tombol di atas sesuai lokasi file PDF kamu di GitHub / Drive.</p>
 
   <div class="footer-nav">
-    <a href="modul-mtk11-modul9.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 9</a>
-    <a href="modul-mtk12-modul11.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Modul 11 →</a>
+    <a href="modul-mtk12-modul11.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 11</a>
+    <a href="modul-mtk12-modul13.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Modul 13 →</a>
     <a href="index.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">Portal</a>
   </div>
 
