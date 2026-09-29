@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modul 8: Kampung Pelangi — PKBM Bidara Balya</title>
+<title>Gagasan Pokok & Gagasan Pendukung — PKBM Bidara Balya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -160,11 +160,11 @@
 
   /* nav footer */
   .footer-nav{
-    display:flex; flex-wrap:wrap; gap:10px; margin-top:36px; padding-top:20px;
+    display:flex; gap:12px; margin-top:36px; padding-top:20px;
     border-top:1px solid var(--line);
   }
   .btn{
-    flex:1 1 auto; min-width:110px; text-align:center; padding:12px 14px; border-radius:12px;
+    flex:1; text-align:center; padding:14px 16px; border-radius:12px;
     font-weight:600; font-size:15px; cursor:pointer; border:none;
     font-family:'Work Sans',sans-serif;
   }
@@ -190,24 +190,6 @@
   .listen-btn svg{width:14px; height:14px; flex-shrink:0;}
   .listen-row{display:flex; margin-bottom:8px;}
 
-  /* pdf link button */
-  .pdf-btn{
-    display:flex; align-items:center; justify-content:center; gap:8px;
-    background:var(--gold); color:var(--forest-dark);
-    text-decoration:none; border-radius:12px; padding:14px 16px;
-    font-weight:700; font-size:15px; margin:20px 0;
-  }
-  .pdf-btn svg{width:18px; height:18px; flex-shrink:0;}
-
-  .drive-hint{
-    display:flex; align-items:flex-start; gap:10px;
-    background:var(--paper-2); border-left:4px solid var(--gold);
-    border-radius:12px; padding:14px 16px; margin:20px 0;
-    font-size:13px; line-height:1.55; color:var(--forest-dark);
-  }
-  .drive-hint b{color:var(--forest);}
-  .drive-hint svg{width:20px; height:20px; flex-shrink:0; margin-top:1px;}
-
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;}
   }
@@ -219,8 +201,8 @@
   <div class="progressbar-inner">
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
-      <span>Matematika · Paket B</span>
-      <span id="progressPct">Modul 8</span>
+      <span>Bahasa Indonesia · Paket A</span>
+      <span id="progressPct">Bagian 1 dari 4</span>
     </div>
   </div>
 </div>
@@ -230,89 +212,114 @@
   <div class="hero">
     <span class="eyebrow-badge">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5V6.5C4 5.4 4.9 4.5 6 4.5H18C19.1 4.5 20 5.4 20 6.5V16.5C20 17.6 19.1 18.5 18 18.5H7.5L4 21V19.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      Kelas 8 Tingkatan III
+      Modul Tema 1 — Indahnya Kebersamaan
     </span>
-    <h1 class="title">Modul 8: Kampung Pelangi</h1>
-    <p class="subtitle">Teorema Pythagoras dan bangun ruang. Penutup Semester 1.</p>
+    <h1 class="title">Gagasan Pokok & Gagasan Pendukung</h1>
+    <p class="subtitle">Belajar menemukan inti sebuah bacaan, langsung dari contoh yang biasa kita temui sehari-hari.</p>
     <div class="meta-row">
-      <span>⏱ ±6 menit</span>
-      <span>📖 Ringkasan + 4 latihan</span>
+      <span>⏱ ±10 menit</span>
+      <span>📖 4 bagian singkat</span>
     </div>
   </div>
 
-  <!-- RANGKUMAN -->
+  <!-- SECTION 1: KONSEP -->
   <div class="section">
-    <div class="section-tag">Rangkuman</div>
-    <h2 class="section-title">Inti materi Unit 1</h2>
+    <div class="section-tag">Bagian 1 — Memahami Konsep</div>
+    <h2 class="section-title">Apa itu gagasan pokok?</h2>
     <div class="listen-row">
-      <button class="listen-btn" data-target="p-rangkuman" onclick="toggleSpeak(this)">
+      <button class="listen-btn" data-target="p-konsep1" onclick="toggleSpeak(this)">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         Dengarkan
       </button>
     </div>
+    <p id="p-konsep1">Setiap bacaan biasanya terdiri atas beberapa paragraf. Tiap paragraf punya satu ide utama — itulah gagasan pokok. Ide utama ini biasanya diperkuat oleh kalimat-kalimat tambahan yang disebut gagasan pendukung.</p>
+
     <div class="concept-box">
-      <p id="p-rangkuman">1. Teorema Pythagoras menyatakan bahwa pada segitiga siku-siku, jumlah kuadrat kedua sisi tegak (siku-siku) sama dengan kuadrat sisi miring (hipotenusa).<br>
-      2. Teorema Pythagoras juga dapat digunakan untuk menentukan jenis segitiga berdasarkan panjang sisi-sisinya (segitiga siku-siku, tumpul, atau lancip).<br>
-      3. Tripel Pythagoras adalah tiga bilangan bulat positif yang memenuhi Teorema Pythagoras, misalnya 3, 4, 5.<br>
-      4. Teorema Pythagoras diterapkan untuk menghitung diagonal bidang dan diagonal ruang pada bangun ruang seperti kubus, balok, dan prisma, serta menghitung volumenya.</p>
+      <p><strong>Gagasan pokok</strong> — ide utama yang dibahas dalam suatu bacaan. Biasanya ada di kalimat utama.</p>
+      <p><strong>Gagasan pendukung</strong> — uraian atau tambahan informasi yang memperjelas gagasan pokok.</p>
+    </div>
+
+    <p>Cara menemukannya: baca paragraf dengan cermat dari kalimat pertama hingga terakhir. Gagasan pokok bisa ada di awal, akhir, atau bahkan di seluruh paragraf.</p>
+  </div>
+
+  <!-- SECTION 2: CONTOH -->
+  <div class="section">
+    <div class="section-tag">Bagian 2 — Contoh Nyata</div>
+    <h2 class="section-title">Coba temukan sendiri</h2>
+    <p>Bacalah paragraf berikut, lalu coba tebak mana gagasan pokoknya sebelum melihat jawabannya.</p>
+
+    <div class="example-card">
+      <div class="label">Teks — Berkunjung ke Taman Mini Indonesia Indah</div>
+      <p id="p-teks1"><span class="highlight-sentence">Hari Minggu para siswa PKBM Pelita mengunjungi Taman Mini Indonesia Indah.</span> Mereka ingin melihat keragaman budaya Indonesia melalui rumah adat yang ada di sana. Mereka naik bus berukuran sedang ke sana. Perjalanan ke TMII hanya memerlukan waktu satu jam saja.</p>
+      <button class="listen-btn" data-target="p-teks1" onclick="toggleSpeak(this)">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Dengarkan teks ini
+      </button>
+    </div>
+
+    <button class="reveal-btn" onclick="toggleReveal('reveal1', this)">
+      💡 Lihat gagasan pokok & pendukungnya
+    </button>
+    <div class="reveal-answer" id="reveal1">
+      <strong>Gagasan pokok:</strong> Hari Minggu para siswa PKBM Pelita mengunjungi Taman Mini Indonesia Indah.<br><br>
+      <strong>Gagasan pendukung:</strong> Mereka ingin melihat keragaman budaya Indonesia melalui rumah adat yang ada di sana — ini menjelaskan alasan dan detail kunjungan tersebut.
     </div>
   </div>
 
-  <!-- LATIHAN -->
+  <!-- SECTION 3: KALIMAT SUMBANG -->
   <div class="section">
-    <div class="section-tag">Latihan Contoh</div>
-    <h2 class="section-title">Coba dulu sebelum baca PDF</h2>
+    <div class="section-tag">Bagian 3 — Sedikit Lebih Jauh</div>
+    <h2 class="section-title">Waspadai "kalimat sumbang"</h2>
+    <p>Kadang ada kalimat dalam paragraf yang <em>tidak</em> mendukung gagasan pokok. Ini disebut kalimat sumbang, dan membuat paragraf jadi kurang padu.</p>
+
+    <div class="example-card">
+      <div class="label">Contoh paragraf</div>
+      <p id="p-teks2">(1) Sekolahku sangat bersih. (2) Setiap hari kelas selalu disapu. (3) Kaca-kaca jendela juga dibersihkan. <span class="highlight-sentence">(4) Halaman sekolahku dipenuhi bunga-bunga.</span></p>
+      <button class="listen-btn" data-target="p-teks2" onclick="toggleSpeak(this)">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Dengarkan teks ini
+      </button>
+    </div>
+
+    <button class="reveal-btn" onclick="toggleReveal('reveal2', this)">
+      💡 Kenapa kalimat (4) sumbang?
+    </button>
+    <div class="reveal-answer" id="reveal2">
+      Gagasan pokok paragraf ini adalah <strong>"sekolahku bersih"</strong>. Kalimat (1)-(3) semuanya mendukung soal kebersihan. Tapi kalimat (4) bicara soal bunga, bukan kebersihan — jadi tidak nyambung dengan gagasan pokok.
+    </div>
+  </div>
+
+  <!-- SECTION 4: KUIS -->
+  <div class="section">
+    <div class="section-tag">Bagian 4 — Cek Pemahaman</div>
+    <h2 class="section-title">Yuk coba sendiri</h2>
 
     <div class="quiz-card">
-      <div class="quiz-q">1. Pada segitiga siku-siku, jumlah kuadrat kedua sisi tegak sama dengan kuadrat sisi...</div>
+      <div class="quiz-q">1. Gagasan pokok biasanya ditemukan di...</div>
       <div class="quiz-options" id="q1-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Alas</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Miring (hipotenusa)</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Tinggi</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Judul bacaan</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Kalimat utama paragraf</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Kalimat terakhir bab</button>
       </div>
       <div class="quiz-feedback" id="q1-feedback"></div>
     </div>
 
     <div class="quiz-card">
-      <div class="quiz-q">2. Teorema Pythagoras dapat digunakan untuk menentukan jenis...</div>
+      <div class="quiz-q">2. Kalimat yang tidak mendukung gagasan pokok disebut...</div>
       <div class="quiz-options" id="q2-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Segitiga</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Lingkaran</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Kubus</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Kalimat pendukung</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Kalimat utama</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Kalimat sumbang</button>
       </div>
       <div class="quiz-feedback" id="q2-feedback"></div>
     </div>
-
-    <div class="quiz-card">
-      <div class="quiz-q">3. Tiga bilangan bulat positif yang memenuhi Teorema Pythagoras disebut...</div>
-      <div class="quiz-options" id="q3-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Tripel Pythagoras</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Barisan aritmetika</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Rasio geometri</button>
-      </div>
-      <div class="quiz-feedback" id="q3-feedback"></div>
-    </div>
-
-    <div class="quiz-card">
-      <div class="quiz-q">4. Teorema Pythagoras dapat digunakan untuk menghitung diagonal bidang pada bangun ruang seperti...</div>
-      <div class="quiz-options" id="q4-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Lingkaran</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Kubus</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Segitiga sama sisi</button>
-      </div>
-      <div class="quiz-feedback" id="q4-feedback"></div>
-    </div>
-  </div>
-
-  <div class="drive-hint">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-    <span>Materi PDF lengkap &amp; asli tersedia di <b>folder Google Drive</b> kelasmu &mdash; tekan tombol <b>&larr; Kembali ke Portal</b> di bawah, lalu buka <b>&quot;Buka Google Drive Materi&quot;</b>.</span>
   </div>
 
   <div class="footer-nav">
-    <a href="modul-mat8-modul7.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 7</a>
-    <a href="index.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Kembali ke Portal</a>
+    <button class="btn btn-secondary">← Materi Sebelumnya</button>
+    <button class="btn btn-primary">Lanjut ke Bagian B →</button>
   </div>
+  <div class="estimasi-note">Progres kamu tersimpan otomatis. Bisa lanjut kapan saja.</div>
 
 </div>
 
@@ -385,24 +392,23 @@ function toggleSpeak(btn){
 
   currentUtterance = utter;
   currentBtn = btn;
-  if(!btn.dataset.label) btn.dataset.label = btn.lastChild.textContent;
   btn.classList.add('speaking');
-  btn.lastChild.textContent = ' Berhenti';
+  btn.querySelector('svg') && (btn.lastChild.textContent = ' Berhenti');
   window.speechSynthesis.speak(utter);
 }
 
 function resetBtn(btn){
   btn.classList.remove('speaking');
-  const original = btn.dataset.label || ' Dengarkan';
-  btn.lastChild.textContent = original;
+  const label = btn.dataset.target === 'p-konsep1' ? ' Dengarkan' : ' Dengarkan teks ini';
+  btn.lastChild.textContent = label;
   if(currentBtn === btn){ currentBtn = null; currentUtterance = null; }
 }
 
 function updateProgress(){
   const answered = Object.keys(quizState).length;
-  const pct = 20 + (answered * 20); // mulai 20% setelah rangkuman, +20% tiap soal (4 soal)
+  const pct = 50 + (answered * 25); // mulai 50% setelah materi, +25% tiap soal
   document.getElementById('progressFill').style.width = Math.min(pct,100) + '%';
-  if(answered === 4){
+  if(answered === 2){
     document.getElementById('progressPct').textContent = 'Selesai — lanjut ke bagian berikutnya';
   }
 }
