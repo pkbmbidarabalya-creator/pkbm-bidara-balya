@@ -199,6 +199,15 @@
   }
   .pdf-btn svg{width:18px; height:18px; flex-shrink:0;}
 
+  .drive-hint{
+    display:flex; align-items:flex-start; gap:10px;
+    background:var(--paper-2); border-left:4px solid var(--gold);
+    border-radius:12px; padding:14px 16px; margin:20px 0;
+    font-size:13px; line-height:1.55; color:var(--forest-dark);
+  }
+  .drive-hint b{color:var(--forest);}
+  .drive-hint svg{width:20px; height:20px; flex-shrink:0; margin-top:1px;}
+
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;}
   }
@@ -296,11 +305,10 @@
   </div>
 
 
-  <a href="../materi/pkn10-modul3.pdf" target="_blank" class="pdf-btn">
+  <div class="drive-hint">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-    Baca materi lengkap di PDF
-  </a>
-  <p class="estimasi-note">Ganti link tombol di atas sesuai lokasi file PDF kamu di GitHub / Drive.</p>
+    <span>Materi PDF lengkap &amp; asli tersedia di <b>folder Google Drive</b> kelasmu &mdash; tekan tombol <b>&larr; Kembali ke Portal</b> di bawah, lalu buka <b>&quot;Buka Google Drive Materi&quot;</b>.</span>
+  </div>
 
   <div class="footer-nav">
     <a href="modul-pkn10-modul2.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Modul 2</a>
