@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modul Tema 10: Berkomunikasi Persuasif — PKBM Bidara Balya</title>
+<title>Paragraf Padu atau Tidak? — PKBM Bidara Balya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -160,11 +160,11 @@
 
   /* nav footer */
   .footer-nav{
-    display:flex; flex-wrap:wrap; gap:10px; margin-top:36px; padding-top:20px;
+    display:flex; gap:12px; margin-top:36px; padding-top:20px;
     border-top:1px solid var(--line);
   }
   .btn{
-    flex:1 1 auto; min-width:110px; text-align:center; padding:12px 14px; border-radius:12px;
+    flex:1; text-align:center; padding:14px 16px; border-radius:12px;
     font-weight:600; font-size:15px; cursor:pointer; border:none;
     font-family:'Work Sans',sans-serif;
   }
@@ -190,24 +190,6 @@
   .listen-btn svg{width:14px; height:14px; flex-shrink:0;}
   .listen-row{display:flex; margin-bottom:8px;}
 
-  /* pdf link button */
-  .pdf-btn{
-    display:flex; align-items:center; justify-content:center; gap:8px;
-    background:var(--gold); color:var(--forest-dark);
-    text-decoration:none; border-radius:12px; padding:14px 16px;
-    font-weight:700; font-size:15px; margin:20px 0;
-  }
-  .pdf-btn svg{width:18px; height:18px; flex-shrink:0;}
-
-  .drive-hint{
-    display:flex; align-items:flex-start; gap:10px;
-    background:var(--paper-2); border-left:4px solid var(--gold);
-    border-radius:12px; padding:14px 16px; margin:20px 0;
-    font-size:13px; line-height:1.55; color:var(--forest-dark);
-  }
-  .drive-hint b{color:var(--forest);}
-  .drive-hint svg{width:20px; height:20px; flex-shrink:0; margin-top:1px;}
-
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;}
   }
@@ -219,8 +201,8 @@
   <div class="progressbar-inner">
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
-      <span>Bahasa Indonesia · Paket B</span>
-      <span id="progressPct">Modul Tema 10</span>
+      <span>Bahasa Indonesia · Paket A</span>
+      <span id="progressPct">Unit 1.C</span>
     </div>
   </div>
 </div>
@@ -230,91 +212,68 @@
   <div class="hero">
     <span class="eyebrow-badge">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5V6.5C4 5.4 4.9 4.5 6 4.5H18C19.1 4.5 20 5.4 20 6.5V16.5C20 17.6 19.1 18.5 18 18.5H7.5L4 21V19.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      Kelas 8 Tingkatan III
+      Modul Tema 1 — Indahnya Kebersamaan
     </span>
-    <h1 class="title">Modul Tema 10: Berkomunikasi Persuasif</h1>
-    <p class="subtitle">Teks persuasi, iklan, slogan, dan poster. Awal Semester 2.</p>
+    <h1 class="title">Paragraf Padu atau Tidak?</h1>
+    <p class="subtitle">Belajar mengenali kalimat yang "nyasar" dari topik utama.</p>
     <div class="meta-row">
       <span>⏱ ±6 menit</span>
-      <span>📖 Ringkasan + 4 latihan</span>
+      <span>📖 2 bagian</span>
     </div>
   </div>
 
-  <!-- RANGKUMAN -->
+  <!-- SECTION 1: PADU -->
   <div class="section">
-    <div class="section-tag">Rangkuman</div>
-    <h2 class="section-title">Inti materi Unit 1</h2>
-    <div class="listen-row">
-      <button class="listen-btn" data-target="p-rangkuman" onclick="toggleSpeak(this)">
+    <div class="section-tag">Bagian 1 — Contoh Paragraf Padu</div>
+    <h2 class="section-title">Semua kalimat "nyambung"</h2>
+    <div class="example-card">
+      <div class="label">Teks — Tari Merak</div>
+      <p id="p-teks1">(1) Gerakan Tari Merak sangat indah. (2) Penari meliuk ke kanan dan ke kiri sambil mengepakkan sayap. (3) Kepala penari mengangguk-angguk seperti merak. (4) Penari juga berlari ke depan dan ke belakang mengikuti gaya burung merak.</p>
+      <button class="listen-btn" data-target="p-teks1" onclick="toggleSpeak(this)">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        Dengarkan
+        Dengarkan teks ini
       </button>
     </div>
-    <div class="concept-box">
-      <p id="p-rangkuman"><strong>Unit 1 & 2 — Teks Persuasi dan Iklan</strong><br>
-      1. Teks persuasi bertujuan memengaruhi atau membujuk seseorang untuk memenuhi keinginan penulis. Strukturnya: pengenalan isu, rangkaian argumen, ajakan, dan penegasan kembali.<br>
-      2. Kaidah kebahasaan teks persuasi: pernyataan mengandung ajakan/bujukan/dorongan, kata-kata teknis sesuai topik, kata penghubung argumentasi, dan fakta.<br>
-      3. Iklan adalah teks yang memberitahu, mendorong, dan membujuk pembaca agar tertarik pada barang/jasa yang ditawarkan. Slogan adalah perkataan/kalimat pendek yang menarik dan mudah diingat. Poster memuat kata-kata dan gambar yang dipajang di tempat umum.<br>
-      4. Pola penyajian iklan ada 3: audio, visual, dan audio visual. Unsur-unsur pembentuk iklan: sumber, pesan, media, penerima, efek, umpan balik, dan konteks.</p>
+    <p>Semua kalimat mendukung satu hal: keindahan gerak Tari Merak. Ini paragraf yang padu.</p>
+  </div>
+
+  <!-- SECTION 2: TIDAK PADU -->
+  <div class="section">
+    <div class="section-tag">Bagian 2 — Contoh Paragraf Tidak Padu</div>
+    <h2 class="section-title">Ada kalimat yang "nyasar"</h2>
+    <div class="example-card">
+      <div class="label">Teks — Tari Enggang</div>
+      <p id="p-teks2">(1) Tari Burung Enggang adalah tarian tradisional dari Kalimantan Timur. (2) Menurut kepercayaan masyarakat Dayak, nenek moyang mereka berasal dari langit dan turun ke bumi menyerupai burung enggang. (3) Tarian Enggang dianggap sebagai penghormatan kepada leluhur. <span class="highlight-sentence">(4) Kalimantan Timur sangat terkenal dengan kerajinan batu alam.</span></p>
+      <button class="listen-btn" data-target="p-teks2" onclick="toggleSpeak(this)">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5C17 9.5 17 14.5 16 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Dengarkan teks ini
+      </button>
+    </div>
+    <button class="reveal-btn" onclick="toggleReveal('reveal1', this)">💡 Kalimat mana yang sumbang?</button>
+    <div class="reveal-answer" id="reveal1">
+      Kalimat (4) — soal kerajinan batu alam tidak ada hubungannya dengan gagasan pokok tentang Tari Enggang.
     </div>
   </div>
 
-  <!-- LATIHAN -->
+  <!-- KUIS -->
   <div class="section">
-    <div class="section-tag">Latihan Contoh</div>
-    <h2 class="section-title">Coba dulu sebelum baca PDF</h2>
-
+    <div class="section-tag">Cek Pemahaman</div>
     <div class="quiz-card">
-      <div class="quiz-q">1. Teks yang bertujuan memengaruhi atau membujuk seseorang untuk memenuhi keinginan penulis disebut teks...</div>
+      <div class="quiz-q">Kalimat yang tidak mendukung gagasan pokok disebut...</div>
       <div class="quiz-options" id="q1-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Persuasi</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Eksplanasi</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Ulasan</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Kalimat utama</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',true)">Kalimat sumbang</button>
+        <button class="quiz-option" onclick="answerQuiz(this,'q1',false)">Kalimat penjelas</button>
       </div>
       <div class="quiz-feedback" id="q1-feedback"></div>
     </div>
-
-    <div class="quiz-card">
-      <div class="quiz-q">2. Struktur teks persuasi meliputi pengenalan isu, rangkaian argumen, ajakan, dan...</div>
-      <div class="quiz-options" id="q2-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Kesimpulan sementara</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',true)">Penegasan kembali</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q2',false)">Daftar pustaka</button>
-      </div>
-      <div class="quiz-feedback" id="q2-feedback"></div>
-    </div>
-
-    <div class="quiz-card">
-      <div class="quiz-q">3. Perkataan atau kalimat pendek yang menarik dan mudah diingat disebut...</div>
-      <div class="quiz-options" id="q3-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Poster</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',false)">Iklan baris</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q3',true)">Slogan</button>
-      </div>
-      <div class="quiz-feedback" id="q3-feedback"></div>
-    </div>
-
-    <div class="quiz-card">
-      <div class="quiz-q">4. Pola penyajian iklan ada 3, yaitu audio, visual, dan...</div>
-      <div class="quiz-options" id="q4-options">
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Cetak</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',true)">Audio visual</button>
-        <button class="quiz-option" onclick="answerQuiz(this,'q4',false)">Digital</button>
-      </div>
-      <div class="quiz-feedback" id="q4-feedback"></div>
-    </div>
-  </div>
-
-  <div class="drive-hint">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H14L19 8V21H6V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3V8H19" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-    <span>Materi PDF lengkap &amp; asli tersedia di <b>folder Google Drive</b> kelasmu &mdash; tekan tombol <b>&larr; Kembali ke Portal</b> di bawah, lalu buka <b>&quot;Buka Google Drive Materi&quot;</b>.</span>
   </div>
 
   <div class="footer-nav">
-    <a href="index.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">← Kembali ke Portal</a>
-    <a href="index.html" class="btn btn-secondary" style="text-decoration:none; text-align:center;">Portal</a>
-    <a href="modul-b8-tema11.html" class="btn btn-primary" style="text-decoration:none; text-align:center;">Modul 11 →</a>
+    <button class="btn btn-secondary">← Bagian B</button>
+    <button class="btn btn-primary">Lanjut ke Bagian D →</button>
   </div>
+  <div class="estimasi-note">Progres kamu tersimpan otomatis. Bisa lanjut kapan saja.</div>
 
 </div>
 
@@ -387,24 +346,23 @@ function toggleSpeak(btn){
 
   currentUtterance = utter;
   currentBtn = btn;
-  if(!btn.dataset.label) btn.dataset.label = btn.lastChild.textContent;
   btn.classList.add('speaking');
-  btn.lastChild.textContent = ' Berhenti';
+  btn.querySelector('svg') && (btn.lastChild.textContent = ' Berhenti');
   window.speechSynthesis.speak(utter);
 }
 
 function resetBtn(btn){
   btn.classList.remove('speaking');
-  const original = btn.dataset.label || ' Dengarkan';
-  btn.lastChild.textContent = original;
+  const label = btn.dataset.target === 'p-konsep1' ? ' Dengarkan' : ' Dengarkan teks ini';
+  btn.lastChild.textContent = label;
   if(currentBtn === btn){ currentBtn = null; currentUtterance = null; }
 }
 
 function updateProgress(){
   const answered = Object.keys(quizState).length;
-  const pct = 20 + (answered * 20); // mulai 20% setelah rangkuman, +20% tiap soal (4 soal)
+  const pct = 50 + (answered * 50); // mulai 50% setelah materi, +50% tiap soal
   document.getElementById('progressFill').style.width = Math.min(pct,100) + '%';
-  if(answered === 4){
+  if(answered === 1){
     document.getElementById('progressPct').textContent = 'Selesai — lanjut ke bagian berikutnya';
   }
 }
