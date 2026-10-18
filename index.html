@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PKBM Bidara Balya - Portal Pembelajaran</title>
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#0284c7">
@@ -133,24 +135,18 @@
         </div>
         <div style="padding: 30px 24px;">
             <div class="form-group">
-                <label>Nama Siswa</label>
-                <input type="text" id="username" placeholder="Masukkan Nama Panggilan">
+                <label for="nisn">NISN (Nomor Induk Siswa Nasional)</label>
+                <input type="text" id="nisn" placeholder="Masukkan NISN" inputmode="numeric" maxlength="20" autocomplete="off">
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <div class="password-wrapper">
-                    <input type="password" id="password" placeholder="Masukkan Password">
-                    <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility()" id="btn-toggle-eye">👁️</button>
-                </div>
-            </div>
-            <button class="btn-primary" style="margin-top: 10px;" onclick="handleLogin()">Login</button>
+            <div id="login-error" style="display:none; background:#fef2f2; color:#b91c1c; border:1px solid #fecaca; border-radius:10px; padding:10px 12px; font-size:13px; margin-bottom:14px; text-align:left;"></div>
+            <button class="btn-primary" id="btn-login" style="margin-top: 10px;" onclick="handleLogin()">Login</button>
         </div>
     </div>
 
     <!-- 3. MENU UTAMA (PAKET A, B, C) -->
     <div id="screen-paket" class="screen">
         <div class="app-header">
-            <button class="btn-header-back" onclick="showScreen('screen-login')">⬅ Logout</button>
+            <button class="btn-header-back" onclick="handleLogout()">⬅ Logout</button>
             <h2>Menu Paket</h2>
             <div style="width: 50px;"></div>
         </div>
@@ -269,9 +265,11 @@
 
 <script>
     // =========================================================================
-    // PASSWORD LOGIN APLIKASI
+    // SUPABASE (data siswa sama dengan aplikasi CBT)
     // =========================================================================
-    const PASSWORD_LOGIN = "123"; 
+    const SUPABASE_URL = "https://yrapraumxkcvkgxgphgt.supabase.co";
+    const SUPABASE_KEY = "sb_publishable_Yp3c7QV9vhvNEhkOdwhpqw_bLW8JWqx";
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     // =========================================================================
     // DAFTAR LINK GOOGLE DRIVE UNTUK KELAS & SEMESTER
@@ -780,37 +778,62 @@
         document.getElementById(screenId).classList.add('active');
     }
 
-    // FITUR INTIP PASSWORD (LIHAT / SEMBUNYIKAN)
-    function togglePasswordVisibility() {
-        const passwordInput = document.getElementById('password');
-        const toggleBtn = document.getElementById('btn-toggle-eye');
-        
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            toggleBtn.innerText = '🙈';
-        } else {
-            passwordInput.type = 'password';
-            toggleBtn.innerText = '👁️';
-        }
+    // LOGIN DENGAN NISN (dicek ke Supabase lewat fungsi login_siswa)
+    function tampilkanErrorLogin(pesan) {
+        const box = document.getElementById('login-error');
+        box.innerText = pesan;
+        box.style.display = 'block';
     }
 
-    function handleLogin() {
-        const u = document.getElementById('username').value.trim();
-        const p = document.getElementById('password').value.trim();
+    async function handleLogin() {
+        const nisn = document.getElementById('nisn').value.trim();
+        const btn = document.getElementById('btn-login');
+        const box = document.getElementById('login-error');
+        box.style.display = 'none';
 
-        if (!u) {
-            alert('Silakan masukkan Nama Lengkap Siswa terlebih dahulu!');
+        if (!nisn) {
+            tampilkanErrorLogin('Silakan masukkan NISN terlebih dahulu!');
             return;
         }
 
-        if (p === PASSWORD_LOGIN) {
-            document.getElementById('display-name').innerText = u;
-            document.getElementById('avatar-initial').innerText = u.charAt(0).toUpperCase();
+        btn.disabled = true;
+        btn.innerText = 'Memeriksa...';
+
+        try {
+            const { data, error } = await supabaseClient.rpc('login_siswa', { p_nisn: nisn });
+            if (error) throw error;
+
+            if (!data || data.length === 0) {
+                tampilkanErrorLogin('NISN tidak ditemukan. Periksa kembali NISN kamu.');
+                return;
+            }
+
+            const siswa = data[0];
+            const nama = siswa.nama || 'Siswa';
+            document.getElementById('display-name').innerText = nama;
+            document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
+            document.getElementById('nisn').value = '';
             showScreen('screen-paket');
-        } else {
-            alert('Password salah! Silakan periksa kembali password kamu.');
+        } catch (err) {
+            console.error(err);
+            tampilkanErrorLogin('Terjadi kesalahan saat menghubungkan ke server. Coba lagi sebentar.');
+        } finally {
+            btn.disabled = false;
+            btn.innerText = 'Login';
         }
     }
+
+    function handleLogout() {
+        document.getElementById('nisn').value = '';
+        document.getElementById('login-error').style.display = 'none';
+        document.getElementById('display-name').innerText = 'Nama Siswa';
+        showScreen('screen-login');
+    }
+
+    // Tekan Enter di kolom NISN = Login
+    document.getElementById('nisn').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') handleLogin();
+    });
 
     function selectPaket(namaPaket, listKelas) {
         document.getElementById('judul-paket').innerText = namaPaket;
