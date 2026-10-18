@@ -163,6 +163,14 @@
         </div>
 
         <div class="card-container">
+            <!-- Absen Mingguan -->
+            <div id="absen-card" style="background: white; border-radius: 20px; padding: 18px 20px; margin-bottom: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
+                <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 4px;">📝 Absen Minggu Ini</p>
+                <p id="absen-info" style="font-size: 12px; color: #64748b; margin-bottom: 12px;">Memeriksa...</p>
+                <button class="btn-primary" id="btn-absen" onclick="kirimAbsen()" style="display: none;">✅ Saya Hadir</button>
+                <div id="absen-sudah" style="display: none; background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; font-size: 13px; font-weight: 500;"></div>
+            </div>
+
             <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 12px;">Daftar Program Paket:</p>
 
             <div class="paket-card paket-a" onclick="selectPaket('Paket A', ['Kelas 4', 'Kelas 5', 'Kelas 6'])">
@@ -812,8 +820,10 @@
             const nama = siswa.nama || 'Siswa';
             document.getElementById('display-name').innerText = nama;
             document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
+            currentNisn = String(siswa.nisn || nisn);
             document.getElementById('nisn').value = '';
             showScreen('screen-paket');
+            cekAbsen();
         } catch (err) {
             console.error(err);
             tampilkanErrorLogin('Terjadi kesalahan saat menghubungkan ke server. Coba lagi sebentar.');
@@ -823,7 +833,75 @@
         }
     }
 
+    // =========================================================================
+    // ABSEN MINGGUAN (data di Supabase, lewat fungsi status_absen_minggu_ini & absen_minggu_ini)
+    // =========================================================================
+    let currentNisn = '';
+
+    function formatTanggal(d, opsi) {
+        return d.toLocaleDateString('id-ID', Object.assign({ timeZone: 'UTC' }, opsi));
+    }
+
+    function tampilkanAbsen(r) {
+        const info = document.getElementById('absen-info');
+        const btn = document.getElementById('btn-absen');
+        const sudah = document.getElementById('absen-sudah');
+
+        const awal = new Date(r.minggu_mulai + 'T00:00:00Z');
+        const akhir = new Date(awal.getTime() + 6 * 86400000);
+        const labelKe = r.minggu_ke ? 'Minggu ke-' + r.minggu_ke + ' · ' : 'Minggu ';
+        info.innerText = labelKe + formatTanggal(awal, { day: 'numeric', month: 'short' }) +
+                         ' – ' + formatTanggal(akhir, { day: 'numeric', month: 'short', year: 'numeric' });
+
+        if (r.sudah) {
+            const waktu = new Date(r.waktu).toLocaleString('id-ID', {
+                weekday: 'long', day: 'numeric', month: 'short',
+                hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Pontianak'
+            });
+            sudah.innerText = '✅ Sudah absen minggu ini (' + r.status + ') — ' + waktu + ' WIB';
+            sudah.style.display = 'block';
+            btn.style.display = 'none';
+        } else {
+            sudah.style.display = 'none';
+            btn.style.display = 'block';
+            btn.disabled = false;
+            btn.innerText = '✅ Saya Hadir';
+        }
+    }
+
+    async function cekAbsen() {
+        const info = document.getElementById('absen-info');
+        document.getElementById('btn-absen').style.display = 'none';
+        document.getElementById('absen-sudah').style.display = 'none';
+        info.innerText = 'Memeriksa...';
+        try {
+            const { data, error } = await supabaseClient.rpc('status_absen_minggu_ini', { p_nisn: currentNisn });
+            if (error) throw error;
+            tampilkanAbsen(data);
+        } catch (err) {
+            console.error(err);
+            info.innerText = 'Absen belum bisa dimuat. Coba buka ulang halaman ini nanti.';
+        }
+    }
+
+    async function kirimAbsen() {
+        const btn = document.getElementById('btn-absen');
+        btn.disabled = true;
+        btn.innerText = 'Menyimpan...';
+        try {
+            const { data, error } = await supabaseClient.rpc('absen_minggu_ini', { p_nisn: currentNisn, p_status: 'Hadir' });
+            if (error) throw error;
+            tampilkanAbsen(data);
+        } catch (err) {
+            console.error(err);
+            alert('Absen gagal disimpan. Periksa koneksi internet, lalu coba lagi.');
+            btn.disabled = false;
+            btn.innerText = '✅ Saya Hadir';
+        }
+    }
+
     function handleLogout() {
+        currentNisn = '';
         document.getElementById('nisn').value = '';
         document.getElementById('login-error').style.display = 'none';
         document.getElementById('display-name').innerText = 'Nama Siswa';
