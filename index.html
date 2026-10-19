@@ -171,9 +171,16 @@
                 <div id="absen-sudah" style="display: none; background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; font-size: 13px; font-weight: 500;"></div>
             </div>
 
-            <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 12px;">Daftar Program Paket:</p>
+            <!-- Tugas Mingguan -->
+            <div id="tugas-card" style="background: white; border-radius: 20px; padding: 18px 20px; margin-bottom: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
+                <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 10px;">📚 Tugas Minggu Ini</p>
+                <div id="tugas-list" style="font-size: 12px; color: #64748b;">Memeriksa...</div>
+            </div>
 
-            <div class="paket-card paket-a" onclick="selectPaket('Paket A', ['Kelas 4', 'Kelas 5', 'Kelas 6'])">
+            <p id="label-paket" style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 12px;">Paket Belajar Kamu:</p>
+            <div id="akses-info" style="display: none; background: #fffbeb; color: #92400e; border: 1px solid #fde68a; border-radius: 12px; padding: 12px 14px; font-size: 13px; margin-bottom: 16px;">Data paket atau kelas kamu belum lengkap. Silakan hubungi admin PKBM.</div>
+
+            <div id="card-paket-a" class="paket-card paket-a" onclick="selectPaket('Paket A', ['Kelas 4', 'Kelas 5', 'Kelas 6'])">
                 <div class="paket-header">
                     <span class="paket-title">Paket A</span>
                     <span class="paket-badge badge-a">Setara SD</span>
@@ -181,7 +188,7 @@
                 <p class="paket-sub">Kelas 4, Kelas 5, dan Kelas 6</p>
             </div>
 
-            <div class="paket-card paket-b" onclick="selectPaket('Paket B', ['Kelas 7', 'Kelas 8', 'Kelas 9'])">
+            <div id="card-paket-b" class="paket-card paket-b" onclick="selectPaket('Paket B', ['Kelas 7', 'Kelas 8', 'Kelas 9'])">
                 <div class="paket-header">
                     <span class="paket-title">Paket B</span>
                     <span class="paket-badge badge-b">Setara SMP</span>
@@ -189,7 +196,7 @@
                 <p class="paket-sub">Kelas 7, Kelas 8, dan Kelas 9</p>
             </div>
 
-            <div class="paket-card paket-c" onclick="selectPaket('Paket C', ['Kelas 10', 'Kelas 11', 'Kelas 12'])">
+            <div id="card-paket-c" class="paket-card paket-c" onclick="selectPaket('Paket C', ['Kelas 10', 'Kelas 11', 'Kelas 12'])">
                 <div class="paket-header">
                     <span class="paket-title">Paket C</span>
                     <span class="paket-badge badge-c">Setara SMA</span>
@@ -821,9 +828,11 @@
             document.getElementById('display-name').innerText = nama;
             document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
             currentNisn = String(siswa.nisn || nisn);
+            terapkanAkses(siswa);
             document.getElementById('nisn').value = '';
             showScreen('screen-paket');
             cekAbsen();
+            cekTugas();
         } catch (err) {
             console.error(err);
             tampilkanErrorLogin('Terjadi kesalahan saat menghubungkan ke server. Coba lagi sebentar.');
@@ -900,8 +909,104 @@
         }
     }
 
+    // =========================================================================
+    // TUGAS MINGGUAN (fungsi daftar_tugas_minggu_ini & tandai_tugas_selesai)
+    // =========================================================================
+    function renderTugas(list) {
+        const box = document.getElementById('tugas-list');
+        box.innerHTML = '';
+
+        if (!list || list.length === 0) {
+            box.innerText = 'Belum ada tugas untuk minggu ini.';
+            return;
+        }
+
+        list.forEach(function (t) {
+            const item = document.createElement('div');
+            item.style.cssText = 'border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; margin-bottom: 12px; background: #f8fafc; text-align: left;';
+
+            const judul = document.createElement('div');
+            judul.style.cssText = 'font-weight: 600; color: #0f172a; font-size: 14px; margin-bottom: 4px;';
+            judul.textContent = t.judul;
+            item.appendChild(judul);
+
+            if (t.petunjuk) {
+                const pet = document.createElement('div');
+                pet.style.cssText = 'font-size: 13px; color: #475569; margin-bottom: 8px; white-space: pre-line;';
+                pet.textContent = t.petunjuk;
+                item.appendChild(pet);
+            }
+
+            if (t.batas_waktu) {
+                const batas = document.createElement('div');
+                batas.style.cssText = 'font-size: 12px; color: #b45309; margin-bottom: 8px;';
+                batas.textContent = '⏰ Batas: ' + formatTanggal(new Date(t.batas_waktu + 'T00:00:00Z'),
+                    { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+                item.appendChild(batas);
+            }
+
+            if (t.link_modul && /^https?:\/\//i.test(t.link_modul)) {
+                const a = document.createElement('a');
+                a.href = t.link_modul;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.textContent = '📖 Buka materi ›';
+                a.style.cssText = 'display: inline-block; font-size: 13px; font-weight: 600; color: #0284c7; text-decoration: none; margin-bottom: 10px;';
+                item.appendChild(a);
+                item.appendChild(document.createElement('br'));
+            }
+
+            if (t.selesai) {
+                const ok = document.createElement('div');
+                ok.style.cssText = 'background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 12px; padding: 10px 12px; font-size: 13px; font-weight: 500;';
+                ok.textContent = '✅ Selesai';
+                item.appendChild(ok);
+            } else {
+                const btn = document.createElement('button');
+                btn.className = 'btn-primary';
+                btn.style.cssText = 'padding: 11px; font-size: 13px;';
+                btn.textContent = 'Sudah saya kerjakan';
+                btn.onclick = function () { tandaiTugas(t.id, btn); };
+                item.appendChild(btn);
+            }
+
+            box.appendChild(item);
+        });
+    }
+
+    async function cekTugas() {
+        const box = document.getElementById('tugas-list');
+        box.innerText = 'Memeriksa...';
+        try {
+            const { data, error } = await supabaseClient.rpc('daftar_tugas_minggu_ini', { p_nisn: currentNisn });
+            if (error) throw error;
+            renderTugas(data);
+        } catch (err) {
+            console.error(err);
+            box.innerText = 'Tugas belum bisa dimuat. Coba buka ulang halaman ini nanti.';
+        }
+    }
+
+    async function tandaiTugas(idTugas, btn) {
+        btn.disabled = true;
+        btn.textContent = 'Menyimpan...';
+        try {
+            const { data, error } = await supabaseClient.rpc('tandai_tugas_selesai', { p_nisn: currentNisn, p_tugas_id: idTugas });
+            if (error) throw error;
+            renderTugas(data);
+        } catch (err) {
+            console.error(err);
+            alert('Gagal menyimpan. Periksa koneksi internet, lalu coba lagi.');
+            btn.disabled = false;
+            btn.textContent = 'Sudah saya kerjakan';
+        }
+    }
+
     function handleLogout() {
         currentNisn = '';
+        aksesPaket = null;
+        aksesKelas = null;
+        document.getElementById('tugas-list').innerText = 'Memeriksa...';
         document.getElementById('nisn').value = '';
         document.getElementById('login-error').style.display = 'none';
         document.getElementById('display-name').innerText = 'Nama Siswa';
@@ -913,7 +1018,46 @@
         if (e.key === 'Enter') handleLogin();
     });
 
+    // =========================================================================
+    // AKSES SESUAI NISN: siswa hanya melihat paket & kelasnya sendiri
+    // (paket & kelas diambil dari tabel siswa lewat login_siswa)
+    // =========================================================================
+    let aksesPaket = null;   // contoh: 'Paket B'
+    let aksesKelas = null;   // contoh: 'Kelas 8'
+
+    const ROMAWI = { IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10, XI: 11, XII: 12 };
+    const RENTANG_PAKET = { A: [4, 6], B: [7, 9], C: [10, 12] };
+
+    function parseKelasAngka(teks) {
+        const t = String(teks || '').toUpperCase().replace(/KELAS/g, '').trim();
+        if (/^\d+$/.test(t)) return parseInt(t, 10);
+        return ROMAWI[t] || null;
+    }
+
+    function terapkanAkses(siswa) {
+        const huruf = String(siswa.paket || '').toUpperCase().replace(/PAKET/g, '').trim();
+        const angka = parseKelasAngka(siswa.kelas);
+        const rentang = RENTANG_PAKET[huruf];
+        const ok = !!(rentang && angka && angka >= rentang[0] && angka <= rentang[1]);
+
+        aksesPaket = ok ? 'Paket ' + huruf : null;
+        aksesKelas = ok ? 'Kelas ' + angka : null;
+
+        ['a', 'b', 'c'].forEach(function (k) {
+            const kartu = document.getElementById('card-paket-' + k);
+            kartu.style.display = (ok && k === huruf.toLowerCase()) ? '' : 'none';
+            if (ok && k === huruf.toLowerCase()) {
+                kartu.querySelector('.paket-sub').innerText = aksesKelas;
+            }
+        });
+        document.getElementById('akses-info').style.display = ok ? 'none' : 'block';
+        document.getElementById('label-paket').style.display = ok ? 'block' : 'none';
+    }
+
     function selectPaket(namaPaket, listKelas) {
+        if (!aksesPaket || namaPaket !== aksesPaket) return;
+        listKelas = listKelas.filter(function (k) { return k === aksesKelas; });
+        if (listKelas.length === 0) return;
         document.getElementById('judul-paket').innerText = namaPaket;
         const container = document.getElementById('daftar-kelas');
         container.innerHTML = '';
@@ -931,6 +1075,7 @@
     }
 
     function openSemester(keySemester) {
+        if (!aksesKelas || !String(keySemester).startsWith(aksesKelas + ' - ')) return;
         document.getElementById('judul-konten').innerText = keySemester;
 
         const data = databaseLink[keySemester] || {
