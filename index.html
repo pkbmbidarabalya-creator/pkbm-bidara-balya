@@ -912,64 +912,75 @@
     // =========================================================================
     // TUGAS MINGGUAN (fungsi daftar_tugas_minggu_ini & tandai_tugas_selesai)
     // =========================================================================
+    function el(tag, css, text) {
+        const e = document.createElement(tag);
+        if (css) e.style.cssText = css;
+        if (text !== undefined) e.textContent = text;
+        return e;
+    }
+
     function renderTugas(list) {
         const box = document.getElementById('tugas-list');
         box.innerHTML = '';
-
-        if (!list || list.length === 0) {
-            box.innerText = 'Belum ada tugas untuk minggu ini.';
-            return;
-        }
+        if (!list || list.length === 0) { box.innerText = 'Belum ada tugas untuk minggu ini.'; return; }
 
         list.forEach(function (t) {
-            const item = document.createElement('div');
-            item.style.cssText = 'border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; margin-bottom: 12px; background: #f8fafc; text-align: left;';
-
-            const judul = document.createElement('div');
-            judul.style.cssText = 'font-weight: 600; color: #0f172a; font-size: 14px; margin-bottom: 4px;';
-            judul.textContent = t.judul;
-            item.appendChild(judul);
-
-            if (t.petunjuk) {
-                const pet = document.createElement('div');
-                pet.style.cssText = 'font-size: 13px; color: #475569; margin-bottom: 8px; white-space: pre-line;';
-                pet.textContent = t.petunjuk;
-                item.appendChild(pet);
-            }
-
+            const soal = t.soal || [];
+            const item = el('div', 'border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; margin-bottom: 12px; background: #f8fafc; text-align: left;');
+            item.appendChild(el('div', 'font-weight: 600; color: #0f172a; font-size: 14px; margin-bottom: 4px;', t.judul));
+            if (t.petunjuk) item.appendChild(el('div', 'font-size: 13px; color: #475569; margin-bottom: 8px; white-space: pre-line;', t.petunjuk));
             if (t.batas_waktu) {
-                const batas = document.createElement('div');
-                batas.style.cssText = 'font-size: 12px; color: #b45309; margin-bottom: 8px;';
-                batas.textContent = '⏰ Batas: ' + formatTanggal(new Date(t.batas_waktu + 'T00:00:00Z'),
-                    { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
-                item.appendChild(batas);
+                item.appendChild(el('div', 'font-size: 12px; color: #b45309; margin-bottom: 8px;', '⏰ Batas: ' +
+                    formatTanggal(new Date(t.batas_waktu + 'T00:00:00Z'), { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' })));
+            }
+            if (t.link_modul && /^https?:\/\//i.test(t.link_modul)) {
+                const a = el('a', 'display: inline-block; font-size: 13px; font-weight: 600; color: #0284c7; text-decoration: none; margin-bottom: 10px;', '📖 Buka materi ›');
+                a.href = t.link_modul; a.target = '_blank'; a.rel = 'noopener';
+                item.appendChild(a);
             }
 
-            if (t.link_modul && /^https?:\/\//i.test(t.link_modul)) {
-                const a = document.createElement('a');
-                a.href = t.link_modul;
-                a.target = '_blank';
-                a.rel = 'noopener';
-                a.textContent = '📖 Buka materi ›';
-                a.style.cssText = 'display: inline-block; font-size: 13px; font-weight: 600; color: #0284c7; text-decoration: none; margin-bottom: 10px;';
-                item.appendChild(a);
-                item.appendChild(document.createElement('br'));
+            soal.forEach(function (q) {
+                const blok = el('div', 'margin: 10px 0; padding: 10px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;');
+                blok.appendChild(el('div', 'font-size: 13px; font-weight: 500; color: #0f172a; margin-bottom: 6px; white-space: pre-line;', q.nomor + '. ' + q.pertanyaan));
+                ['a', 'b', 'c', 'd'].forEach(function (o) {
+                    const lab = el('label', 'display: block; font-size: 13px; color: #334155; padding: 4px 0;');
+                    let teks = o.toUpperCase() + '. ' + q[o];
+                    if (!t.selesai) {
+                        const r = document.createElement('input');
+                        r.type = 'radio'; r.name = 'q-' + t.id + '-' + q.nomor; r.value = o; r.style.marginRight = '8px';
+                        lab.appendChild(r);
+                    } else if (o === q.kunci) {
+                        lab.style.cssText += 'color: #166534; font-weight: 600;'; teks += '  ✓';
+                    } else if (o === q.jawab) {
+                        lab.style.cssText += 'color: #b91c1c;'; teks += '  ✗ (jawabanmu)';
+                    }
+                    lab.appendChild(document.createTextNode(teks));
+                    blok.appendChild(lab);
+                });
+                item.appendChild(blok);
+            });
+
+            if (t.minta_jawaban && !t.selesai) {
+                const ta = document.createElement('textarea');
+                ta.rows = 5; ta.maxLength = 4000; ta.placeholder = 'Tulis jawabanmu di sini...';
+                ta.style.cssText = 'width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #cbd5e1; border-radius: 10px; font-family: inherit; font-size: 13px; margin: 6px 0 10px;';
+                item.appendChild(ta);
+            } else if (t.minta_jawaban && t.jawaban_teks) {
+                item.appendChild(el('div', 'background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; font-size: 13px; color: #334155; margin: 6px 0 10px; white-space: pre-line;', 'Jawabanmu:\n' + t.jawaban_teks));
             }
 
             if (t.selesai) {
-                const ok = document.createElement('div');
-                ok.style.cssText = 'background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 12px; padding: 10px 12px; font-size: 13px; font-weight: 500;';
-                ok.textContent = '✅ Selesai';
-                item.appendChild(ok);
+                let ringkas = '✅ Selesai';
+                if (t.nilai !== null && t.nilai !== undefined) ringkas += '  ·  🎯 Nilai latihan: ' + t.nilai;
+                if (t.nilai_manual !== null && t.nilai_manual !== undefined) ringkas += '  ·  ⭐ Nilai tutor: ' + t.nilai_manual;
+                item.appendChild(el('div', 'background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 12px; padding: 10px 12px; font-size: 13px; font-weight: 500;', ringkas));
+                if (t.catatan) item.appendChild(el('div', 'font-size: 13px; color: #475569; margin-top: 8px; white-space: pre-line;', '💬 Catatan tutor: ' + t.catatan));
             } else {
-                const btn = document.createElement('button');
+                const btn = el('button', 'padding: 11px; font-size: 13px;', (soal.length || t.minta_jawaban) ? 'Kirim jawaban' : 'Sudah saya kerjakan');
                 btn.className = 'btn-primary';
-                btn.style.cssText = 'padding: 11px; font-size: 13px;';
-                btn.textContent = 'Sudah saya kerjakan';
-                btn.onclick = function () { tandaiTugas(t.id, btn); };
+                btn.onclick = function () { kirimTugas(t, item, btn); };
                 item.appendChild(btn);
             }
-
             box.appendChild(item);
         });
     }
@@ -987,18 +998,35 @@
         }
     }
 
-    async function tandaiTugas(idTugas, btn) {
+    async function kirimTugas(t, item, btn) {
+        const soal = t.soal || [];
+        const jawab = {};
+        for (const q of soal) {
+            const pilih = item.querySelector('input[name="q-' + t.id + '-' + q.nomor + '"]:checked');
+            if (!pilih) { alert('Soal nomor ' + q.nomor + ' belum dijawab. Jawab semua soal dulu ya.'); return; }
+            jawab[q.nomor] = pilih.value;
+        }
+        let teks = null;
+        if (t.minta_jawaban) {
+            teks = (item.querySelector('textarea').value || '').trim();
+            if (!teks) { alert('Jawaban tulisan belum diisi.'); return; }
+        }
+        if (soal.length && !confirm('Kirim jawaban? Setelah dikirim, jawaban tidak bisa diubah.')) return;
+
+        const label = btn.textContent;
         btn.disabled = true;
         btn.textContent = 'Menyimpan...';
         try {
-            const { data, error } = await supabaseClient.rpc('tandai_tugas_selesai', { p_nisn: currentNisn, p_tugas_id: idTugas });
+            const { data, error } = await supabaseClient.rpc('kirim_tugas', {
+                p_nisn: currentNisn, p_tugas_id: t.id, p_jawaban: soal.length ? jawab : null, p_teks: teks
+            });
             if (error) throw error;
             renderTugas(data);
         } catch (err) {
             console.error(err);
             alert('Gagal menyimpan. Periksa koneksi internet, lalu coba lagi.');
             btn.disabled = false;
-            btn.textContent = 'Sudah saya kerjakan';
+            btn.textContent = label;
         }
     }
 
