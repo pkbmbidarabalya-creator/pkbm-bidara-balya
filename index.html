@@ -829,6 +829,7 @@
             document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
             currentNisn = String(siswa.nisn || nisn);
             terapkanAkses(siswa);
+            aksesSemester = await ambilSemester();
             document.getElementById('nisn').value = '';
             showScreen('screen-paket');
             cekAbsen();
@@ -933,16 +934,23 @@
                 item.appendChild(el('div', 'font-size: 12px; color: #b45309; margin-bottom: 8px;', '⏰ Batas: ' +
                     formatTanggal(new Date(t.batas_waktu + 'T00:00:00Z'), { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' })));
             }
-            if (t.link_modul && /^https?:\/\//i.test(t.link_modul)) {
-                const a = el('a', 'display: inline-block; font-size: 13px; font-weight: 600; color: #0284c7; text-decoration: none; margin-bottom: 10px;', '📖 Buka materi ›');
-                a.href = t.link_modul; a.target = '_blank'; a.rel = 'noopener';
-                item.appendChild(a);
+            if (t.link_modul) {
+                String(t.link_modul).split('\n').forEach(function (baris) {
+                    const bagian = baris.trim().split('|');
+                    const url = bagian.length > 1 ? bagian[bagian.length - 1].trim() : bagian[0].trim();
+                    const label = bagian.length > 1 ? bagian.slice(0, -1).join('|').trim() : 'Buka materi';
+                    if (!/^https?:\/\//i.test(url)) return;
+                    const a = el('a', 'display: block; font-size: 13px; font-weight: 600; color: #0284c7; text-decoration: none; margin-bottom: 8px;', '📖 ' + label + ' ›');
+                    a.href = url; a.target = '_blank'; a.rel = 'noopener';
+                    item.appendChild(a);
+                });
             }
 
             soal.forEach(function (q) {
                 const blok = el('div', 'margin: 10px 0; padding: 10px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;');
                 blok.appendChild(el('div', 'font-size: 13px; font-weight: 500; color: #0f172a; margin-bottom: 6px; white-space: pre-line;', q.nomor + '. ' + q.pertanyaan));
                 ['a', 'b', 'c', 'd'].forEach(function (o) {
+                    if (q[o] === null || q[o] === undefined || q[o] === '') return;
                     const lab = el('label', 'display: block; font-size: 13px; color: #334155; padding: 4px 0;');
                     let teks = o.toUpperCase() + '. ' + q[o];
                     if (!t.selesai) {
@@ -1034,6 +1042,7 @@
         currentNisn = '';
         aksesPaket = null;
         aksesKelas = null;
+        aksesSemester = null;
         document.getElementById('tugas-list').innerText = 'Memeriksa...';
         document.getElementById('nisn').value = '';
         document.getElementById('login-error').style.display = 'none';
@@ -1052,6 +1061,18 @@
     // =========================================================================
     let aksesPaket = null;   // contoh: 'Paket B'
     let aksesKelas = null;   // contoh: 'Kelas 8'
+    let aksesSemester = null; // 1 atau 2 = semester berjalan; null = tidak dibatasi
+
+    async function ambilSemester() {
+        try {
+            const { data, error } = await supabaseClient.rpc('info_semester_berjalan');
+            if (error) throw error;
+            return (data === 1 || data === 2) ? data : null;
+        } catch (err) {
+            console.error(err);
+            return null;   // jika gagal, kedua semester tetap tampil
+        }
+    }
 
     const ROMAWI = { IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10, XI: 11, XII: 12 };
     const RENTANG_PAKET = { A: [4, 6], B: [7, 9], C: [10, 12] };
@@ -1091,11 +1112,14 @@
         container.innerHTML = '';
 
         listKelas.forEach(kelas => {
+            const tombolSemester = [1, 2]
+                .filter(n => !aksesSemester || n === aksesSemester)
+                .map(n => `<button class="btn-outline" style="margin-bottom: 6px;" onclick="openSemester('${kelas} - Semester ${n}')">Semester ${n}${aksesSemester ? ' (sedang berjalan)' : ''}</button>`)
+                .join('');
             container.innerHTML += `
                 <div class="kelas-box">
                     <div class="kelas-title">📌 ${kelas}</div>
-                    <button class="btn-outline" style="margin-bottom: 6px;" onclick="openSemester('${kelas} - Semester 1')">Semester 1</button>
-                    <button class="btn-outline" onclick="openSemester('${kelas} - Semester 2')">Semester 2</button>
+                    ${tombolSemester}
                 </div>
             `;
         });
@@ -1104,6 +1128,7 @@
 
     function openSemester(keySemester) {
         if (!aksesKelas || !String(keySemester).startsWith(aksesKelas + ' - ')) return;
+        if (aksesSemester && !String(keySemester).endsWith('Semester ' + aksesSemester)) return;
         document.getElementById('judul-konten').innerText = keySemester;
 
         const data = databaseLink[keySemester] || {
