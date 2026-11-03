@@ -60,7 +60,8 @@
         .btn-outline { background: #ffffff; color: #0284c7; border: 1.5px solid #0284c7; border-radius: 10px; padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 8px; }
 
         /* Header Navigation Universal */
-        .app-header { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 20px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; display: flex; align-items: center; justify-content: space-between; }
+        .app-header { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 20px; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+        .app-header > :first-child { justify-self: start; }
         .app-header h2 { font-size: 17px; font-weight: 600; }
         .btn-header-back { background: rgba(255, 255, 255, 0.2); border: none; color: white; padding: 8px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: 0.2s; }
         .btn-header-back:active { background: rgba(255, 255, 255, 0.35); transform: scale(0.95); }
@@ -74,7 +75,7 @@
         /* Card Menu Options */
         .card-container { padding: 0 20px; }
         .paket-card { background: white; border-radius: 20px; padding: 20px; margin-bottom: 16px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); cursor: pointer; transition: 0.25s; position: relative; overflow: hidden; }
-        .paket-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        @media (hover: hover) { .paket-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); } }
         .paket-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
         
         .paket-a::before { background: #f59e0b; }
@@ -106,7 +107,7 @@
         .modul-scroll { max-height: 55vh; overflow-y: auto; padding-right: 2px; }
         .modul-list-item { display: block; text-decoration: none; background: #ffffff; color: #0284c7; border: 1.5px solid #0284c7; border-radius: 10px; padding: 12px 14px; font-size: 13.5px; font-weight: 600; margin-bottom: 8px; text-align: center; }
         .modul-list-item:active { background: #e0f2fe; }
-        .modul-empty-note { font-size: 13px; color: #94a3b8; text-align: center; padding: 20px 8px; }
+        .modul-empty-note { font-size: 13px; color: #64748b; text-align: center; padding: 20px 8px; }
     </style>
 </head>
 <body>
@@ -158,7 +159,7 @@
             <div class="avatar" id="avatar-initial">S</div>
             <div class="user-info">
                 <h4 id="display-name">Nama Siswa</h4>
-                <p>Status: Siswa Aktif</p>
+                <p id="display-status">Status: Siswa Aktif</p>
             </div>
         </div>
 
@@ -229,7 +230,7 @@
 
         <!-- PILIHAN UTAMA: 1. Modul PDF  2. Modul Interaktif -->
         <div class="card-container" id="konten-pilihan">
-            <div class="paket-card" style="border-left-color:#f59e0b;" onclick="tampilkanSubKonten('pdf')">
+            <div class="paket-card paket-a" onclick="tampilkanSubKonten('pdf')">
                 <div class="paket-header">
                     <div>
                         <div class="paket-title" style="font-size:16px;">📂 1. Modul PDF</div>
@@ -238,7 +239,7 @@
                     <div style="font-size:20px; color:#cbd5e1;">›</div>
                 </div>
             </div>
-            <div class="paket-card" style="border-left-color:#6366f1;" onclick="tampilkanSubKonten('interaktif')">
+            <div class="paket-card paket-c" onclick="tampilkanSubKonten('interaktif')">
                 <div class="paket-header">
                     <div>
                         <div class="paket-title" style="font-size:16px;">✨ 2. Modul Interaktif</div>
@@ -829,11 +830,10 @@
             document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
             currentNisn = String(siswa.nisn || nisn);
             terapkanAkses(siswa);
-            aksesSemester = await ambilSemester();
+            aksesSemester = isAdmin ? null : await ambilSemester();
             document.getElementById('nisn').value = '';
             showScreen('screen-paket');
-            cekAbsen();
-            cekTugas();
+            if (!isAdmin) { cekAbsen(); cekTugas(); }
         } catch (err) {
             console.error(err);
             tampilkanErrorLogin('Terjadi kesalahan saat menghubungkan ke server. Coba lagi sebentar.');
@@ -866,9 +866,9 @@
         if (r.sudah) {
             const waktu = new Date(r.waktu).toLocaleString('id-ID', {
                 weekday: 'long', day: 'numeric', month: 'short',
-                hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Pontianak'
+                hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Makassar'
             });
-            sudah.innerText = '✅ Sudah absen minggu ini (' + r.status + ') — ' + waktu + ' WIB';
+            sudah.innerText = '✅ Sudah absen minggu ini (' + r.status + ')\n' + waktu + ' WITA';
             sudah.style.display = 'block';
             btn.style.display = 'none';
         } else {
@@ -946,23 +946,30 @@
                 });
             }
 
+            let prog = null;
+            if (soal.length && !t.selesai) {
+                prog = el('div', 'font-size: 12px; font-weight: 600; color: #0369a1; margin: 6px 0;', 'Terjawab 0/' + soal.length);
+                item.appendChild(prog);
+            }
+
             soal.forEach(function (q) {
                 const blok = el('div', 'margin: 10px 0; padding: 10px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;');
                 blok.appendChild(el('div', 'font-size: 13px; font-weight: 500; color: #0f172a; margin-bottom: 6px; white-space: pre-line;', q.nomor + '. ' + q.pertanyaan));
                 ['a', 'b', 'c', 'd'].forEach(function (o) {
                     if (q[o] === null || q[o] === undefined || q[o] === '') return;
-                    const lab = el('label', 'display: block; font-size: 13px; color: #334155; padding: 4px 0;');
+                    const lab = el('label', 'display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #334155; padding: 6px 0;');
                     let teks = o.toUpperCase() + '. ' + q[o];
                     if (!t.selesai) {
                         const r = document.createElement('input');
-                        r.type = 'radio'; r.name = 'q-' + t.id + '-' + q.nomor; r.value = o; r.style.marginRight = '8px';
+                        r.type = 'radio'; r.name = 'q-' + t.id + '-' + q.nomor; r.value = o; r.style.cssText = 'margin: 2px 0 0; flex-shrink: 0; width: 18px; height: 18px;';
+                        if (prog) r.onchange = function () { prog.textContent = 'Terjawab ' + item.querySelectorAll('input[type="radio"]:checked').length + '/' + soal.length; };
                         lab.appendChild(r);
                     } else if (o === q.kunci) {
                         lab.style.cssText += 'color: #166534; font-weight: 600;'; teks += '  ✓';
                     } else if (o === q.jawab) {
                         lab.style.cssText += 'color: #b91c1c;'; teks += '  ✗ (jawabanmu)';
                     }
-                    lab.appendChild(document.createTextNode(teks));
+                    const span = document.createElement('span'); span.textContent = teks; lab.appendChild(span);
                     blok.appendChild(lab);
                 });
                 item.appendChild(blok);
@@ -972,6 +979,7 @@
                 const ta = document.createElement('textarea');
                 ta.rows = 5; ta.maxLength = 4000; ta.placeholder = 'Tulis jawabanmu di sini...';
                 ta.style.cssText = 'width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #cbd5e1; border-radius: 10px; font-family: inherit; font-size: 13px; margin: 6px 0 10px;';
+                item.appendChild(el('div', 'font-size: 13px; font-weight: 600; color: #0f172a; margin: 12px 0 4px;', '✍️ Jawaban tulisanmu'));
                 item.appendChild(ta);
             } else if (t.minta_jawaban && t.jawaban_teks) {
                 item.appendChild(el('div', 'background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; font-size: 13px; color: #334155; margin: 6px 0 10px; white-space: pre-line;', 'Jawabanmu:\n' + t.jawaban_teks));
@@ -1043,12 +1051,19 @@
         aksesPaket = null;
         aksesKelas = null;
         aksesSemester = null;
+        isAdmin = false;
         document.getElementById('tugas-list').innerText = 'Memeriksa...';
         document.getElementById('nisn').value = '';
         document.getElementById('login-error').style.display = 'none';
         document.getElementById('display-name').innerText = 'Nama Siswa';
         showScreen('screen-login');
     }
+
+    // Simpan teks asli subjudul kartu paket (dipakai mode admin)
+    ['a', 'b', 'c'].forEach(function (k) {
+        const sub = document.querySelector('#card-paket-' + k + ' .paket-sub');
+        sub.dataset.asli = sub.innerText;
+    });
 
     // Tekan Enter di kolom NISN = Login
     document.getElementById('nisn').addEventListener('keydown', function (e) {
@@ -1062,6 +1077,7 @@
     let aksesPaket = null;   // contoh: 'Paket B'
     let aksesKelas = null;   // contoh: 'Kelas 8'
     let aksesSemester = null; // 1 atau 2 = semester berjalan; null = tidak dibatasi
+    let isAdmin = false;      // true jika paket di tabel siswa = 'Admin' (lihat semua kelas & semester)
 
     async function ambilSemester() {
         try {
@@ -1085,6 +1101,34 @@
 
     function terapkanAkses(siswa) {
         const huruf = String(siswa.paket || '').toUpperCase().replace(/PAKET/g, '').trim();
+        isAdmin = (huruf === 'ADMIN');
+
+        // MODE ADMIN: semua paket, kelas, dan semester terbuka; absen & tugas disembunyikan
+        if (isAdmin) {
+            aksesPaket = null;
+            aksesKelas = null;
+            ['a', 'b', 'c'].forEach(function (k) {
+                const kartu = document.getElementById('card-paket-' + k);
+                kartu.style.display = '';
+                const sub = kartu.querySelector('.paket-sub');
+                if (sub.dataset.asli) sub.innerText = sub.dataset.asli;
+            });
+            document.getElementById('akses-info').style.display = 'none';
+            const label = document.getElementById('label-paket');
+            label.innerText = 'Semua Paket (Mode Admin):';
+            label.style.display = 'block';
+            document.getElementById('display-status').innerText = 'Status: Admin (akses semua kelas & semester)';
+            document.getElementById('absen-card').style.display = 'none';
+            document.getElementById('tugas-card').style.display = 'none';
+            return;
+        }
+
+        // MODE SISWA
+        document.getElementById('absen-card').style.display = '';
+        document.getElementById('tugas-card').style.display = '';
+        document.getElementById('display-status').innerText = 'Status: Siswa Aktif';
+        document.getElementById('label-paket').innerText = 'Paket Belajar Kamu:';
+
         const angka = parseKelasAngka(siswa.kelas);
         const rentang = RENTANG_PAKET[huruf];
         const ok = !!(rentang && angka && angka >= rentang[0] && angka <= rentang[1]);
@@ -1104,8 +1148,10 @@
     }
 
     function selectPaket(namaPaket, listKelas) {
-        if (!aksesPaket || namaPaket !== aksesPaket) return;
-        listKelas = listKelas.filter(function (k) { return k === aksesKelas; });
+        if (!isAdmin) {
+            if (!aksesPaket || namaPaket !== aksesPaket) return;
+            listKelas = listKelas.filter(function (k) { return k === aksesKelas; });
+        }
         if (listKelas.length === 0) return;
         document.getElementById('judul-paket').innerText = namaPaket;
         const container = document.getElementById('daftar-kelas');
@@ -1113,8 +1159,8 @@
 
         listKelas.forEach(kelas => {
             const tombolSemester = [1, 2]
-                .filter(n => !aksesSemester || n === aksesSemester)
-                .map(n => `<button class="btn-outline" style="margin-bottom: 6px;" onclick="openSemester('${kelas} - Semester ${n}')">Semester ${n}${aksesSemester ? ' (sedang berjalan)' : ''}</button>`)
+                .filter(n => isAdmin || !aksesSemester || n === aksesSemester)
+                .map(n => `<button class="btn-outline" style="margin-bottom: 6px;" onclick="openSemester('${kelas} - Semester ${n}')">Semester ${n}${(!isAdmin && aksesSemester) ? ' (sedang berjalan)' : ''}</button>`)
                 .join('');
             container.innerHTML += `
                 <div class="kelas-box">
@@ -1127,8 +1173,10 @@
     }
 
     function openSemester(keySemester) {
-        if (!aksesKelas || !String(keySemester).startsWith(aksesKelas + ' - ')) return;
-        if (aksesSemester && !String(keySemester).endsWith('Semester ' + aksesSemester)) return;
+        if (!isAdmin) {
+            if (!aksesKelas || !String(keySemester).startsWith(aksesKelas + ' - ')) return;
+            if (aksesSemester && !String(keySemester).endsWith('Semester ' + aksesSemester)) return;
+        }
         document.getElementById('judul-konten').innerText = keySemester;
 
         const data = databaseLink[keySemester] || {
