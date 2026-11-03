@@ -946,6 +946,16 @@
                 });
             }
 
+            if (t.minta_jawaban && !t.selesai) {
+                const ta = document.createElement('textarea');
+                ta.rows = 5; ta.maxLength = 4000; ta.placeholder = 'Tulis jawabanmu di sini...';
+                ta.style.cssText = 'width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #cbd5e1; border-radius: 10px; font-family: inherit; font-size: 13px; margin: 6px 0 10px;';
+                item.appendChild(el('div', 'font-size: 13px; font-weight: 600; color: #0f172a; margin: 12px 0 4px;', '✍️ Tugas kreatif: tulis jawabanmu di sini'));
+                item.appendChild(ta);
+            } else if (t.minta_jawaban && t.jawaban_teks) {
+                item.appendChild(el('div', 'background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; font-size: 13px; color: #334155; margin: 6px 0 10px; white-space: pre-line;', 'Jawabanmu:\n' + t.jawaban_teks));
+            }
+
             let prog = null;
             if (soal.length && !t.selesai) {
                 prog = el('div', 'font-size: 12px; font-weight: 600; color: #0369a1; margin: 6px 0;', 'Terjawab 0/' + soal.length);
@@ -974,16 +984,6 @@
                 });
                 item.appendChild(blok);
             });
-
-            if (t.minta_jawaban && !t.selesai) {
-                const ta = document.createElement('textarea');
-                ta.rows = 5; ta.maxLength = 4000; ta.placeholder = 'Tulis jawabanmu di sini...';
-                ta.style.cssText = 'width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #cbd5e1; border-radius: 10px; font-family: inherit; font-size: 13px; margin: 6px 0 10px;';
-                item.appendChild(el('div', 'font-size: 13px; font-weight: 600; color: #0f172a; margin: 12px 0 4px;', '✍️ Jawaban tulisanmu'));
-                item.appendChild(ta);
-            } else if (t.minta_jawaban && t.jawaban_teks) {
-                item.appendChild(el('div', 'background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; font-size: 13px; color: #334155; margin: 6px 0 10px; white-space: pre-line;', 'Jawabanmu:\n' + t.jawaban_teks));
-            }
 
             if (t.selesai) {
                 let ringkas = '✅ Selesai';
