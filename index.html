@@ -108,51 +108,57 @@
         .modul-list-item { display: block; text-decoration: none; background: #ffffff; color: #0284c7; border: 1.5px solid #0284c7; border-radius: 10px; padding: 12px 14px; font-size: 13.5px; font-weight: 600; margin-bottom: 8px; text-align: center; }
         .modul-list-item:active { background: #e0f2fe; }
         .modul-empty-note { font-size: 13px; color: #64748b; text-align: center; padding: 20px 8px; }
+        .login-tabs { display: flex; gap: 6px; background: #f1f5f9; border-radius: 14px; padding: 4px; margin-bottom: 18px; }
+        .login-tabs button { flex: 1; padding: 11px; border: 0; border-radius: 11px; background: none; font-size: 13px; font-weight: 600; color: #64748b; cursor: pointer; }
+        .login-tabs button.on { background: #0284c7; color: #fff; box-shadow: 0 4px 10px rgba(2,132,199,.25); }
+        .topbar { padding: 16px 20px 8px; font-size: 16px; font-weight: 700; color: #0369a1; }
+        .user-banner { margin: 4px 20px 20px; background: linear-gradient(135deg, #0284c7, #0369a1); border: 0; box-shadow: 0 8px 18px rgba(3,105,161,.25); }
+        .user-banner .avatar { background: #fff; }
+        .user-banner .user-info h4 { color: #fff; }
+        .user-banner .user-info p { color: #bae6fd; }
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .menu-card { border-radius: 18px; padding: 16px; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
+        .menu-card b { font-size: 15px; color: #0f172a; }
+        .menu-card small { font-size: 11px; color: #64748b; }
+        .menu-card .mi { font-size: 30px; }
+        .m-tugas { background: #ffedd5; } .m-belajar { background: #ede9fe; } .m-absen { background: #dcfce7; }
+        #screen-paket { padding-bottom: 0; }
+        .bottom-nav { position: sticky; bottom: 0; display: flex; background: #0369a1; border-radius: 18px 18px 0 0; padding: 8px 6px calc(8px + env(safe-area-inset-bottom, 0px)); margin-top: 24px; }
+        .bottom-nav button { flex: 1; background: none; border: 0; color: #bae6fd; font-size: 10px; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; padding: 4px 0; }
+        .bottom-nav button i { font-style: normal; font-size: 18px; }
+        .bottom-nav button.on { color: #fff; }
     </style>
 </head>
 <body>
 
 <div class="app-container">
 
-    <!-- 1. SELAMAT DATANG -->
-    <div id="screen-welcome" class="screen active">
+    <!-- LOGIN: tab Siswa (NISN) / Admin (kode) -->
+    <div id="screen-login" class="screen active">
         <div class="welcome-hero">
-            <div class="welcome-icon">🎓</div>
-            <h1 class="welcome-title">Selamat Datang Di<br>PKBM Bidara Balya</h1>
-            <p class="welcome-subtitle">Platform Belajar Digital Pendidikan Kesetaraan Paket A, B, & C</p>
+            <svg width="76" height="66" viewBox="0 0 64 56" aria-hidden="true" style="margin-bottom:10px;"><path d="M32 4 4 16l28 12 28-12z" fill="#fff"/><path d="M16 24v10c0 5 8 9 16 9s16-4 16-9V24l-16 7z" fill="#bae6fd"/><path d="M58 18v16" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+            <h1 class="welcome-title">Portal Pembelajaran</h1>
+            <p class="welcome-subtitle">PKBM Bidara Balya</p>
         </div>
-        <div class="welcome-body">
-            <p style="color:#64748b; font-size: 14px; margin-bottom: 30px;">Akses modul dan materi pembelajaran secara fleksibel.</p>
-            <button class="btn-primary" onclick="showScreen('screen-login')">Masuk Ke Portal Belajar 🚀</button>
-        </div>
-    </div>
-
-    <!-- 2. LOGIN -->
-    <div id="screen-login" class="screen">
-        <div class="app-header">
-            <button class="btn-header-back" onclick="showScreen('screen-welcome')">⬅ Kembali</button>
-            <h2>Halaman Login</h2>
-            <div style="width: 50px;"></div>
-        </div>
-        <div style="padding: 30px 24px;">
-            <div class="form-group">
-                <label for="nisn">NISN (Nomor Induk Siswa Nasional)</label>
+        <div style="padding: 24px;">
+            <div class="login-tabs">
+                <button id="tab-siswa" class="on" onclick="setModeLogin('siswa')">Login Siswa</button>
+                <button id="tab-admin" onclick="setModeLogin('admin')">Login Admin</button>
+            </div>
+            <p id="login-judul" style="font-size:16px;font-weight:700;color:#0f172a;">Login Siswa</p>
+            <p id="login-sub" style="font-size:12px;color:#64748b;margin-bottom:14px;">Masuk menggunakan NISN</p>
+            <div class="form-group" style="position:relative;">
                 <input type="text" id="nisn" placeholder="Masukkan NISN" inputmode="numeric" maxlength="20" autocomplete="off">
+                <button type="button" id="btn-eye" onclick="toggleEye()" aria-label="Tampilkan atau sembunyikan kode" style="display:none;position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:none;font-size:18px;cursor:pointer;">👁</button>
             </div>
             <div id="login-error" style="display:none; background:#fef2f2; color:#b91c1c; border:1px solid #fecaca; border-radius:10px; padding:10px 12px; font-size:13px; margin-bottom:14px; text-align:left;"></div>
-            <button class="btn-primary" id="btn-login" style="margin-top: 10px;" onclick="handleLogin()">Login</button>
+            <button class="btn-primary" id="btn-login" onclick="handleLogin()">Masuk ›</button>
         </div>
     </div>
 
     <!-- 3. MENU UTAMA (PAKET A, B, C) -->
     <div id="screen-paket" class="screen">
-        <div class="app-header">
-            <button class="btn-header-back" onclick="handleLogout()">⬅ Logout</button>
-            <h2>Menu Paket</h2>
-            <div style="width: 50px;"></div>
-        </div>
-
-        <div style="margin-top: 20px;"></div>
+        <div class="topbar">🎓 Portal Pembelajaran</div>
 
         <!-- Banner Profil Siswa -->
         <div class="user-banner">
@@ -164,6 +170,14 @@
         </div>
 
         <div class="card-container">
+            <div id="tab-beranda" class="tab">
+                <div class="menu-grid">
+                    <div class="menu-card m-tugas" onclick="showTab('tugas')"><div class="mi">📋</div><b>Tugas</b><small>Lihat dan kerjakan tugas</small></div>
+                    <div class="menu-card m-belajar" onclick="showTab('pembelajaran')"><div class="mi">📚</div><b>Pembelajaran</b><small>Materi dan modul</small></div>
+                    <div id="menu-absen" class="menu-card m-absen" onclick="showTab('absen')" style="grid-column:1/-1;"><div class="mi">🗓️</div><b>Absen</b><small>Presensi kehadiran mingguan</small></div>
+                </div>
+            </div>
+            <div id="tab-absen" class="tab" style="display:none;">
             <!-- Absen Mingguan -->
             <div id="absen-card" style="background: white; border-radius: 20px; padding: 18px 20px; margin-bottom: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
                 <p style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 4px;">📝 Absen Minggu Ini</p>
@@ -172,12 +186,16 @@
                 <div id="absen-sudah" style="display: none; background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; font-size: 13px; font-weight: 500;"></div>
             </div>
 
+            </div>
+            <div id="tab-tugas" class="tab" style="display:none;">
             <!-- Tugas Mingguan -->
             <div id="tugas-card" style="background: white; border-radius: 20px; padding: 18px 20px; margin-bottom: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);">
                 <p id="tugas-judul" style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 10px;">📚 Tugas Minggu Ini</p>
                 <div id="tugas-list" style="font-size: 12px; color: #64748b;">Memeriksa...</div>
             </div>
 
+            </div>
+            <div id="tab-pembelajaran" class="tab" style="display:none;">
             <p id="label-paket" style="font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 12px;">Paket Belajar Kamu:</p>
             <div id="akses-info" style="display: none; background: #fffbeb; color: #92400e; border: 1px solid #fde68a; border-radius: 12px; padding: 12px 14px; font-size: 13px; margin-bottom: 16px;">Data paket atau kelas kamu belum lengkap. Silakan hubungi admin PKBM.</div>
 
@@ -205,6 +223,14 @@
                 <p class="paket-sub">Kelas 10, Kelas 11, dan Kelas 12</p>
             </div>
         </div>
+        </div>
+        <nav class="bottom-nav">
+            <button data-tab="beranda" class="on" onclick="showTab('beranda')"><i>🏠</i>Beranda</button>
+            <button data-tab="tugas" onclick="showTab('tugas')"><i>📋</i>Tugas</button>
+            <button data-tab="pembelajaran" onclick="showTab('pembelajaran')"><i>📚</i>Pembelajaran</button>
+            <button data-tab="absen" id="nav-absen" onclick="showTab('absen')"><i>🗓️</i>Absen</button>
+            <button onclick="handleLogout()"><i>🚪</i>Keluar</button>
+        </nav>
     </div>
 
     <!-- 4. PILIH KELAS & SEMESTER -->
@@ -801,6 +827,35 @@
         box.style.display = 'block';
     }
 
+    let modeLogin = 'siswa';
+    function setModeLogin(m) {
+        modeLogin = m;
+        const adm = (m === 'admin');
+        document.getElementById('tab-siswa').classList.toggle('on', !adm);
+        document.getElementById('tab-admin').classList.toggle('on', adm);
+        document.getElementById('login-judul').innerText = adm ? 'Login Admin' : 'Login Siswa';
+        document.getElementById('login-sub').innerText = adm ? 'Masuk dengan kode admin' : 'Masuk menggunakan NISN';
+        const inp = document.getElementById('nisn');
+        inp.type = adm ? 'password' : 'text';
+        inp.placeholder = adm ? 'Masukkan kode admin' : 'Masukkan NISN';
+        inp.value = '';
+        document.getElementById('btn-eye').style.display = adm ? 'block' : 'none';
+        document.getElementById('login-error').style.display = 'none';
+    }
+    function toggleEye() {
+        const i = document.getElementById('nisn');
+        i.type = (i.type === 'password') ? 'text' : 'password';
+    }
+    function showTab(n) {
+        ['beranda', 'tugas', 'pembelajaran', 'absen'].forEach(function (t) {
+            document.getElementById('tab-' + t).style.display = (t === n) ? 'block' : 'none';
+        });
+        document.querySelectorAll('.bottom-nav button[data-tab]').forEach(function (b) {
+            b.classList.toggle('on', b.dataset.tab === n);
+        });
+        window.scrollTo(0, 0);
+    }
+
     async function handleLogin() {
         const nisn = document.getElementById('nisn').value.trim();
         const btn = document.getElementById('btn-login');
@@ -808,7 +863,7 @@
         box.style.display = 'none';
 
         if (!nisn) {
-            tampilkanErrorLogin('Silakan masukkan NISN terlebih dahulu!');
+            tampilkanErrorLogin(modeLogin === 'admin' ? 'Silakan masukkan kode admin terlebih dahulu!' : 'Silakan masukkan NISN terlebih dahulu!');
             return;
         }
 
@@ -820,26 +875,30 @@
             if (error) throw error;
 
             if (!data || data.length === 0) {
-                tampilkanErrorLogin('NISN tidak ditemukan. Periksa kembali NISN kamu.');
+                tampilkanErrorLogin(modeLogin === 'admin' ? 'Kode admin tidak sesuai.' : 'NISN tidak ditemukan. Periksa kembali NISN kamu.');
                 return;
             }
 
             const siswa = data[0];
+            const akunAdmin = String(siswa.paket || '').trim().toLowerCase() === 'admin';
+            if (modeLogin === 'siswa' && akunAdmin) { tampilkanErrorLogin('Kode ini untuk admin. Silakan pilih tab Login Admin.'); return; }
+            if (modeLogin === 'admin' && !akunAdmin) { tampilkanErrorLogin('Kode admin tidak sesuai.'); return; }
             const nama = siswa.nama || 'Siswa';
-            document.getElementById('display-name').innerText = nama;
+            document.getElementById('display-name').innerText = 'Halo, ' + nama + '!';
             document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
             currentNisn = String(siswa.nisn || nisn);
             terapkanAkses(siswa);
             aksesSemester = isAdmin ? null : await ambilSemester();
             document.getElementById('nisn').value = '';
             showScreen('screen-paket');
+            showTab('beranda');
             if (isAdmin) { cekTugasAdmin(); } else { cekAbsen(); cekTugas(); }
         } catch (err) {
             console.error(err);
             tampilkanErrorLogin('Terjadi kesalahan saat menghubungkan ke server. Coba lagi sebentar.');
         } finally {
             btn.disabled = false;
-            btn.innerText = 'Login';
+            btn.innerText = 'Masuk ›';
         }
     }
 
@@ -1114,6 +1173,7 @@
         document.getElementById('nisn').value = '';
         document.getElementById('login-error').style.display = 'none';
         document.getElementById('display-name').innerText = 'Nama Siswa';
+        setModeLogin('siswa');
         showScreen('screen-login');
     }
 
@@ -1177,6 +1237,8 @@
             label.style.display = 'block';
             document.getElementById('display-status').innerText = 'Status: Admin (akses semua kelas & semester)';
             document.getElementById('absen-card').style.display = 'none';
+            document.getElementById('menu-absen').style.display = 'none';
+            document.getElementById('nav-absen').style.display = 'none';
             document.getElementById('tugas-card').style.display = '';
             document.getElementById('tugas-judul').innerText = '📚 Tugas Minggu Ini — semua kelas (hanya lihat)';
             return;
@@ -1184,6 +1246,8 @@
 
         // MODE SISWA
         document.getElementById('absen-card').style.display = '';
+        document.getElementById('menu-absen').style.display = '';
+        document.getElementById('nav-absen').style.display = '';
         document.getElementById('tugas-card').style.display = '';
         document.getElementById('tugas-judul').innerText = '📚 Tugas Minggu Ini';
         document.getElementById('display-status').innerText = 'Status: Siswa Aktif';
