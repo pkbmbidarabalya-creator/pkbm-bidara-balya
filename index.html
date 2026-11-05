@@ -127,54 +127,109 @@
         .bottom-nav button { flex: 1; background: none; border: 0; color: #bae6fd; font-size: 10px; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; padding: 4px 0; }
         .bottom-nav button i { font-style: normal; font-size: 18px; }
         .bottom-nav button.on { color: #fff; }
+        .ic { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+        .btn-primary, .app-header { background: linear-gradient(135deg, #1d5fd6, #0b3a96); }
+        .login-tabs { display: flex; gap: 10px; background: none; padding: 0; margin: 14px 0 18px; }
+        .login-tabs button { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 8px; border: 1.5px solid #cbd5e1; background: #fff; color: #1e3a8a; border-radius: 14px; font-size: 14px; }
+        .login-tabs button.on { background: linear-gradient(135deg, #1d5fd6, #0b3a96); color: #fff; border-color: transparent; box-shadow: 0 6px 14px rgba(29,95,214,.3); }
+        .inp { position: relative; margin-bottom: 14px; }
+        .inp > .ic { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #475569; }
+        .inp input { width: 100%; padding: 14px 46px; border: 1.5px solid #cbd5e1; border-radius: 12px; font-size: 14px; background: #fff; outline: none; }
+        .inp input:focus { border-color: #1d5fd6; box-shadow: 0 0 0 4px rgba(29,95,214,.1); }
+        .inp button { display: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); border: 0; background: none; color: #475569; cursor: pointer; }
+        #screen-paket { background: linear-gradient(180deg, #e3effc, #f8fbff 50%); }
+        .topbar { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 17px; font-weight: 700; color: #0b2f7a; padding: 18px 20px 10px; }
+        .topbar img { height: 30px; }
+        .user-banner { position: relative; overflow: hidden; min-height: 104px; margin: 6px 20px 18px; padding: 16px; border-radius: 22px; background: linear-gradient(100deg, #a9d6f5, #d8ecfb); box-shadow: 0 8px 18px rgba(30,100,200,.18); gap: 14px; }
+        .avatar-img { width: 66px; height: 66px; border-radius: 50%; flex-shrink: 0; position: relative; z-index: 1; }
+        .user-banner .user-info { position: relative; z-index: 1; max-width: 52%; }
+        .user-banner .user-info h4 { font-size: 18px; font-weight: 700; color: #0b2f7a; line-height: 1.2; }
+        .user-banner .user-info p { font-size: 12px; color: #1e3a8a; }
+        .banner-art { position: absolute; right: 0; top: 0; height: 100%; -webkit-mask-image: linear-gradient(to right, transparent, #000 40%); mask-image: linear-gradient(to right, transparent, #000 40%); }
+        .menu-grid { gap: 14px; }
+        .menu-card { position: relative; align-items: center; text-align: center; padding: 18px 14px 42px; border-radius: 22px; box-shadow: 0 8px 18px rgba(30,60,120,.10); border: 1px solid rgba(255,255,255,.7); }
+        .menu-card img { height: 64px; margin-bottom: 6px; }
+        .menu-card b { font-size: 17px; color: #0b2f7a; }
+        .menu-card small { font-size: 11.5px; color: #334155; line-height: 1.35; }
+        .menu-card .chev { position: absolute; right: 10px; bottom: 10px; width: 26px; height: 26px; border-radius: 50%; background: #fff; color: #1d4ed8; display: flex; align-items: center; justify-content: center; font-size: 18px; line-height: 1; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+        .m-tugas { background: linear-gradient(160deg, #fff3ea, #fbd3bb); }
+        .m-belajar { background: linear-gradient(160deg, #f5f0ff, #d8cffa); }
+        .m-absen { grid-column: 1 / -1; flex-direction: row; text-align: left; gap: 16px; padding: 18px 16px; background: linear-gradient(120deg, #dcf7e8, #d3e8fb); }
+        .m-absen img { height: 70px; margin: 0; }
+        .m-absen b { display: block; font-size: 19px; }
+        .info-box { background: #fff; border-radius: 20px; padding: 14px; box-shadow: 0 6px 16px rgba(30,60,120,.08); }
+        .info-head { font-size: 16px; font-weight: 700; color: #0b2f7a; margin-bottom: 10px; }
+        .info-item { display: flex; gap: 12px; align-items: center; border: 1px solid #e2e8f0; border-radius: 14px; padding: 12px; cursor: pointer; }
+        .info-item b { display: block; font-size: 13px; color: #0f172a; }
+        .info-item small { font-size: 12px; color: #475569; }
+        .bottom-nav { background: linear-gradient(180deg, #1d56c9, #0b3a96); }
+        .bottom-nav button { color: #fff; font-size: 11px; }
+        .bottom-nav button.on { color: #fbbf24; }
+        .bottom-nav .ic { width: 22px; height: 22px; }
+        .wave-bawah { display: block; width: 100%; margin-top: 4px; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 40%); mask-image: linear-gradient(to bottom, transparent, #000 40%); }
+        .bottom-nav { bottom: 12px; margin: 24px 12px 12px; border-radius: 28px; box-shadow: 0 8px 20px rgba(11,58,150,.28); }
     </style>
 </head>
 <body>
 
 <div class="app-container">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></symbol>
+<symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h6"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-2-2-5-2.500-9-2v14c4-.5 7 0 9 2 2-2 5-2.500 9-2V4c-4-.5-7 0-9 2zM12 6v14"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4"/></symbol>
+<symbol id="i-out" viewBox="0 0 24 24"><path d="M9 21H5V3h4M16 17l5-5-5-5M21 12H9"/></symbol>
+</defs></svg>
 
     <!-- LOGIN: tab Siswa (NISN) / Admin (kode) -->
-    <div id="screen-login" class="screen active">
-        <div class="welcome-hero">
-            <svg width="76" height="66" viewBox="0 0 64 56" aria-hidden="true" style="margin-bottom:10px;"><path d="M32 4 4 16l28 12 28-12z" fill="#fff"/><path d="M16 24v10c0 5 8 9 16 9s16-4 16-9V24l-16 7z" fill="#bae6fd"/><path d="M58 18v16" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
-            <h1 class="welcome-title">Portal Pembelajaran</h1>
-            <p class="welcome-subtitle">PKBM Bidara Balya</p>
-        </div>
-        <div style="padding: 24px;">
+    <div id="screen-login" class="screen active" style="background: linear-gradient(#e6f1fe, #f3f9ff);">
+        <img src="hero-login.jpg" alt="Portal Pembelajaran" style="width:100%; display:block;">
+        <div style="padding: 6px 24px 24px;">
             <div class="login-tabs">
-                <button id="tab-siswa" class="on" onclick="setModeLogin('siswa')">Login Siswa</button>
-                <button id="tab-admin" onclick="setModeLogin('admin')">Login Admin</button>
+                <button id="tab-siswa" class="on" onclick="setModeLogin('siswa')"><svg class="ic"><use href="#i-user"/></svg>Login Siswa</button>
+                <button id="tab-admin" onclick="setModeLogin('admin')"><svg class="ic"><use href="#i-shield"/></svg>Login Admin</button>
             </div>
-            <p id="login-judul" style="font-size:16px;font-weight:700;color:#0f172a;">Login Siswa</p>
-            <p id="login-sub" style="font-size:12px;color:#64748b;margin-bottom:14px;">Masuk menggunakan NISN</p>
-            <div class="form-group" style="position:relative;">
+            <p id="login-judul" style="font-size:18px;font-weight:700;color:#0b2f7a;">Login Siswa</p>
+            <p id="login-sub" style="font-size:13px;color:#64748b;margin-bottom:14px;">Masuk menggunakan NISN</p>
+            <div class="inp">
+                <svg class="ic" id="inp-ico"><use href="#i-user"/></svg>
                 <input type="text" id="nisn" placeholder="Masukkan NISN" inputmode="numeric" maxlength="20" autocomplete="off">
-                <button type="button" id="btn-eye" onclick="toggleEye()" aria-label="Tampilkan atau sembunyikan kode" style="display:none;position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:none;font-size:18px;cursor:pointer;">👁</button>
+                <button type="button" id="btn-eye" onclick="toggleEye()" aria-label="Tampilkan atau sembunyikan kode"><svg class="ic"><use href="#i-eye"/></svg></button>
             </div>
             <div id="login-error" style="display:none; background:#fef2f2; color:#b91c1c; border:1px solid #fecaca; border-radius:10px; padding:10px 12px; font-size:13px; margin-bottom:14px; text-align:left;"></div>
             <button class="btn-primary" id="btn-login" onclick="handleLogin()">Masuk ›</button>
         </div>
+        <img class="wave-bawah" src="wave-bawah.png" alt="">
     </div>
 
     <!-- 3. MENU UTAMA (PAKET A, B, C) -->
     <div id="screen-paket" class="screen">
-        <div class="topbar">🎓 Portal Pembelajaran</div>
+        <div class="topbar"><img src="logo.png" alt="">Portal Pembelajaran</div>
 
         <!-- Banner Profil Siswa -->
         <div class="user-banner">
-            <div class="avatar" id="avatar-initial">S</div>
+            <img class="avatar-img" src="avatar.png" alt="">
             <div class="user-info">
                 <h4 id="display-name">Nama Siswa</h4>
                 <p id="display-status">Status: Siswa Aktif</p>
             </div>
+            <img class="banner-art" src="banner-art.png" alt="">
         </div>
 
         <div class="card-container">
             <div id="tab-beranda" class="tab">
                 <div class="menu-grid">
-                    <div class="menu-card m-tugas" onclick="showTab('tugas')"><div class="mi">📋</div><b>Tugas</b><small>Lihat dan kerjakan tugas</small></div>
-                    <div class="menu-card m-belajar" onclick="showTab('pembelajaran')"><div class="mi">📚</div><b>Pembelajaran</b><small>Materi dan modul</small></div>
-                    <div id="menu-absen" class="menu-card m-absen" onclick="showTab('absen')" style="grid-column:1/-1;"><div class="mi">🗓️</div><b>Absen</b><small>Presensi kehadiran mingguan</small></div>
+                    <div class="menu-card m-tugas" onclick="showTab('tugas')"><img src="icon-tugas.png" alt=""><b>Tugas</b><small>Lihat dan kerjakan tugas dari pendidik</small><span class="chev">›</span></div>
+                    <div class="menu-card m-belajar" onclick="showTab('pembelajaran')"><img src="icon-belajar.png" alt=""><b>Pembelajaran</b><small>Akses materi dan modul pembelajaran</small><span class="chev">›</span></div>
+                    <div id="menu-absen" class="menu-card m-absen" onclick="showTab('absen')"><img src="icon-absen.png" alt=""><div><b>Absen</b><small>Lakukan presensi kehadiran</small></div><span class="chev">›</span></div>
+                </div>
+                <div class="info-box">
+                    <div class="info-head">📢 Pengumuman</div>
+                    <div class="info-item" onclick="showTab('pembelajaran')"><svg class="ic" style="width:30px;height:30px;color:#1d4ed8;flex-shrink:0;"><use href="#i-cal"/></svg><div><b>Jadwal Pembelajaran Minggu Ini</b><small>Cek jadwal dan materi terbaru, ya!</small></div></div>
                 </div>
             </div>
             <div id="tab-absen" class="tab" style="display:none;">
@@ -225,11 +280,11 @@
         </div>
         </div>
         <nav class="bottom-nav">
-            <button data-tab="beranda" class="on" onclick="showTab('beranda')"><i>🏠</i>Beranda</button>
-            <button data-tab="tugas" onclick="showTab('tugas')"><i>📋</i>Tugas</button>
-            <button data-tab="pembelajaran" onclick="showTab('pembelajaran')"><i>📚</i>Pembelajaran</button>
-            <button data-tab="absen" id="nav-absen" onclick="showTab('absen')"><i>🗓️</i>Absen</button>
-            <button onclick="handleLogout()"><i>🚪</i>Keluar</button>
+            <button data-tab="beranda" class="on" onclick="showTab('beranda')"><svg class="ic"><use href="#i-home"/></svg>Beranda</button>
+            <button data-tab="tugas" onclick="showTab('tugas')"><svg class="ic"><use href="#i-clip"/></svg>Tugas</button>
+            <button data-tab="pembelajaran" onclick="showTab('pembelajaran')"><svg class="ic"><use href="#i-book"/></svg>Pembelajaran</button>
+            <button data-tab="absen" id="nav-absen" onclick="showTab('absen')"><svg class="ic"><use href="#i-cal"/></svg>Absen</button>
+            <button onclick="handleLogout()"><svg class="ic"><use href="#i-out"/></svg>Keluar</button>
         </nav>
     </div>
 
@@ -841,6 +896,7 @@
         inp.value = '';
         document.getElementById('btn-eye').style.display = adm ? 'block' : 'none';
         document.getElementById('login-error').style.display = 'none';
+        document.getElementById('inp-ico').innerHTML = '<use href="#' + (adm ? 'i-lock' : 'i-user') + '"/>';
     }
     function toggleEye() {
         const i = document.getElementById('nisn');
@@ -885,7 +941,6 @@
             if (modeLogin === 'admin' && !akunAdmin) { tampilkanErrorLogin('Kode admin tidak sesuai.'); return; }
             const nama = siswa.nama || 'Siswa';
             document.getElementById('display-name').innerText = 'Halo, ' + nama + '!';
-            document.getElementById('avatar-initial').innerText = nama.charAt(0).toUpperCase();
             currentNisn = String(siswa.nisn || nisn);
             terapkanAkses(siswa);
             aksesSemester = isAdmin ? null : await ambilSemester();
@@ -1250,7 +1305,7 @@
         document.getElementById('nav-absen').style.display = '';
         document.getElementById('tugas-card').style.display = '';
         document.getElementById('tugas-judul').innerText = '📚 Tugas Minggu Ini';
-        document.getElementById('display-status').innerText = 'Status: Siswa Aktif';
+        document.getElementById('display-status').innerText = 'NISN : ' + (siswa.nisn || '-');
         document.getElementById('label-paket').innerText = 'Paket Belajar Kamu:';
 
         const angka = parseKelasAngka(siswa.kelas);
